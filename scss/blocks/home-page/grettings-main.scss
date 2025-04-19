@@ -1,0 +1,210 @@
+.grettings-main {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 830px;
+  z-index: 2;
+
+  @include responsive1439 {
+    height: 740px;
+  }
+
+  @include responsive1279 {
+    height: 710px;
+  }
+
+  @include responsive767 {
+    height: 100dvh;
+  }
+}
+
+.grettings-main-slider {
+  position: static;
+  width: 100%;
+  height: 100%;
+
+  .swiper-wrapper {
+    position: static;
+  }
+
+  .swiper-slide {
+    position: static;
+    padding: 165px 0;
+
+    @include responsive1439 {
+      padding: 150px 0;
+    }
+
+    @include responsive767 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding: 100px 0 14px;
+    }
+  }
+
+  .grettings-main__content {
+    width: 555px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(148px);
+    color: $colorWhite;
+    padding: 32px;
+    border-radius: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    transform: translateX(115px);
+    font-size: 28px;
+    line-height: 160%;
+    color: $colorWhite-a6;
+
+    @include responsive1439 {
+      width: 500px;
+      transform: translateX(150px);
+      font-size: 24px;
+    }
+
+    @include responsive1279 {
+      width: 470px;
+      transform: translateX(120px);
+      font-size: 20px;
+    }
+
+    @include responsive1023 {
+      transform: translateX(0);
+      font-size: 18px;
+      margin: 0 auto;
+      width: 450px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      font-size: 20px;
+      padding: 16px;
+      border-radius: 16px;
+    }
+  }
+
+  .caption {
+    color: $colorWhite;
+  }
+
+  .btn {
+    width: auto;
+
+    @include responsive639 {
+      width: 100%;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      object-position: top;
+    }
+  }
+
+  .btnSwiper {
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 88px;
+    border-radius: 24px;
+    background-color: $colorWhite;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include responsive767 {
+      display: none;
+    }
+
+    &.btnSwiperPrev {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.7071 0.792893C11.3166 0.402369 10.6834 0.402369 10.2929 0.792893L0.999999 10.0858C0.218949 10.8668 0.218952 12.1332 1 12.9142L10.2929 22.2071C10.6834 22.5976 11.3166 22.5976 11.7071 22.2071C12.0976 21.8166 12.0976 21.1834 11.7071 20.7929L2.41421 11.5L11.7071 2.20711C12.0976 1.81658 12.0976 1.18342 11.7071 0.792893Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+      left: 40px;
+
+      @include responsive1439 {
+        left: 12.5px;
+      }
+
+      @include responsive1279 {
+        left: 20px;
+      }
+    }
+
+    &.btnSwiperNext {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L11 10.0858C11.7811 10.8668 11.781 12.1332 11 12.9142L1.70711 22.2071C1.31658 22.5976 0.683417 22.5976 0.292893 22.2071C-0.0976311 21.8166 -0.0976311 21.1834 0.292893 20.7929L9.58579 11.5L0.292893 2.20711C-0.0976311 1.81658 -0.0976311 1.18342 0.292893 0.792893Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+      right: 40px;
+
+      @include responsive1439 {
+        right: 12.5px;
+      }
+
+      @include responsive1279 {
+        right: 20px;
+      }
+    }
+  }
+
+  .swiper-bullets {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive767 {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    width: 300px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 11px;
+    backdrop-filter: blur(28px);
+    background-color: $colorWhite-a33;
+    border-radius: 24px;
+    padding: 0 32px;
+
+    .swiper-pagination-bullet {
+      height: 2px;
+      width: 16px;
+      background-color: $colorWhite;
+      border-radius: 4px;
+      flex: initial;
+
+      @include before {
+        width: 0;
+        height: 100%;
+        background-color: $colorWhite;
+        left: 0;
+        top: 0;
+      }
+
+      &.swiper-pagination-bullet-active {
+        width: 100%;
+        background-color: $colorWhite-a11;
+
+        &::before {
+          width: 100%;
+          transition: all 5s;
+        }
+      }
+    }
+  }
+}

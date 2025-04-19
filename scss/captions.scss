@@ -1,0 +1,64 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.caption {
+  font-family: $fontMain;
+  font-weight: 600;
+}
+
+h1,
+.caption--h1 {
+  font-size: 44px;
+  line-height: 120%;
+  font-family: $fontRadiotechnika;
+  font-weight: 400;
+
+  @include responsive1439 {
+    font-size: 36px;
+  }
+
+  @include responsive1279 {
+    font-size: 32px;
+  }
+
+  @include responsive1023 {
+    font-size: 30px;
+  }
+
+  @include responsive767 {
+    font-size: 24px;
+  }
+}
+
+h2,
+.caption--h2 {
+  @include responsive1279 {
+  }
+
+  @include responsive767 {
+  }
+}
+
+h3,
+.caption--h3 {
+  @include responsive1439 {
+  }
+
+  @include responsive767 {
+  }
+}
+
+h4,
+.caption--h4 {
+  @include responsive1439 {
+  }
+
+  @include responsive1279 {
+  }
+
+  @include responsive1023 {
+  }
+}

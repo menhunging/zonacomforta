@@ -1,0 +1,70 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  position: relative;
+  color: $colorBlack;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 5px 48px;
+  border-radius: 24px;
+  font-variant-ligatures: none;
+  font-family: $fontRadiotechnika;
+  width: 100%;
+  height: 87px;
+
+  @include responsive1439 {
+    font-size: 20px;
+  }
+
+  @include responsive1279 {
+    padding: 5px 40px;
+    height: 70px;
+  }
+
+  @include responsive1023 {
+    font-size: 16px;
+    height: 60px;
+    padding: 5px 35px;
+  }
+
+  @include responsive767 {
+  }
+
+  &--orange {
+    border: solid 1px $colorOrange;
+    background-color: $colorOrange;
+    color: $colorWhite;
+
+    @include hover {
+      background-color: $colorWhite;
+      color: $colorOrange;
+    }
+  }
+
+  &--borderRed {
+    border: solid 1px $colorOrange;
+    background-color: transparent;
+    color: $colorWhite;
+  }
+
+  &--black {
+    border: solid 1px $colorBlack;
+    background-color: $colorBlack;
+    color: $colorWhite;
+  }
+
+  &--arrow {
+  }
+}

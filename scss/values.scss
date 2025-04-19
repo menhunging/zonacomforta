@@ -1,0 +1,98 @@
+$fontMain: "Inter";
+$fontRadiotechnika: "Radiotechnika";
+
+$colorWhite: rgba(255, 255, 255, 1);
+$colorWhite-a11: rgba(255, 255, 255, 0.11);
+$colorWhite-a33: rgba(255, 255, 255, 0.33);
+$colorWhite-a6: rgba(255, 255, 255, 0.6);
+$colorWhite-a8: rgba(255, 255, 255, 0.8);
+
+$colorBlack: rgb(78, 84, 87, 1); // #4e5457
+$colorDark: rgba(26, 26, 28, 1); // #1A1A1C
+
+$colorOrange: #fa4f19;
+$colorBlue: #045afe;
+
+$responsive1799: "1799px";
+$responsive1599: "1599px";
+$responsive1439: "1439px";
+$responsive1279: "1279px";
+$responsive1023: "1023px";
+$responsive767: "767px";
+$responsive639: "639px";
+$responsive479: "479px";
+$responsive389: "389px";
+
+// @media responsive
+
+@mixin responsiveMinWidth1920 {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin responsiveMinWidth1280 {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin responsiveMinWidth768 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive1799 {
+  @media (max-width: $responsive1799) {
+    @content;
+  }
+}
+
+@mixin responsive1599 {
+  @media (max-width: $responsive1599) {
+    @content;
+  }
+}
+
+@mixin responsive1439 {
+  @media (max-width: $responsive1439) {
+    @content;
+  }
+}
+
+@mixin responsive1279 {
+  @media (max-width: $responsive1279) {
+    @content;
+  }
+}
+
+@mixin responsive1023 {
+  @media (max-width: $responsive1023) {
+    @content;
+  }
+}
+
+@mixin responsive767 {
+  @media (max-width: $responsive767) {
+    @content;
+  }
+}
+
+@mixin responsive639 {
+  @media (max-width: $responsive639) {
+    @content;
+  }
+}
+
+@mixin responsive479 {
+  @media (max-width: $responsive479) {
+    @content;
+  }
+}
+
+@mixin responsive389 {
+  @media (max-width: $responsive389) {
+    @content;
+  }
+}

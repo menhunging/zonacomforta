@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <title>Модальные окна</title>
+
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Ola Dom" />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="market-page">
+
+    <div class="site-wrapper">
+
+        <main class="main">
+            <div class="container">
+                <br />
+                <br />
+
+                <a href="#" data-modal="popup-review">Отзыв</a>
+
+                <br>
+                <br>
+
+                <a href="" data-modal="popup-send">Отправить запрос</a>
+                <br>
+                <br>
+
+                <a href="" data-modal="popup-thank">Спасибо!</a>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+
+<div class="micromodal-slide modal" id="popup-review" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+    <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__close" tabindex="-1" data-micromodal-close></div>
+        <div class="modal__inner">
+            <div class="modal__content" autocomplete="off">
+                <div class="popup-send">
+                    <span class="popup-send__title caption caption--h2">Оставить отзыв</span>
+
+                    <div class="input-item-review">
+                        <textarea name="" id="" placeholder="Текст сообщения"></textarea>
+                    </div>
+
+                    <div class="input-item-review">
+                        <input type="file" id="inputFile" class="inputFile" accept=".jpg,.png,.jpeg">
+                        <label for="inputFile" class="labelFile">Прикрепить файл</label>
+                    </div>
+
+                    <div class="input-item">
+                        <input type="text" placeholder="Имя*">
+                    </div>
+                    <div class="input-item">
+                        <input type="text" placeholder="Телефон*" class="phone-input">
+                    </div>
+                    <div class="input-item">
+                        <input type="text" placeholder="E-mail*">
+                    </div>
+                    <div class="input-item">
+                        <input type="text" placeholder="Должность">
+                    </div>
+                    <span class="popup-send__text">* - обязательные поля</span>
+                    <div class="check-block">
+                        <input type="checkbox" id="personal" checked>
+                        <label for="personal">Согласен с обработкой персональных данных в соответствии с <a
+                                href="#">политикой конфиденциальности</a></label>
+                    </div>
+
+                    <button class="btn btn--red">Отправить</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="micromodal-slide modal" id="popup-send" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+    <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__close" tabindex="-1" data-micromodal-close></div>
+        <div class="modal__inner">
+            <div class="modal__content" autocomplete="off">
+                <div class="popup-send">
+                    <span class="popup-send__title caption caption--h2">Отправить запрос</span>
+                    <div class="input-item">
+                        <input type="text" placeholder="Имя*">
+                    </div>
+                    <div class="input-item">
+                        <input type="text" placeholder="Телефон*" class="phone-input">
+                    </div>
+                    <span class="popup-send__text">* - обязательные поля</span>
+                    <div class="check-block">
+                        <input type="checkbox" id="personal" checked>
+                        <label for="personal">Согласие на обработку персональных данных</label>
+                    </div>
+
+                    <button class="btn btn--red">Отправить</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="micromodal-slide modal" id="popup-thank" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+    <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__close" tabindex="-1" data-micromodal-close></div>
+        <div class="modal__inner">
+            <div class="modal__content" autocomplete="off">
+                <div class="popup-thank">
+                    <span class="popup-send__title caption caption--h2">Спасибо!</span>
+                    <p>Запрос успешно отправлен</p>
+                    <button class="btn btn--red">
+                        <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M33 3L13 23L3 13.0004" stroke="white" stroke-width="5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/selectric/jquery.selectric.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>

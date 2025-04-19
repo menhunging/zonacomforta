@@ -1,0 +1,16 @@
+@import "values";
+@import "mixins";
+@import "reset";
+@import "modals";
+@import "base";
+@import "btns";
+@import "captions";
+
+@import "header";
+@import "footer";
+
+// HOME PAGE
+@import "blocks/home-page/grettings-main.scss";
+
+// BLOCKS
+@import "blocks";
