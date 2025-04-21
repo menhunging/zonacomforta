@@ -1,1 +1,187 @@
-.footer{}
+.footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  padding: 31px 0;
+
+  @include responsive767 {
+    padding: 20px 0;
+  }
+
+  a:not(.btn) {
+    transition: color 0.3s;
+
+    @include hover {
+      color: $colorOrange;
+    }
+  }
+
+  .footer__inner {
+    background-color: $colorDark;
+    border-radius: 32px;
+    padding: 64px 40px;
+
+    @include responsive1439 {
+      padding: 40px 30px;
+    }
+
+    @include responsive1279 {
+      padding: 24px;
+    }
+  }
+
+  .logo {
+    width: 335px;
+    height: 65px;
+
+    @include responsive1439 {
+      width: 280px;
+    }
+
+    @include responsive767 {
+      margin: 0 auto;
+    }
+
+    @include responsive389 {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  .social {
+    margin-top: 24px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    a {
+      transition: opacity 0.3s;
+      opacity: 0.7;
+
+      @include hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include responsive1279 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  grid-row: 1/4;
+
+  @include responsive1279 {
+    grid-template-columns: 1fr;
+  }
+
+  @include responsive767 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.footer-menu__col {
+  min-width: 275px;
+  width: calc(100% / 3);
+
+  @include responsive1439 {
+    min-width: 250px;
+  }
+
+  @include responsive767 {
+    min-width: initial;
+    width: 100%;
+  }
+}
+
+.footer-menu__title {
+  font-family: $fontRadiotechnika;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  a {
+    transition: color 0.3s;
+
+    @include hover {
+      color: $colorOrange;
+    }
+  }
+}
+
+.footer-partners {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 64px;
+  max-width: 335px;
+
+  @include responsive1279 {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @include responsive767 {
+    gap: 12px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 47px;
+    border-radius: 12px;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+}
+
+.footer-bottom {
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive1279 {
+    margin-top: 50px;
+  }
+
+  @include responsive767 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .copyRight {
+  }
+
+  .thisYear {
+  }
+}

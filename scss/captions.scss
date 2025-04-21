@@ -35,19 +35,53 @@ h1,
 
 h2,
 .caption--h2 {
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 120%;
+  font-family: $fontRadiotechnika;
+
   @include responsive1279 {
+    font-size: 76px;
+  }
+
+  @include responsive1023 {
+    font-size: 66px;
   }
 
   @include responsive767 {
+    font-size: 55px;
+  }
+
+  @include responsive479 {
+    font-size: 30px;
   }
 }
 
 h3,
 .caption--h3 {
+  font-size: 44px;
+  line-height: 120%;
+  font-family: $fontRadiotechnika;
+  font-weight: 400;
+
   @include responsive1439 {
+    font-size: 40px;
+  }
+
+  @include responsive1279 {
+    font-size: 32px;
+  }
+
+  @include responsive1023 {
+    font-size: 28px;
   }
 
   @include responsive767 {
+    font-size: 24px;
+  }
+
+  @include responsive639{
+    font-size: 18px;
   }
 }
 
@@ -60,5 +94,30 @@ h4,
   }
 
   @include responsive1023 {
+  }
+}
+
+.caption__small {
+  font-size: 48px;
+  line-height: 60px;
+  display: block;
+  font-weight: 400;
+
+  @include responsive1279 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  @include responsive1023 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @include responsive767 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @include responsive479 {
   }
 }

@@ -1,6 +1,6 @@
 body {
   font-family: $fontMain;
-  background-color: $colorWhite;
+  background-color: #edeadf;
   color: $colorBlack;
   font-size: 20px;
   line-height: 120%;
@@ -96,7 +96,7 @@ div {
     height: 51px;
   }
 
-  @include responsive767{
+  @include responsive767 {
     width: 78px;
     min-width: initial;
   }
@@ -166,11 +166,19 @@ section {
   padding: 80px 0;
 
   @include responsive1439 {
-    padding: 50px 0;
+    padding: 60px 0;
   }
 
   @include responsive1279 {
+    padding: 50px 0;
+  }
+
+  @include responsive767 {
     padding: 40px 0;
+  }
+
+  @include responsive639 {
+    padding: 30px 0;
   }
 }
 
@@ -447,18 +455,29 @@ section {
 .input-item {
   width: 100%;
 
-  & + .input-item {
-    margin-top: 20px;
-  }
-
   input {
     width: 100%;
-    height: 44px;
-    background-color: $colorWhite;
-    border-radius: 9px;
+    height: 65px;
     border: 0;
-    font-size: 14px;
-    padding: 0 16px;
+    background-color: transparent;
+    border-bottom: solid 1px $colorWhite;
+    border-radius: 0;
+    font-size: 24px;
+    padding: 0;
+    color: $colorWhite;
+    font-family: $fontRadiotechnika;
+
+    @include responsive1023 {
+      font-size: 20px;
+    }
+
+    @include responsive767{
+      height: 45px;
+    }
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
   }
 
   textarea {
@@ -476,29 +495,22 @@ section {
     display: none;
 
     &:checked + label {
-      text-decoration-color: $colorBlack;
-      color: $colorBlack;
+      &:before {
+        background-color: $colorOrange;
+      }
 
       &::after {
+        background-color: $colorOrange;
         opacity: 1;
       }
     }
   }
 
-  & + .check-block {
-    margin-top: 8px;
-
-    @include responsive1279 {
-      margin-top: 0px;
-    }
-  }
-
   label {
     cursor: pointer;
-    font-size: 14px;
     font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 20px;
     position: relative;
     padding-left: 24px;
     text-decoration-color: transparent;
@@ -508,47 +520,63 @@ section {
     display: block;
     align-items: center;
     gap: 8px;
-    min-height: 45px;
-    padding-left: 45px;
-
-    a {
-      text-decoration: underline;
-    }
+    padding-left: 70px;
+    color: $colorWhite;
 
     @include responsive1279 {
       font-size: 12px;
-      min-height: 30px;
     }
 
-    @include responsive767 {
-      padding-left: 38px;
+    @include responsive1023 {
+      padding-left: 50px;
+    }
+
+    a {
+      text-decoration: underline;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     @include before {
       left: 0;
       top: 50%;
-      width: 25px;
-      height: 25px;
+      width: 48px;
+      height: 48px;
       border: 0;
-      border-radius: 2px;
+      border-radius: 4px;
       overflow: hidden;
       transform: translateY(-50%);
       background-color: $colorWhite;
+
+      @include responsive1023 {
+        width: 38px;
+        height: 38px;
+      }
     }
 
     @include after {
       background-color: $colorWhite;
       left: 0;
       top: 50%;
-      width: 25px;
-      height: 25px;
+      width: 48px;
+      height: 48px;
       opacity: 0;
-      border-radius: 2px;
+      border-radius: 4px;
       overflow: hidden;
       transform: translateY(-50%);
       background-position: center;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.00284094 6.60178L1.69318 4.89014L5.13778 8.27792L12.5881 0.856045L14.2926 2.56769L5.13778 11.687L0.00284094 6.60178Z' fill='%23F94242'/%3e%3cpath d='M0.00284094 6.60178L1.69318 4.89014L5.13778 8.27792L12.5881 0.856045L14.2926 2.56769L5.13778 11.687L0.00284094 6.60178Z' fill='%23F94242'/%3e%3cpath d='M0.00284094 6.60178L1.69318 4.89014L5.13778 8.27792L12.5881 0.856045L14.2926 2.56769L5.13778 11.687L0.00284094 6.60178Z' fill='%230F0F0F'/%3e%3c/svg%3e ");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23EDEADF' stroke-width='4'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
+
+      @include responsive1023 {
+        width: 38px;
+        height: 38px;
+        background-size: 50%;
+      }
     }
   }
 }
@@ -607,36 +635,68 @@ section {
 
 .play {
   cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='42' height='49' viewBox='0 0 42 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M41.6331 24.9074L0.0598198 48.9097L0.0598219 0.905068L41.6331 24.9074Z' fill='%2353B5DF'/%3e%3c/svg%3e ");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='50' viewBox='0 0 45 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M41.0625 19.8399C45.0347 22.1333 45.0347 27.8667 41.0625 30.1601L9.43749 48.4188C5.46527 50.7121 0.499998 47.8454 0.499998 43.2587L0.499999 6.74129C0.5 2.15456 5.46528 -0.712135 9.4375 1.58123L41.0625 19.8399Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
   background-position: calc(50% + 5px) center;
   background-repeat: no-repeat;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 145px;
-  height: 145px;
+  width: 66px;
+  height: 66px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $colorWhite;
   transition: all 0.3s;
   z-index: 5;
+}
 
-  @include responsive1279 {
-    width: 80px;
-    height: 80px;
-    background-size: 30%;
-  }
+.videoPlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  background-color: $colorWhite-a11;
+  backdrop-filter: blur(44px);
+  border-radius: 24px;
+  overflow: hidden;
+  width: 333px;
+  height: 108px;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.3s, backdrop-filter 0.3s;
+  position: relative;
 
   @include responsive767 {
-    width: 75px;
-    height: 75px;
+    width: 263px;
+    height: 84px;
+    gap: 8px;
+    top: -25px;
   }
 
   &:hover {
-    transform: translate(-50%, -50%) scale(0.9);
+    backdrop-filter: blur(22px);
+    transform: scale(0.9);
+  }
+
+  .play {
+  }
+
+  .videoPlay__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .videoPlay__title {
+    font-size: 24px;
+    font-family: $fontRadiotechnika;
+
+    @include responsive767 {
+      font-size: 20px;
+    }
+  }
+
+  .videoPlay__time {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 
@@ -693,5 +753,15 @@ section {
 
   span.breadcrumbs-link {
     text-decoration: none;
+  }
+}
+
+.testBlock {
+  color: $colorWhite;
+  background-color: #000;
+  text-align: center;
+
+  @include responsive767 {
+    font-size: 14px;
   }
 }

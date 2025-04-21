@@ -46,20 +46,49 @@ $(document).ready(function () {
     });
   }
 
-  // -----------
+  if ($(".faq-section").length > 0) {
+    $(".faq-section__quest").on("click", function () {
+      if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this).parents(".faq-item").removeClass("opened");
+        $(this).next(".faq-section__answer").stop().slideUp();
+      } else {
+        $(".faq-item").removeClass("opened");
+        $(".faq-section__quest").removeClass("active");
+        $(".faq-section__answer").stop().slideUp();
 
-  if ($(".thisYear").length > 0) {
-    let date = new Date();
-    $(".thisYear").text(date.getFullYear());
+        $(this).parents(".faq-item").addClass("opened");
+        $(this).addClass("active");
+        $(this).next(".faq-section__answer").stop().slideDown();
+      }
+    });
   }
 
-  if ($(".selectric").length > 0) {
-    $(".selectric").map(function () {
-      $(this).selectric({
-        onOpen: function (element) {},
-        onChange: function (element) {},
-        onClose: function (element) {},
-      });
+  if ($(".reviews-slider").length > 0) {
+    const swiper = new Swiper(".reviews-slider", {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: true,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      navigation: {
+        prevEl: ".reviews-slider .btnSwiperPrev",
+        nextEl: ".reviews-slider .btnSwiperNext",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+          return `<span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+        },
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+      },
     });
   }
 
@@ -75,10 +104,27 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".thisYear").length > 0) {
+    let date = new Date();
+    $(".thisYear").text(date.getFullYear());
+  }
+
   if ($("[data-fancybox]").length > 0) {
     Fancybox.bind("[data-fancybox]", {
       speedIn: 600,
       speedOut: 600,
+    });
+  }
+
+  // -----------
+
+  if ($(".selectric").length > 0) {
+    $(".selectric").map(function () {
+      $(this).selectric({
+        onOpen: function (element) {},
+        onChange: function (element) {},
+        onClose: function (element) {},
+      });
     });
   }
 
@@ -105,20 +151,6 @@ $(document).ready(function () {
       mouseevent: "click",
       attribute: "href",
       animation: true,
-    });
-  }
-
-  if ($(".faq-section").length > 0) {
-    $(".faq-section__quest").on("click", function () {
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active");
-        $(this).next(".faq-section__answer").stop().slideUp();
-      } else {
-        $(".faq-section__quest").removeClass("active");
-        $(".faq-section__answer").stop().slideUp();
-        $(this).addClass("active");
-        $(this).next(".faq-section__answer").stop().slideDown();
-      }
     });
   }
 });

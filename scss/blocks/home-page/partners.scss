@@ -1,0 +1,88 @@
+.partners {
+  .partners__head {
+    display: flex;
+  }
+  .caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 60px;
+
+    span {
+      display: block;
+
+      &:last-child {
+        width: 520px;
+        font-size: 30px;
+        line-height: 120%;
+
+        @include responsive1439 {
+          width: 410px;
+        }
+
+        @include responsive1279 {
+          width: 280px;
+          font-size: 20px;
+        }
+
+        @include responsive1023 {
+          font-size: 18px;
+          width: 100%;
+        }
+
+        @include responsive767{
+          font-size: 16px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .partners__body {
+    background-color: $colorBlack;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-radius: 24px;
+    padding: 27px;
+    gap: 30px 65px;
+    margin-top: 20px;
+
+    @include responsive1279 {
+      gap: 20px 30px;
+      padding: 24px;
+    }
+
+    @include responsive1023 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .input-item {
+    grid-column: span 2;
+
+    @include responsive1023 {
+      grid-column: initial;
+    }
+
+    @include responsive767 {
+      grid-column: 1/4;
+    }
+  }
+
+  .check-block {
+    grid-column: 1 / 4;
+    margin-top: auto;
+
+    @include responsive1023 {
+      grid-column: 1/4;
+    }
+  }
+
+  .btn {
+    grid-column: 4 / 7;
+
+    @include responsive1023 {
+      grid-column: 1/4;
+    }
+  }
+}
