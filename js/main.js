@@ -21,6 +21,28 @@ $(document).ready(function () {
     }
   }
 
+  if ($(".link-menu-catalog").length > 0) {
+    let menu = $(".invisProductCatalog");
+    let burger = $(".link-menu-catalog");
+    let body = $("body");
+
+    burger.on("click", function () {
+      if (burger.hasClass("opened")) {
+        closeMenu();
+      } else {
+        burger.addClass("opened");
+        menu.stop().slideDown();
+        body.addClass("hidden");
+      }
+    });
+
+    function closeMenu() {
+      burger.removeClass("opened");
+      body.removeClass("hidden");
+      menu.stop().slideUp();
+    }
+  }
+
   if ($(".grettings-main-slider").length > 0) {
     const swiper = new Swiper(".grettings-main-slider", {
       slidesPerView: 1,

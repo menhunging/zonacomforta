@@ -3,7 +3,7 @@
   line-height: 160%;
   padding: 30px 0;
   color: $colorWhite;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -28,6 +28,7 @@
     background-color: $colorDark;
     padding: 13px;
     border-radius: 12px;
+    position: relative;
 
     @include responsive1439 {
       justify-content: space-between;
@@ -59,13 +60,15 @@
 
     @include responsive1279 {
       position: absolute;
-      top: calc(100% - 16px);
+      top: calc(100% - 10px);
       left: 0;
       display: none;
       background-color: $colorDark;
-      padding: 20px 30px;
       width: 100%;
       align-items: flex-start;
+      max-height: calc(100vh - 80px);
+      overflow: auto;
+      padding: 20px 12px;
     }
   }
 
@@ -167,7 +170,7 @@
     flex-direction: column;
     gap: 2px;
     cursor: pointer;
-    width: 12px;
+    width: 13px;
   }
 
   .link-menu-catalog____line {
@@ -186,6 +189,26 @@
 
   .link-menu-catalog__text {
     transition: color 0.3s;
+  }
+
+  &.opened {
+    background-color: $colorOrange;
+    border-color: $colorOrange;
+    color: $colorWhite;
+
+    .link-menu-catalog__burger {
+      .link-menu-catalog____line {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(4.1px, 1.7px);
+        }
+        &:nth-child(2) {
+          width: 0 !important;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(4.1px, -1.7px);
+        }
+      }
+    }
   }
 }
 
@@ -440,6 +463,100 @@
 
     &--mail {
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='17' viewBox='0 0 20 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 3.4375C1 2.90707 1.21071 2.39836 1.58579 2.02329C1.96086 1.64821 2.46957 1.4375 3 1.4375H17C17.5304 1.4375 18.0391 1.64821 18.4142 2.02329C18.7893 2.39836 19 2.90707 19 3.4375M1 3.4375V13.4375C1 13.9679 1.21071 14.4766 1.58579 14.8517C1.96086 15.2268 2.46957 15.4375 3 15.4375H17C17.5304 15.4375 18.0391 15.2268 18.4142 14.8517C18.7893 14.4766 19 13.9679 19 13.4375V3.4375M1 3.4375L10 9.4375L19 3.4375' stroke='%23FA4F19' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    }
+  }
+}
+
+.invisProductCatalog {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #4e5457;
+  padding: 24px;
+  border-radius: 40px;
+  max-height: calc(100vh - 105px);
+  overflow: auto;
+  display: none;
+
+  @include responsive1279 {
+    position: relative;
+    margin-top: 20px;
+    max-height: initial;
+  }
+
+  @include responsive639 {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .invisProductCatalog__title {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .assortment__list {
+    margin-top: 16px;
+    grid-template-columns: 1fr 1fr;
+    background-color: transparent;
+    padding: 0;
+
+    @include responsive639 {
+      grid-template-columns: 1fr;
+    }
+
+    .assortment__item {
+      grid-column: initial;
+      min-height: 250px;
+
+      &:before {
+        @include responsive1279 {
+          opacity: 1;
+        }
+      }
+
+      .picture-block {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 120%;
+        height: 130%;
+        transform: translateX(-50%);
+        opacity: 0.3;
+
+        @include responsive639 {
+          top: -40px;
+          left: 50%;
+          width: 150%;
+          height: 170%;
+        }
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+
+    .assortment__text {
+      display: flex;
+      align-items: flex-end;
+      max-width: 100%;
+
+      @include responsive1279 {
+        color: $colorWhite-a6;
+      }
+    }
+
+    .assortment__content {
+      align-items: flex-end;
+    }
+  }
+
+  .assortment__link {
+    @include responsive1279 {
+      background-color: transparent;
     }
   }
 }

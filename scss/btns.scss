@@ -99,6 +99,7 @@
 
     @include hover {
       &:after {
+        transform: translateX(5px);
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L11 10.0858C11.7811 10.8668 11.781 12.1332 11 12.9142L1.70711 22.2071C1.31658 22.5976 0.683417 22.5976 0.292893 22.2071C-0.0976311 21.8166 -0.0976311 21.1834 0.292893 20.7929L9.58579 11.5L0.292893 2.20711C-0.0976311 1.81658 -0.0976311 1.18342 0.292893 0.792893Z' fill='%23fa4f19'/%3e%3c/svg%3e ");
       }
     }

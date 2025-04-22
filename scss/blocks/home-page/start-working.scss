@@ -1,6 +1,10 @@
 .start-working {
   .caption {
     max-width: 1040px;
+
+    @include responsive1439 {
+      max-width: 100%;
+    }
   }
 }
 
@@ -23,8 +27,8 @@
   transition: background-color 0.3s;
 
   @include responsive1439 {
-    min-height: 350px;
-    padding: 0 70px;
+    min-height: 330px;
+    padding: 0 50px;
   }
 
   @include responsive1279 {
@@ -77,6 +81,11 @@
     width: 300px;
     height: 300px;
     margin: 0 auto;
+
+    @include responsive1439{
+      width: 270px;
+      height: 270px;
+    }
 
     @include responsive1279 {
       width: 200px;

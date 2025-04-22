@@ -162,6 +162,10 @@
     width: 808px;
     margin-left: auto;
 
+    @include responsive1439 {
+      margin-top: 50px;
+    }
+
     @include responsive1279 {
       width: 480px;
       margin-top: 50px;

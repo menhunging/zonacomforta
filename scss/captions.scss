@@ -40,8 +40,12 @@ h2,
   line-height: 120%;
   font-family: $fontRadiotechnika;
 
-  @include responsive1279 {
+  @include responsive1439 {
     font-size: 76px;
+  }
+
+  @include responsive1279 {
+    font-size: 72px;
   }
 
   @include responsive1023 {
@@ -65,7 +69,7 @@ h3,
   font-weight: 400;
 
   @include responsive1439 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   @include responsive1279 {
@@ -80,7 +84,7 @@ h3,
     font-size: 24px;
   }
 
-  @include responsive639{
+  @include responsive639 {
     font-size: 18px;
   }
 }
