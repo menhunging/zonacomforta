@@ -21,7 +21,7 @@
     border-radius: 32px;
     padding: 64px 40px;
 
-    @include responsive1439 {
+    @include responsive1449 {
       padding: 40px 30px;
     }
 
@@ -34,7 +34,7 @@
     width: 335px;
     height: 65px;
 
-    @include responsive1439 {
+    @include responsive1449 {
       width: 280px;
     }
 
@@ -100,7 +100,7 @@
   min-width: 275px;
   width: calc(100% / 3);
 
-  @include responsive1439 {
+  @include responsive1449 {
     min-width: 250px;
   }
 

@@ -12,7 +12,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 
-  @include responsive1439 {
+  @include responsive1449 {
     margin-top: 16px;
   }
 
@@ -43,7 +43,7 @@
   position: relative;
   z-index: 2;
 
-  @include responsive1439{
+  @include responsive1449{
     min-height: 260px;
     padding: 16px;
   }
@@ -224,7 +224,7 @@
   text-transform: uppercase;
   transition: color 0.3s;
 
-  @include responsive1439 {
+  @include responsive1449 {
     font-size: 22px;
   }
 

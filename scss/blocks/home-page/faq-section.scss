@@ -110,9 +110,12 @@
     @include responsive639 {
       width: 100%;
       font-size: 20px;
+      color: $colorWhite-a22;
     }
 
     &.active {
+      color: $colorWhite-a8;
+
       &::before {
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.5' d='M0.836 0.431999H35.788V6.008H0.836V0.431999Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
       }
@@ -162,7 +165,7 @@
     width: 808px;
     margin-left: auto;
 
-    @include responsive1439 {
+    @include responsive1449 {
       margin-top: 50px;
     }
 

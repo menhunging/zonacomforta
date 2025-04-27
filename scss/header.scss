@@ -9,7 +9,7 @@
   left: 0;
   z-index: 5;
 
-  @include responsive1439 {
+  @include responsive1449 {
     font-size: 12.5px;
   }
 
@@ -30,7 +30,7 @@
     border-radius: 12px;
     position: relative;
 
-    @include responsive1439 {
+    @include responsive1449 {
       justify-content: space-between;
     }
 
@@ -66,7 +66,7 @@
       background-color: $colorDark;
       width: 100%;
       align-items: flex-start;
-      max-height: calc(100vh - 80px);
+      max-height: calc(100vh - 71px);
       overflow: auto;
       padding: 20px 12px;
     }
@@ -152,9 +152,17 @@
       }
     }
 
+    &.header-link--buy {
+      @include hover {
+        background-color: $colorBlue;
+        border-color: $colorBlue;
+        color: $colorWhite;
+      }
+    }
+
     @include hover {
-      background-color: $colorBlue;
-      border-color: $colorBlue;
+      background-color: $colorOrange;
+      border-color: $colorOrange;
       color: $colorWhite;
     }
   }
@@ -229,8 +237,16 @@
   }
 
   .header-list__item {
+    position: relative;
+
     @include responsive1279 {
       width: 100%;
+    }
+
+    &:hover {
+      .menu-sub {
+        display: block;
+      }
     }
   }
 }
@@ -467,6 +483,50 @@
   }
 }
 
+.menu-sub {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 221px;
+  padding-top: 3px;
+  display: none;
+
+  @include responsive1279 {
+    position: relative;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  ul {
+    padding: 8px;
+    background-color: $colorDark;
+    border-radius: 16px;
+    border: solid 1px $colorBlack;
+  }
+
+  li {
+  }
+
+  a {
+    transition: background-color 0.3s;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+
+    @include responsive1279 {
+      font-size: 20px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    @include hover {
+      background-color: #313133;
+    }
+  }
+}
+
 .invisProductCatalog {
   position: absolute;
   top: 100%;
@@ -483,11 +543,13 @@
     position: relative;
     margin-top: 20px;
     max-height: initial;
+    padding: 16px;
+    gap: 12px;
   }
 
   @include responsive639 {
-    padding: 20px 16px;
-    border-radius: 20px;
+    padding: 16px;
+    border-radius: 32px;
   }
 
   .invisProductCatalog__title {
@@ -498,10 +560,14 @@
   }
 
   .assortment__list {
-    margin-top: 16px;
-    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    grid-template-columns: repeat(5, 1fr);
     background-color: transparent;
     padding: 0;
+
+    @include responsive1023 {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include responsive639 {
       grid-template-columns: 1fr;
@@ -509,11 +575,56 @@
 
     .assortment__item {
       grid-column: initial;
-      min-height: 250px;
+      min-height: 170px;
 
-      &:before {
-        @include responsive1279 {
-          opacity: 1;
+      @include responsive1279 {
+        min-height: 150px;
+      }
+
+      &:nth-child(1) {
+        background-color: #9eb6bb;
+      }
+
+      &:nth-child(2) {
+        grid-column: span 2;
+        background-color: #91926d;
+
+        @include responsive1023 {
+          grid-column: initial;
+        }
+      }
+
+      &:nth-child(3) {
+        background-color: #6d7992;
+      }
+
+      &:nth-child(4) {
+        background-color: #d3b898;
+        grid-row: span 2;
+
+        @include responsive639 {
+          grid-row: initial;
+        }
+
+        .assortment__text {
+        }
+      }
+
+      &:nth-child(5) {
+        background-color: #d47842;
+        grid-column: span 2;
+
+        @include responsive639 {
+          grid-column: initial;
+        }
+      }
+
+      &:nth-child(6) {
+        background-color: #6d9285;
+        grid-column: span 2;
+
+        @include responsive639 {
+          grid-column: initial;
         }
       }
 
@@ -543,9 +654,11 @@
       display: flex;
       align-items: flex-end;
       max-width: 100%;
+      font-size: 18px;
 
       @include responsive1279 {
         color: $colorWhite-a6;
+        font-size: 14px;
       }
     }
 

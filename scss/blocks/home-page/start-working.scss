@@ -2,7 +2,7 @@
   .caption {
     max-width: 1040px;
 
-    @include responsive1439 {
+    @include responsive1449 {
       max-width: 100%;
     }
   }
@@ -26,7 +26,7 @@
   overflow: hidden;
   transition: background-color 0.3s;
 
-  @include responsive1439 {
+  @include responsive1449 {
     min-height: 330px;
     padding: 0 50px;
   }
@@ -82,7 +82,7 @@
     height: 300px;
     margin: 0 auto;
 
-    @include responsive1439{
+    @include responsive1449{
       width: 270px;
       height: 270px;
     }

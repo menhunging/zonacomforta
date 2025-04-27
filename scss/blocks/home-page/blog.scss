@@ -1,0 +1,237 @@
+.blog-main {
+  .blog-main__head {
+    .caption {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      line-height: 90%;
+      gap: 40px;
+
+      @include responsive767 {
+        gap: 20px;
+      }
+
+      @include responsive389 {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .caption__small {
+    }
+  }
+
+  .blog-main__body {
+    margin-top: 24px;
+  }
+}
+
+.blog-item {
+  position: relative;
+  border-radius: 24px;
+  background-color: #b79e4e;
+  color: $colorWhite;
+  padding: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  @include responsive479 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @include hover {
+    .blog-item__media {
+      opacity: 1;
+    }
+  }
+}
+
+.blog-item__media {
+  width: 264px;
+  height: 246px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+
+  @include responsive479 {
+    width: 100%;
+    height: auto;
+    padding-top: calc(200 / 380 * 100%);
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.blog-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0 16px;
+  flex: 1;
+
+  @include responsive479 {
+    padding: 0;
+    gap: 16px;
+  }
+
+  .blog-item__tag {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    padding: 6px 8px;
+    text-transform: uppercase;
+    background-color: $colorWhite-a22;
+    border-radius: 8px;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+
+  .blog-item__date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+
+  .blog-item__name {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+
+  .btn {
+    font-size: 16px;
+    width: auto;
+    height: 50px;
+    padding: 3px 20px;
+    border-radius: 12px;
+    gap: 0;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+}
+
+.blog-main__controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 95px;
+  margin-top: 45px;
+
+  @include responsive767 {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .btn {
+    width: auto;
+    white-space: nowrap;
+
+    @include responsive767 {
+      padding: 0 20px;
+      width: 100%;
+    }
+  }
+
+  .blog-main__text {
+    max-width: 552px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+
+    @include responsive767 {
+      font-size: 16px;
+      max-width: 100%;
+    }
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  @include responsive1279 {
+    gap: 14px;
+  }
+
+  & + .marquee {
+    margin-top: 20px;
+  }
+
+  &--alternate {
+    flex-direction: row-reverse;
+
+    .blog-item {
+      background-color: #e58567;
+    }
+  }
+
+  .marquee-list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    @include responsive1279 {
+      gap: 14px;
+    }
+  }
+
+  .blog-item {
+    width: 558px;
+
+    @include responsive1279 {
+      width: 450px;
+    }
+
+    @include responsive767 {
+      width: 560px;
+    }
+
+    @include responsive639 {
+      width: 450px;
+    }
+
+    @include responsive479 {
+      width: 350px;
+    }
+
+    @include responsive389 {
+      width: 320px;
+    }
+  }
+}

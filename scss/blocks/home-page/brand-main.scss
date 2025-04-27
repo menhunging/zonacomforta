@@ -20,7 +20,7 @@
     }
 
     @include responsive1023 {
-      width: 55%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       font-size: 18px;
@@ -29,6 +29,12 @@
     @include responsive767 {
       font-size: 16px;
       width: 100%;
+    }
+
+    .btn{
+      @include responsive767{
+        display: none;
+      }
     }
   }
 
@@ -58,7 +64,7 @@
     }
 
     @include responsive767 {
-      max-width: 320px;
+      max-width: 100%;
     }
   }
 
@@ -107,5 +113,15 @@
         object-fit: contain;
       }
     }
+  }
+}
+
+.brand-main__btnMobile{
+  display: none;
+
+  @include responsive767{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
   }
 }

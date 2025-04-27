@@ -3,6 +3,7 @@ $fontRadiotechnika: "Radiotechnika";
 
 $colorWhite: rgba(255, 255, 255, 1);
 $colorWhite-a11: rgba(255, 255, 255, 0.11);
+$colorWhite-a22: rgba(255, 255, 255, 0.22);
 $colorWhite-a33: rgba(255, 255, 255, 0.33);
 $colorWhite-a6: rgba(255, 255, 255, 0.6);
 $colorWhite-a8: rgba(255, 255, 255, 0.8);
@@ -18,7 +19,7 @@ $colorBlue: #045afe;
 
 $responsive1799: "1799px";
 $responsive1599: "1599px";
-$responsive1439: "1439px";
+$responsive1449: "1449px";
 $responsive1279: "1279px";
 $responsive1023: "1023px";
 $responsive767: "767px";
@@ -58,8 +59,8 @@ $responsive389: "389px";
   }
 }
 
-@mixin responsive1439 {
-  @media (max-width: $responsive1439) {
+@mixin responsive1449 {
+  @media (max-width: $responsive1449) {
     @content;
   }
 }
