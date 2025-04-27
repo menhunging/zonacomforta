@@ -1,13 +1,15 @@
-@import "values";
-@import "mixins";
-@import "reset";
-@import "modals";
-@import "base";
-@import "btns";
-@import "captions";
+@import "./shared/values";
+@import "./shared/mixins";
+@import "./shared/reset";
 
-@import "header";
-@import "footer";
+@import "base";
+
+// components
+@import "./components/btns";
+@import "./components/captions";
+@import "./components/modals";
+@import "./components/header";
+@import "./components/footer";
 
 // HOME PAGE
 @import "blocks/home-page/grettings-main.scss";

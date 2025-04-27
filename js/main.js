@@ -145,7 +145,7 @@ $(document).ready(function () {
     Marquee(".marquee--alternate", speed, true);
   }
 
-  // -----------
+  // --------------------------------
 
   if ($(".selectric").length > 0) {
     $(".selectric").map(function () {
