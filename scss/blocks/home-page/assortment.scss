@@ -27,6 +27,176 @@
     border-radius: 33px;
     margin-top: 12px;
   }
+
+  // с
+
+  &--catalog {
+    margin-top: 0;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: transparent;
+    padding: 0;
+
+    @include responsive1023 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive639 {
+      grid-template-columns: 1fr;
+    }
+
+    .assortment__item {
+      grid-column: initial;
+      min-height: 170px;
+
+      @include responsive1279 {
+        min-height: 150px;
+      }
+
+      &:nth-child(1) {
+        background-color: #9eb6bb;
+
+        @include hover {
+          background-color: #3e9eb3;
+        }
+
+        @include responsive767 {
+          background-color: #3e9eb3;
+        }
+      }
+
+      &:nth-child(2) {
+        grid-column: span 2;
+        background-color: #91926d;
+
+        @include hover {
+          background-color: #989b2c;
+        }
+
+        @include responsive1279 {
+          background-color: #989b2c;
+        }
+
+        @include responsive1023 {
+          grid-column: initial;
+        }
+      }
+
+      &:nth-child(3) {
+        background-color: #6d7992;
+
+        @include hover {
+          background-color: #4162a7;
+        }
+
+        @include responsive1279 {
+          background-color: #4162a7;
+        }
+      }
+
+      &:nth-child(4) {
+        background-color: #d3b898;
+        grid-row: span 2;
+
+        @include hover {
+          background-color: #dfa156;
+        }
+
+        @include responsive1279 {
+          background-color: #dfa156;
+        }
+
+        @include responsive639 {
+          grid-row: initial;
+        }
+
+        .assortment__text {
+        }
+      }
+
+      &:nth-child(5) {
+        background-color: #d47842;
+        grid-column: span 2;
+
+        @include hover {
+          background-color: #d47842;
+        }
+
+        @include responsive1279 {
+          background-color: #d47842;
+        }
+
+        @include responsive639 {
+          grid-column: initial;
+        }
+      }
+
+      &:nth-child(6) {
+        background-color: #6d9285;
+        grid-column: span 2;
+
+        @include hover {
+          background-color: #279b72;
+        }
+
+        @include responsive1279 {
+          background-color: #279b72;
+        }
+
+        @include responsive639 {
+          grid-column: initial;
+        }
+      }
+
+      .picture-block {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        width: 120%;
+        height: 130%;
+        transform: translateX(-50%);
+        opacity: 0.3;
+
+        @include responsive1279 {
+          opacity: 1;
+        }
+
+        @include responsive639 {
+          top: -40px;
+          left: 50%;
+          width: 150%;
+          height: 170%;
+        }
+
+        img {
+          object-fit: contain;
+        }
+      }
+
+      &::before {
+        @include responsive1279 {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .assortment__text {
+      display: flex;
+      align-items: flex-end;
+      max-width: 100%;
+      font-size: 18px;
+
+      @include responsive1279 {
+        color: $colorWhite;
+        font-size: 14px;
+      }
+    }
+
+    .assortment__content {
+      align-items: flex-end;
+    }
+  }
+
+  // версия для каталога и меню
 }
 
 .assortment__item {
@@ -43,7 +213,7 @@
   position: relative;
   z-index: 2;
 
-  @include responsive1449{
+  @include responsive1449 {
     min-height: 260px;
     padding: 16px;
   }

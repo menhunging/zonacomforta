@@ -1,0 +1,144 @@
+.catalog {
+  padding: 0;
+
+  .assortment__link {
+    @include responsive1279 {
+      background-color: transparent;
+    }
+  }
+
+  .catalog__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 32px;
+    font-size: 16px;
+
+    @include responsive1279 {
+      max-width: 700px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      gap: 15px;
+    }
+
+    a {
+      text-decoration: underline;
+      transition: text-decoration 0.3s;
+
+      @include hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+}
+
+.catalog-section {
+  padding: 15px 0;
+
+  .catalog-section__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border: solid 1px $colorBlack-a2;
+    border-radius: 8px;
+
+    @include responsive1279{
+      padding: 16px;
+    }
+
+    @include responsive767{
+      flex-direction: column;
+      align-items: flex-start;
+      gap:10px;
+    }
+  }
+
+  .catalog-section__caption {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    max-width: 730px;
+    width: 100%;
+
+    @include responsive1279 {
+      font-size: 20px;
+      max-width: 570px;
+    }
+
+    @include responsive1023{
+      max-width: 480px;
+    }
+
+    @include responsive767{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .catalog-section__search {
+    width: 334px;
+
+    @include responsive1279 {
+      width: 250px;
+    }
+
+    @include responsive767{
+      width: 100%;
+    }
+
+    .input-item {
+      position: relative;
+
+      input {
+        border: solid 1px $colorBlack-a2;
+        border-radius: 8px;
+        color: $colorBlack;
+        padding: 0 56px;
+        height: 58px;
+        font-family: $fontMain;
+        text-transform: initial;
+        font-size: 16px;
+        background-position: 20px center;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 19L13 13M1 8C1 8.91925 1.18106 9.82951 1.53284 10.6788C1.88463 11.5281 2.40024 12.2997 3.05025 12.9497C3.70026 13.5998 4.47194 14.1154 5.32122 14.4672C6.1705 14.8189 7.08075 15 8 15C8.91925 15 9.82951 14.8189 10.6788 14.4672C11.5281 14.1154 12.2997 13.5998 12.9497 12.9497C13.5998 12.2997 14.1154 11.5281 14.4672 10.6788C14.8189 9.82951 15 8.91925 15 8C15 7.08075 14.8189 6.1705 14.4672 5.32122C14.1154 4.47194 13.5998 3.70026 12.9497 3.05025C12.2997 2.40024 11.5281 1.88463 10.6788 1.53284C9.82951 1.18106 8.91925 1 8 1C7.08075 1 6.1705 1.18106 5.32122 1.53284C4.47194 1.88463 3.70026 2.40024 3.05025 3.05025C2.40024 3.70026 1.88463 4.47194 1.53284 5.32122C1.18106 6.1705 1 7.08075 1 8Z' stroke='%23FA4F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+        background-repeat: no-repeat;
+
+        @include responsive1279 {
+          height: 50px;
+          font-size: 14px;
+        }
+
+        &::placeholder {
+          text-transform: initial;
+        }
+      }
+
+      .btnClearSearch {
+        cursor: pointer;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.8988 1.24246C21.2893 1.63297 21.2893 2.26614 20.8988 2.65667L12.4135 11.1419L20.8995 19.6279C21.29 20.0184 21.29 20.6516 20.8995 21.0421C20.509 21.4325 19.8758 21.4326 19.4853 21.0421L10.9993 12.5562L2.51403 21.0414C2.1235 21.432 1.49034 21.432 1.09981 21.0414C0.709589 20.6509 0.709388 20.0177 1.09981 19.6272L9.58509 11.1419L1.1005 2.65736C0.710017 2.26687 0.710091 1.63368 1.1005 1.24315C1.49103 0.852622 2.12419 0.852621 2.51472 1.24315L10.9993 9.72774L19.4846 1.24246C19.875 0.85205 20.5083 0.852239 20.8988 1.24246Z' fill='%234E5457' fill-opacity='0.3'/%3e%3c/svg%3e ");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include responsive1279 {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .catalog-section__body {
+  }
+}
