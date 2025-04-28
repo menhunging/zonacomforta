@@ -1,0 +1,47 @@
+.subcategories {
+  .subcategories__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .subcategories__caption {
+    font-family: $fontMain;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
+
+.subcategories-slider {
+  margin-top: 16px;
+
+  .swiper-slide {
+    background-color: rgba(78, 84, 87, 0.05);
+    border-radius: 8px;
+    cursor: pointer;
+    @include invisLink;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    transition: background-color 0.3s;
+
+    @include hover {
+      background-color: rgba(78, 84, 87, 0.11);
+    }
+  }
+
+  .picture-block {
+    width: 100px;
+    height: 96px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

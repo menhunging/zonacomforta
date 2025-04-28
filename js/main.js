@@ -145,6 +145,63 @@ $(document).ready(function () {
     Marquee(".marquee--alternate", speed, true);
   }
 
+  if ($(".subcategories-slider").length > 0) {
+    const sliders = document.querySelectorAll(".subcategories-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider)
+            .parents(".subcategories")
+            .find(".btnSwiperNext")[0];
+          navPrev = $(slider)
+            .parents(".subcategories")
+            .find(".btnSwiperPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 24,
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".blog-block-slider").length > 0) {
+    const swiper = new Swiper(".blog-block-slider", {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      navigation: {
+        prevEl: ".blog-block .btnSwiperPrev",
+        nextEl: ".blog-block .btnSwiperNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+      },
+    });
+  }
+
   // --------------------------------
 
   if ($(".selectric").length > 0) {
