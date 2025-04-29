@@ -171,6 +171,14 @@ $(document).ready(function () {
             },
             breakpoints: {
               0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1280: {
                 slidesPerView: 3,
                 spaceBetween: 24,
               },
@@ -195,10 +203,92 @@ $(document).ready(function () {
       },
       breakpoints: {
         0: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1280: {
           slidesPerView: 3,
           spaceBetween: 16,
         },
       },
+    });
+  }
+
+  if ($(".catalog-section__search").length > 0) {
+    $(".catalog-section__search input").on("input", function () {
+      if ($(this).val().trim() !== "") {
+        $(this).siblings(".btnClearSearch").show();
+      } else {
+        $(this).siblings(".btnClearSearch").hide();
+      }
+    });
+
+    $(".btnClearSearch").on("click", function () {
+      $(this).siblings("input").val("");
+      $(this).hide();
+    });
+  }
+
+  if ($(".filter").length > 0) {
+    $(".filter__title").on("click", function () {
+      if ($(this).hasClass("opened")) {
+        $(this)
+          .removeClass("opened")
+          .siblings(".filter__content")
+          .stop()
+          .slideUp();
+      } else {
+        $(this)
+          .addClass("opened")
+          .siblings(".filter__content")
+          .stop()
+          .slideDown();
+      }
+    });
+
+    $(".filter-mobile-button").on("click", toggleFilter);
+    $(".overlay, .filter-mobile-head__close").on("click", closeFilter);
+
+    function toggleFilter() {
+      $(".catalog-section__left, .overlay, body").toggleClass(
+        "opened visible hidden"
+      );
+    }
+
+    function closeFilter() {
+      $(".catalog-section__left, .overlay, body").removeClass(
+        "opened visible hidden"
+      );
+    }
+  }
+
+  if ($(".sort-block").length > 0) {
+    $(".sort-block").on("click", function () {
+      if ($(this).hasClass("opened")) {
+        $(this)
+          .removeClass("opened")
+          .find(".sort-block__list")
+          .stop()
+          .slideUp();
+      } else {
+        let self = $(this);
+
+        self.addClass("opened").find(".sort-block__list").stop().slideDown();
+
+        $(document).mouseup(function (e) {
+          if (!self.is(e.target) && self.has(e.target).length === 0) {
+            self
+              .removeClass("opened")
+              .find(".sort-block__list")
+              .stop()
+              .slideUp();
+          }
+        });
+      }
     });
   }
 

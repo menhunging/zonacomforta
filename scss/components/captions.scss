@@ -93,14 +93,20 @@ h4,
 .caption--h4 {
   font-size: 30px;
   line-height: 120%;
-  
+
   @include responsive1449 {
   }
 
   @include responsive1279 {
+    font-size: 24px;
   }
 
-  @include responsive1023 {
+  @include responsive767 {
+    font-size: 22px;
+  }
+
+  @include responsive479 {
+    font-size: 18px;
   }
 }
 

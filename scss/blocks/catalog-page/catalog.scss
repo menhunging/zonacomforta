@@ -120,6 +120,7 @@
       }
 
       .btnClearSearch {
+        display: none;
         cursor: pointer;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.8988 1.24246C21.2893 1.63297 21.2893 2.26614 20.8988 2.65667L12.4135 11.1419L20.8995 19.6279C21.29 20.0184 21.29 20.6516 20.8995 21.0421C20.509 21.4325 19.8758 21.4326 19.4853 21.0421L10.9993 12.5562L2.51403 21.0414C2.1235 21.432 1.49034 21.432 1.09981 21.0414C0.709589 20.6509 0.709388 20.0177 1.09981 19.6272L9.58509 11.1419L1.1005 2.65736C0.710017 2.26687 0.710091 1.63368 1.1005 1.24315C1.49103 0.852622 2.12419 0.852621 2.51472 1.24315L10.9993 9.72774L19.4846 1.24246C19.875 0.85205 20.5083 0.852239 20.8988 1.24246Z' fill='%234E5457' fill-opacity='0.3'/%3e%3c/svg%3e ");
         background-position: center;
@@ -156,6 +157,27 @@
     position: sticky;
     top: 8px;
     left: 0;
+
+    @include responsive1279 {
+      width: 280px;
+      padding: 16px;
+    }
+
+    @include responsive1023 {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      transition: left 0.3s;
+      background-color: $colorWhite;
+      z-index: 11;
+      padding: 0 16px 16px;
+      max-height: 100dvh;
+      overflow: auto;
+
+      &.opened {
+        left: 0;
+      }
+    }
   }
 
   .catalog-section__right {
@@ -164,6 +186,11 @@
     border: solid 1px $colorBlack-a2;
     border-radius: 8px;
     flex: 1;
+
+    @include responsive1279 {
+      width: calc(100% - 280px - 8px);
+      padding: 16px;
+    }
   }
 
   .catalog-section__bottom {
@@ -172,6 +199,10 @@
     border: solid 1px $colorBlack-a2;
     border-radius: 8px;
     margin-top: 8px;
+
+    @include responsive1279 {
+      padding: 16px;
+    }
 
     .catalog-text {
       padding: 0;
@@ -194,6 +225,27 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+
+  @include responsive1279 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    .product-item {
+      order: 4;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 2;
+      }
+    }
+  }
+
+  @include responsive639 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .product-item {
@@ -205,6 +257,11 @@
   line-height: 160%;
   border-radius: 24px;
   transition: all 0.3s;
+
+  @include responsive1279 {
+    font-size: 14px;
+    line-height: 120%;
+  }
 
   @include hover {
     background-color: $colorWhite;
@@ -227,6 +284,10 @@
     transition: transform 0.3s;
     @include invisLink;
 
+    @include responsive639 {
+      height: 180px;
+    }
+
     img {
       object-fit: contain;
     }
@@ -243,6 +304,12 @@
     font-size: 20px;
     line-height: 160%;
     transition: color 0.3s;
+
+    @include responsive1279 {
+      font-size: 18px;
+      min-height: 48px;
+      line-height: 120%;
+    }
 
     @include hover {
       color: $colorOrange;
@@ -266,6 +333,12 @@
     background-color: $colorBlack;
     border-color: $colorBlack;
 
+    @include responsive1279 {
+      background-color: $colorOrange;
+      border-color: $colorOrange;
+      opacity: 1;
+    }
+
     @include hover {
       background-color: $colorWhite;
     }
@@ -278,12 +351,94 @@
   font-size: 16px;
   line-height: 160%;
 
+  @include responsive1023 {
+    font-size: 14px;
+  }
+
   .catalog-text__text {
     columns: 2;
     margin-top: 12px;
+
+    @include responsive639 {
+      columns: initial;
+    }
   }
 
   p {
     margin-bottom: 20px;
+  }
+}
+
+.catalog-list__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 12px;
+}
+
+.sort-block {
+  font-size: 16px;
+  line-height: 160%;
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+
+  &.opened {
+    .sort-block__sort::before {
+      transform: scale(1, -1);
+    }
+  }
+
+  .sort-block__sort {
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer;
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.213013 0.202243C-0.0710045 0.471901 -0.0710045 0.909102 0.213013 1.17876L6.97148 7.59551C7.53952 8.13483 8.46048 8.13483 9.02852 7.59551L15.787 1.17876C16.071 0.909103 16.071 0.471901 15.787 0.202244C15.503 -0.0674137 15.0425 -0.0674137 14.7585 0.202244L8 6.619L1.24153 0.202243C0.957515 -0.0674143 0.497031 -0.0674144 0.213013 0.202243Z' fill='%23111111'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      right: 0;
+      top: 3px;
+    }
+  }
+
+  .sort-block__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $colorWhite;
+    border-radius: 16px;
+    padding: 16px;
+    width: 220px;
+
+    li {
+    }
+
+    a {
+      @include text-decoration-hover($colorBlack);
+    }
+  }
+}
+
+.filter-mobile-button {
+  display: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='SVGRepo_bgCarrier' stroke-width='0'%3e%3c/g%3e%3cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3e%3c/g%3e%3cg id='SVGRepo_iconCarrier'%3e%3cpath d='M17.9882 3H5.87976C4.25428 3 3.30773 4.8362 4.25068 6.16022L8.38005 11.9583C8.86259 12.6359 9.1219 13.447 9.1219 14.2788V18.3293C9.1219 19.8043 10.3176 21 11.7926 21C13.2676 21 14.4633 19.8043 14.4633 18.3293V14.3385C14.4633 13.4698 14.7461 12.6247 15.269 11.931L19.5854 6.20375C20.5787 4.88587 19.6385 3 17.9882 3Z' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  opacity: 0.7;
+
+  @include responsive1023 {
+    display: block;
   }
 }

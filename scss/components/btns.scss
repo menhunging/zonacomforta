@@ -105,6 +105,11 @@
     }
   }
 
+  &--white{
+    background-color: $colorWhite;
+    color: $colorBlack;
+  }
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;

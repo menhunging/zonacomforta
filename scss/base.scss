@@ -810,6 +810,12 @@ section {
     transition: all 0.3s;
     border-radius: 8px;
 
+    @include responsive639 {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+    }
+
     &.active {
       background-color: #4e5457;
       color: $colorWhite;
@@ -867,6 +873,26 @@ section {
       background-color: $colorOrange;
       border-color: $colorWhite;
     }
+  }
+}
+
+.overlay {
+  background-color: $colorBlack;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  transition: opacity 0.3s;
+
+  &.visible {
+    pointer-events: initial;
+    opacity: 0.55;
+    display: block;
   }
 }
 

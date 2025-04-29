@@ -16,6 +16,10 @@
     position: relative;
     cursor: pointer;
 
+    @include responsive1279 {
+      font-size: 18px;
+    }
+
     @include before {
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.213013 0.202243C-0.0710045 0.471901 -0.0710045 0.909102 0.213013 1.17876L6.97148 7.59551C7.53952 8.13483 8.46048 8.13483 9.02852 7.59551L15.787 1.17876C16.071 0.909103 16.071 0.471901 15.787 0.202244C15.503 -0.0674137 15.0425 -0.0674137 14.7585 0.202244L8 6.619L1.24153 0.202243C0.957515 -0.0674143 0.497031 -0.0674144 0.213013 0.202243Z' fill='%23111111'/%3e%3c/svg%3e ");
       background-position: center;
@@ -26,6 +30,12 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+    }
+
+    &.opened {
+      &::before {
+        transform: translateY(-50%) scale(1, -1);
+      }
     }
   }
 
@@ -49,6 +59,10 @@
       gap: 4px;
       min-height: 32px;
       @include text-decoration-hover($colorBlack);
+
+      @include responsive1279 {
+        font-size: 14px;
+      }
     }
 
     .picture-block {
@@ -124,7 +138,6 @@
         background-repeat: no-repeat;
 
         @include responsive1279 {
-          height: 50px;
           font-size: 14px;
         }
 
@@ -160,5 +173,31 @@
     height: 50px;
     margin-top: 24px;
     font-family: $fontMain;
+  }
+}
+
+.filter-mobile-head {
+  display: none;
+
+  @include responsive1023 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .filter-mobile-head__title {
+    font-family: $fontRadiotechnika;
+    font-weight: 700;
+  }
+
+  .filter-mobile-head__close {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='22' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.3988 1.24255C20.7893 1.63307 20.7893 2.26624 20.3988 2.65677L11.9135 11.142L20.3995 19.628C20.79 20.0185 20.79 20.6517 20.3995 21.0422C20.009 21.4326 19.3758 21.4327 18.9853 21.0422L10.4993 12.5563L2.01403 21.0415C1.6235 21.4321 0.990339 21.4321 0.599815 21.0415C0.209592 20.651 0.209391 20.0178 0.599815 19.6273L9.0851 11.142L0.600505 2.65746C0.210018 2.26697 0.210092 1.63378 0.600505 1.24324C0.991029 0.852721 1.62419 0.852721 2.01472 1.24324L10.4993 9.72784L18.9846 1.24255C19.375 0.852149 20.0083 0.852338 20.3988 1.24255Z' fill='%23000'/%3e%3c/svg%3e ");
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
   }
 }

@@ -5,9 +5,13 @@
 .blog-block__head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 
   .caption--h4 {
+    @include responsive767{
+      font-size: 24px;
+    }
   }
 
   .swiper-controls {

@@ -280,9 +280,15 @@
                     </div>
                     <div class="catalog-section__body">
                         <div class="catalog-section__left">
+
+                            <div class="filter-mobile-head">
+                                <span class="filter-mobile-head__title">Фильтр</span>
+                                <span class="filter-mobile-head__close"></span>
+                            </div>
+
                             <div class="filter">
                                 <div class="filter-row">
-                                    <div class="filter__title">Категории</div>
+                                    <div class="filter__title opened">Категории</div>
                                     <div class="filter__content">
                                         <ul>
                                             <li>
@@ -326,7 +332,7 @@
                                 </div>
 
                                 <div class="filter-row">
-                                    <div class="filter__title">Производитель</div>
+                                    <div class="filter__title opened">Производитель</div>
                                     <div class="filter__content">
 
                                         <div class="filter__search">
@@ -380,7 +386,7 @@
                                 </div>
 
                                 <div class="filter-row">
-                                    <div class="filter__title">Производитель</div>
+                                    <div class="filter__title opened">Производитель</div>
                                     <div class="filter__content">
 
                                         <div class="filter__search">
@@ -424,7 +430,6 @@
                                         <span class="btnSwiperNext"></span>
                                     </div>
                                 </div>
-
 
                                 <div class="subcategories-slider swiper">
                                     <div class="swiper-wrapper">
@@ -471,11 +476,22 @@
                                     </div>
                                 </div>
 
-
-
                             </div>
 
                             <div class="catalog-list">
+
+                                <div class="catalog-list__controls">
+                                    <div class="sort-block">
+                                        <span class="sort-block__sort">По популярности</span>
+
+                                        <ul class="sort-block__list">
+                                            <li><a href="#">По популярности</a></li>
+                                            <li><a href="#">По цене</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <span class="filter-mobile-button"></span>
+                                </div>
 
                                 <div class="product-list">
                                     <div class="product-item">
@@ -544,6 +560,26 @@
 
                                         <a href="#" class="btn btn--orange">Подробнее</a>
                                     </div>
+
+                                    <div class="marketplaces">
+                                        <div class="marketplaces__item ">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <img src="./../../img/bg-ozon.png" alt="">
+                                                </picture>
+                                            </div>
+                                            <a href="#" class="btn btn--white">Купить на Озон</a>
+                                        </div>
+                                        <div class="marketplaces__item">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <img src="./../../img/bg-partners.png" alt="">
+                                                </picture>
+                                            </div>
+                                            <a href="#" class="btn btn--white">Стать партнером</a>
+                                        </div>
+                                    </div>
+
                                     <div class="product-item">
 
                                         <div class="picture-block">
@@ -700,7 +736,6 @@
                                         <span class="btnSwiperNext"></span>
                                     </div>
                                 </div>
-
 
                                 <div class="subcategories-slider swiper">
                                     <div class="swiper-wrapper">
@@ -1002,6 +1037,8 @@
         </footer>
 
     </div>
+
+    <div class="overlay"></div>
 
 </body>
 
