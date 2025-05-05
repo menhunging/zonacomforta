@@ -143,8 +143,12 @@ $(document).ready(function () {
   if ($(".marquee").length > 0) {
     const speed = 0.4;
 
-    Marquee(".marquee--normal", speed);
-    Marquee(".marquee--alternate", speed, true);
+    if ($(window).width() < 768) {
+      // console.log("mobile");
+    } else {
+      Marquee(".marquee--normal", speed);
+      Marquee(".marquee--alternate", speed, true);
+    }
   }
 
   if ($(".subcategories-slider").length > 0) {

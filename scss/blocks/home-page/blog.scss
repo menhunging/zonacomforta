@@ -209,6 +209,11 @@
     @include responsive1279 {
       gap: 14px;
     }
+
+    @include responsive767{
+      overflow: auto;
+      padding: 0 8px;
+    }
   }
 
   .blog-item {
@@ -220,18 +225,22 @@
 
     @include responsive767 {
       width: 560px;
+      min-width: 560px;
     }
 
     @include responsive639 {
       width: 450px;
+      min-width: 450px;
     }
 
     @include responsive479 {
       width: 350px;
+      min-width: 350px;
     }
 
     @include responsive389 {
-      width: 320px;
+      width: 280px;
+      min-width: 280px;
     }
   }
 }

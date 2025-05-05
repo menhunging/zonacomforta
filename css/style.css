@@ -4574,6 +4574,12 @@ p {
     gap: 14px;
   }
 }
+@media (max-width: 767px) {
+  .marquee .marquee-list {
+    overflow: auto;
+    padding: 0 8px;
+  }
+}
 .marquee .blog-item {
   width: 558px;
 }
@@ -4585,21 +4591,25 @@ p {
 @media (max-width: 767px) {
   .marquee .blog-item {
     width: 560px;
+    min-width: 560px;
   }
 }
 @media (max-width: 639px) {
   .marquee .blog-item {
     width: 450px;
+    min-width: 450px;
   }
 }
 @media (max-width: 479px) {
   .marquee .blog-item {
     width: 350px;
+    min-width: 350px;
   }
 }
 @media (max-width: 389px) {
   .marquee .blog-item {
-    width: 320px;
+    width: 280px;
+    min-width: 280px;
   }
 }
 
