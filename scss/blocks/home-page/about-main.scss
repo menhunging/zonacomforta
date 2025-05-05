@@ -251,7 +251,7 @@
       }
     }
 
-    .btn {
+    .about-main__controls {
       grid-column: 2/4;
       margin-top: -107px;
       margin-bottom: -107px;
@@ -264,6 +264,9 @@
       @include responsive639 {
         grid-column: 1/3;
       }
+    }
+
+    .btn {
     }
   }
 }

@@ -18,58 +18,24 @@
 
 .start-working__item {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  min-height: 422px;
   border-radius: 24px;
-  padding: 0 118px;
   overflow: hidden;
   transition: background-color 0.3s;
 
-  @include responsive1449 {
-    min-height: 330px;
-    padding: 0 50px;
-  }
-
-  @include responsive1279 {
-    min-height: 300px;
-  }
-
-  @include responsive1023 {
-    padding: 0 15px;
-  }
-
-  @include responsive767 {
-    min-height: initial;
-    padding: 50px 15px;
-    gap: 30px;
-    font-size: 16px;
-    line-height: 120%;
-  }
-
-  @include responsive639 {
-    padding: 30px 15px;
-  }
-
-  @include responsive479 {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 0;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
   @include hover {
-    background-color: $colorBlack;
-    color: $colorWhite;
+    .start-working__inner {
+      background-color: $colorBlack;
+      color: $colorWhite;
+    }
   }
 
   &:nth-child(2n) {
-    flex-direction: row-reverse;
+    .start-working__inner {
+      flex-direction: row-reverse;
 
-    @include responsive479 {
-      flex-direction: column;
+      @include responsive479 {
+        flex-direction: column;
+      }
     }
   }
 }
@@ -82,7 +48,7 @@
     height: 300px;
     margin: 0 auto;
 
-    @include responsive1449{
+    @include responsive1449 {
       width: 270px;
       height: 270px;
     }
@@ -131,6 +97,48 @@ p {
   }
 
   @include responsive479 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.start-working__inner {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  padding: 0 118px;
+  min-height: 422px;
+
+  @include responsive1449 {
+    min-height: 330px;
+    padding: 0 50px;
+  }
+
+  @include responsive1279 {
+    min-height: 300px;
+  }
+
+  @include responsive1023 {
+    padding: 0 15px;
+  }
+
+  @include responsive767 {
+    min-height: initial;
+    padding: 50px 15px;
+    gap: 30px;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  @include responsive639 {
+    padding: 30px 15px;
+  }
+
+  @include responsive479 {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
     text-align: center;
     justify-content: center;
     align-items: center;

@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
@@ -257,11 +258,21 @@
                         <div class="swiper-slide">
                             <div class="container">
                                 <div class="grettings-main__content">
-                                    <h1 class="caption caption--h1">Текст для рекламной акции на четыре строки</h1>
-                                    <p>
+
+                                    <h1 class="caption caption--h1" data-aos="fade-up" data-aos-duration="1500">
+                                        Текст для рекламной акции на четыре строки</h1>
+
+                                    <p data-aos="fade-up" data-aos-duration="1700">
                                         Дополнительный текст для рекламного баннера
                                     </p>
-                                    <a href="#" class="btn btn--orange">Подробнее</a>
+
+                                    <div class="grettings-main__btns" data-aos="fade-up" data-aos-duration="1900">
+                                        <a href="#" class="btn btn--orange">
+                                            Подробнее
+                                        </a>
+                                    </div>
+
+
                                 </div>
                             </div>
 
@@ -342,9 +353,10 @@
             <section class="about-main">
                 <div class="container">
                     <div class="about-main__list">
-                        <h2 class="caption caption--h2">О нас</h2>
+                        <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="2000">О нас</h2>
 
-                        <div class="about-main__item about-main__item--one">
+                        <div class="about-main__item about-main__item--one" data-aos="fade-right"
+                            data-aos-duration="1500">
                             <span class="num">1500</span>
                             <p>
                                 Более 1500 отзывов с высоким рейтингом
@@ -357,7 +369,7 @@
                             </div>
                         </div>
 
-                        <div class="about-main__item about-main__item--two">
+                        <div class="about-main__item about-main__item--two" data-aos="fade-up" data-aos-duration="1500">
                             <span class="num">PRO</span>
                             <p>
                                 Профессиональная сборка и гарантийный сервис
@@ -370,7 +382,8 @@
                             </div>
                         </div>
 
-                        <div class="about-main__item about-main__item--video">
+                        <div class="about-main__item about-main__item--video" data-aos="fade-left"
+                            data-aos-duration="1200">
 
                             <a href="https://youtu.be/lcxHlmaWJoU" class="videoPlay" data-fancybox="aboutVideo">
                                 <span class="play"></span>
@@ -392,7 +405,8 @@
                             </div>
                         </div>
 
-                        <div class="about-main__item about-main__item--three">
+                        <div class="about-main__item about-main__item--three" data-aos="fade-right"
+                            data-aos-duration="1500">
                             <span class="num">500+</span>
                             <p>
                                 Товаров в каталоге
@@ -405,17 +419,20 @@
                             </div>
                         </div>
 
-                        <a href="#" class="btn btn--orange">узнать больше</a>
+                        <div class="about-main__controls" data-aos="fade-up" data-aos-duration="2000">
+                            <a href="#" class="btn btn--orange">узнать больше</a>
+                        </div>
+
                     </div>
                 </div>
             </section>
 
             <section class="assortment">
                 <div class="container">
-                    <h2 class="caption caption--h2">ассортимент</h2>
+                    <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="1500">ассортимент</h2>
 
                     <div class="assortment__list">
-                        <div class="assortment__item assortment__item--one">
+                        <div class="assortment__item assortment__item--one" data-aos="zoom-in" data-aos-duration="1200">
                             <a href="#"></a>
 
                             <div class="picture-block">
@@ -432,7 +449,7 @@
 
                         </div>
 
-                        <div class="assortment__item assortment__item--two">
+                        <div class="assortment__item assortment__item--two" data-aos="zoom-in" data-aos-duration="1500">
                             <a href="#"></a>
 
                             <div class="picture-block">
@@ -449,7 +466,8 @@
 
                         </div>
 
-                        <div class="assortment__item assortment__item--three">
+                        <div class="assortment__item assortment__item--three" data-aos="zoom-in"
+                            data-aos-duration="1700">
                             <a href="#"></a>
 
                             <div class="picture-block">
@@ -466,7 +484,8 @@
 
                         </div>
 
-                        <div class="assortment__item assortment__item--four">
+                        <div class="assortment__item assortment__item--four" data-aos="zoom-in"
+                            data-aos-duration="2000">
                             <a href="#"></a>
 
                             <div class="picture-block">
@@ -490,84 +509,99 @@
                 <div class="container">
                     <div class="brand-main__inner">
                         <div class="brand-main__content">
-                            <h2 class="caption caption--h2">
+                            <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="1000">
                                 <span class="caption__small">только проверенные</span> бренды
                             </h2>
-                            <p>
+                            <p data-aos="fade-right" data-aos-duration="1500">
                                 Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых Довольных
                                 клиентов и счастливых покупателей
                             </p>
-                            <a href="#" class="btn btn--orange btn--arrow">стать партнером</a> <!-- только десктоп -->
+                            <div class="brand-main__controls" data-aos="fade-right" data-aos-duration="1700">
+                                <a href="#" class="btn btn--orange btn--arrow">стать партнером</a>
+                            </div>
+                            <!-- только десктоп -->
                         </div>
 
-                        <div class="brand-main__logos">
-                            <div class="picture-block">
+                        <div class="brand-main__logos" data-aos="fade-left" data-aos-duration="1200">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="1000">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos1.webp" />
                                     <img src="./../../img/pic-logos1.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="1200">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos2.webp" />
                                     <img src="./../../img/pic-logos2.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="1400">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos2.webp" />
                                     <img src="./../../img/pic-logos2.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="1600">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos3.webp" />
                                     <img src="./../../img/pic-logos3.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="1800">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos4.webp" />
                                     <img src="./../../img/pic-logos4.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="2000">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos5.webp" />
                                     <img src="./../../img/pic-logos5.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="2200">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos5.webp" />
                                     <img src="./../../img/pic-logos5.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="2400">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos2.webp" />
                                     <img src="./../../img/pic-logos2.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="2600">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos3.webp" />
                                     <img src="./../../img/pic-logos3.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="2800">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos2.webp" />
                                     <img src="./../../img/pic-logos2.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="3000">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos6.webp" />
                                     <img src="./../../img/pic-logos6.jpg" alt="">
                                 </picture>
                             </div>
-                            <div class="picture-block">
+                            <div class="picture-block" data-aos="zoom-in-up" data-aos-duration="1500"
+                                data-aos-delay="3000">
                                 <picture>
                                     <source type="image/webp" srcset="./../../img/pic-logos1.webp" />
                                     <img src="./../../img/pic-logos1.jpg" alt="">
@@ -585,21 +619,24 @@
             <section class="why-main">
                 <div class="container">
                     <div class="why-main__head">
-                        <h2 class="caption caption--h2">Почему мы</h2>
+                        <h2 class="caption caption--h2" data-aos="fade-left" data-aos-duration="1500">Почему мы</h2>
                     </div>
                     <div class="why-main__body">
-                        <div class="why-item">
-                            <div class="why-item__num">
-                                01
+                        <div class="why-item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="why-item__inner">
+                                <div class="why-item__num">
+                                    01
+                                </div>
+                                <div class="why-item__content">
+                                    <span class="why-item__title">Стабильное выполнение обязательств</span>
+                                    <p>
+                                        Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
+                                        Довольных клиентов и счастливых покупателей
+                                    </p>
+                                    <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
+                                </div>
                             </div>
-                            <div class="why-item__content">
-                                <span class="why-item__title">Стабильное выполнение обязательств</span>
-                                <p>
-                                    Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
-                                    Довольных клиентов и счастливых покупателей
-                                </p>
-                                <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
-                            </div>
+
                             <div class="why-item__media">
                                 <div class="picture-block">
                                     <picture>
@@ -611,18 +648,21 @@
                             </div>
                         </div>
 
-                        <div class="why-item">
-                            <div class="why-item__num">
-                                01
+                        <div class="why-item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="why-item__inner">
+                                <div class="why-item__num">
+                                    01
+                                </div>
+                                <div class="why-item__content">
+                                    <span class="why-item__title">Стабильное выполнение обязательств</span>
+                                    <p>
+                                        Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
+                                        Довольных клиентов и счастливых покупателей
+                                    </p>
+                                    <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
+                                </div>
                             </div>
-                            <div class="why-item__content">
-                                <span class="why-item__title">Стабильное выполнение обязательств</span>
-                                <p>
-                                    Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
-                                    Довольных клиентов и счастливых покупателей
-                                </p>
-                                <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
-                            </div>
+
                             <div class="why-item__media">
                                 <div class="picture-block">
                                     <picture>
@@ -634,17 +674,19 @@
                             </div>
                         </div>
 
-                        <div class="why-item">
-                            <div class="why-item__num">
-                                01
-                            </div>
-                            <div class="why-item__content">
-                                <span class="why-item__title">Стабильное выполнение обязательств</span>
-                                <p>
-                                    Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
-                                    Довольных клиентов и счастливых покупателей
-                                </p>
-                                <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
+                        <div class="why-item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="why-item__inner">
+                                <div class="why-item__num">
+                                    01
+                                </div>
+                                <div class="why-item__content">
+                                    <span class="why-item__title">Стабильное выполнение обязательств</span>
+                                    <p>
+                                        Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
+                                        Довольных клиентов и счастливых покупателей
+                                    </p>
+                                    <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
+                                </div>
                             </div>
                             <div class="why-item__media">
                                 <div class="picture-block">
@@ -657,17 +699,19 @@
                             </div>
                         </div>
 
-                        <div class="why-item">
-                            <div class="why-item__num">
-                                01
-                            </div>
-                            <div class="why-item__content">
-                                <span class="why-item__title">Стабильное выполнение обязательств</span>
-                                <p>
-                                    Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
-                                    Довольных клиентов и счастливых покупателей
-                                </p>
-                                <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
+                        <div class="why-item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="why-item__inner">
+                                <div class="why-item__num">
+                                    01
+                                </div>
+                                <div class="why-item__content">
+                                    <span class="why-item__title">Стабильное выполнение обязательств</span>
+                                    <p>
+                                        Довольных клиентов и счастливых покупателей Довольных клиентов и счастливых
+                                        Довольных клиентов и счастливых покупателей
+                                    </p>
+                                    <a href="#" class="btn btn--black btn--arrow">стать партнером</a>
+                                </div>
                             </div>
                             <div class="why-item__media">
                                 <div class="picture-block">
@@ -685,84 +729,93 @@
 
             <section class="start-working">
                 <div class="container">
-                    <h2 class="caption caption--h2">Начни работу с нами</h2>
+                    <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="1500">Начни работу с нами
+                    </h2>
 
                     <div class="start-working__list">
-                        <div class="start-working__item">
-                            <div class="start-working__media">
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-working1.webp" />
-                                        <img src="./../../img/pic-working1.png" alt="">
-                                    </picture>
-                                </div>
+                        <div class="start-working__item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="start-working__inner">
+                                <div class="start-working__media">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-working1.webp" />
+                                            <img src="./../../img/pic-working1.png" alt="">
+                                        </picture>
+                                    </div>
 
+                                </div>
+                                <div class="start-working__content">
+                                    <h3 class="caption caption--h3">Широкий ассортимент товаров</h3>
+                                    <p>
+                                        Всё для комфортного и безопасного использования.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="start-working__content">
-                                <h3 class="caption caption--h3">Широкий ассортимент товаров</h3>
-                                <p>
-                                    Всё для комфортного и безопасного использования.
-                                </p>
+                        </div>
+
+                        <div class="start-working__item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="start-working__inner">
+                                <div class="start-working__media">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-working2.webp" />
+                                            <img src="./../../img/pic-working2.png" alt="">
+                                        </picture>
+                                    </div>
+
+                                </div>
+                                <div class="start-working__content">
+                                    <h3 class="caption caption--h3">Логистика</h3>
+                                    <p>
+                                        Отгрузка со складов в Московской области (г. Балашиха) и Кыргызстане (г.
+                                        Бишкек),
+                                        что обеспечивает оперативность и надежность поставок.
+                                    </p>
+                                </div>
                             </div>
 
                         </div>
 
-                        <div class="start-working__item">
-                            <div class="start-working__media">
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-working2.webp" />
-                                        <img src="./../../img/pic-working2.png" alt="">
-                                    </picture>
-                                </div>
+                        <div class="start-working__item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="start-working__inner">
+                                <div class="start-working__media">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-working3.webp" />
+                                            <img src="./../../img/pic-working3.png" alt="">
+                                        </picture>
+                                    </div>
 
-                            </div>
-                            <div class="start-working__content">
-                                <h3 class="caption caption--h3">Логистика</h3>
-                                <p>
-                                    Отгрузка со складов в Московской области (г. Балашиха) и Кыргызстане (г. Бишкек),
-                                    что обеспечивает оперативность и надежность поставок.
-                                </p>
+                                </div>
+                                <div class="start-working__content">
+                                    <h3 class="caption caption--h3">Индивидуальный подход к каждому контракту</h3>
+                                    <p>
+                                        Наши специалисты учитывают все пожелания и требования клиентов.
+                                    </p>
+                                </div>
                             </div>
 
                         </div>
 
-                        <div class="start-working__item">
-                            <div class="start-working__media">
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-working3.webp" />
-                                        <img src="./../../img/pic-working3.png" alt="">
-                                    </picture>
+                        <div class="start-working__item" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="start-working__inner">
+                                <div class="start-working__media">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-working4.webp" />
+                                            <img src="./../../img/pic-working4.png" alt="">
+                                        </picture>
+                                    </div>
+
                                 </div>
-
-                            </div>
-                            <div class="start-working__content">
-                                <h3 class="caption caption--h3">Индивидуальный подход к каждому контракту</h3>
-                                <p>
-                                    Наши специалисты учитывают все пожелания и требования клиентов.
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <div class="start-working__item">
-                            <div class="start-working__media">
-                                <div class="picture-block">
-                                    <picture>
-                                        <source type="image/webp" srcset="./../../img/pic-working4.webp" />
-                                        <img src="./../../img/pic-working4.png" alt="">
-                                    </picture>
+                                <div class="start-working__content">
+                                    <h3 class="caption caption--h3">Соблюдение стандартов</h3>
+                                    <p>
+                                        Упаковочные листы, штрих-коды и другие требования выполняются с высокой
+                                        точностью.
+                                    </p>
                                 </div>
-
                             </div>
-                            <div class="start-working__content">
-                                <h3 class="caption caption--h3">Соблюдение стандартов</h3>
-                                <p>
-                                    Упаковочные листы, штрих-коды и другие требования выполняются с высокой точностью.
-                                </p>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -770,10 +823,12 @@
 
             <section class="faq-section">
                 <div class="container">
-                    <h2 class="caption caption--h2"><span>Ответы</span> <span>на вопросы</span></h2>
+                    <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="1500"><span>Ответы</span>
+                        <span>на вопросы</span>
+                    </h2>
 
                     <div class="faq-list">
-                        <div class="faq-item opened">
+                        <div class="faq-item opened" data-aos="fade-up" data-aos-duration="1500">
                             <div class="faq-section__quest active">
                                 <span>Вопрос первый</span>
                             </div>
@@ -785,7 +840,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-duration="1500">
                             <div class="faq-section__quest">
                                 <span>Вопрос второй</span>
                             </div>
@@ -797,7 +852,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-duration="1500">
                             <div class="faq-section__quest">
                                 <span>Вопрос третий на две строки</span>
                             </div>
@@ -809,7 +864,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-duration="1500">
                             <div class="faq-section__quest">
                                 <span>Вопрос четвертый</span>
                             </div>
@@ -821,7 +876,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="faq-item">
+                        <div class="faq-item" data-aos="fade-up" data-aos-duration="1500">
                             <div class="faq-section__quest">
                                 <span>Вопрос пятый</span>
                             </div>
@@ -833,7 +888,9 @@
                                 </p>
                             </div>
                         </div>
-                        <a href="#" class="btn btn--orange btn--arrow">задать вопрос</a>
+                        <div class="faq-controls" data-aos="fade-up" data-aos-duration="1500">
+                            <a href="#" class="btn btn--orange btn--arrow">задать вопрос</a>
+                        </div>
                     </div>
 
                 </div>
@@ -842,7 +899,8 @@
             <section class="blog-main">
                 <div class="container">
                     <div class="blog-main__head">
-                        <h2 class="caption caption--h2"> <span class="caption__small">Эксклюзивный</span> блог</h2>
+                        <h2 class="caption caption--h2" data-aos="fade-left" data-aos-duration="1500"> <span
+                                class="caption__small">Эксклюзивный</span> блог</h2>
                     </div>
                 </div>
 
@@ -1041,7 +1099,7 @@
                 </div>
 
                 <div class="container">
-                    <div class="blog-main__controls">
+                    <div class="blog-main__controls" data-aos="fade-up" data-aos-duration="1500">
                         <a href="#" class="btn btn--orange btn--arrow">перейти в блог</a>
 
                         <div class="blog-main__text">
@@ -1057,9 +1115,9 @@
 
             <section class="reviews-main">
                 <div class="container">
-                    <h2 class="caption caption--h2">отзывы</h2>
+                    <h2 class="caption caption--h2" data-aos="fade-up" data-aos-duration="1500">отзывы</h2>
 
-                    <div class="reviews-slider swiper">
+                    <div class="reviews-slider swiper" data-aos="fade-up" data-aos-duration="2000">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="picture-block">
@@ -1140,10 +1198,12 @@
             <section class="partners">
                 <div class="container">
                     <div class="partners__head">
-                        <h2 class="caption caption--h2">
-                            <span class="caption__small">всегда рады новым</span>
+                        <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="1200">
+                            <span class="caption__small" data-aos="fade-right" data-aos-duration="1500">всегда рады
+                                новым</span>
                             партнерам
-                            <span class="caption__small">подберем лучшие условия для вас</span>
+                            <span class="caption__small" data-aos="fade-left" data-aos-duration="1800">подберем лучшие
+                                условия для вас</span>
                         </h2>
                     </div>
 
@@ -1286,6 +1346,7 @@
 <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
 <script src="../../libs/fancybox/fancybox.umd.js"></script>
 <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<script src="../../libs/aos/aos.js"></script>
 <script src="../../js/main.js"></script>
 
 </html>

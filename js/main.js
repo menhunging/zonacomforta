@@ -47,6 +47,8 @@ $(document).ready(function () {
     const swiper = new Swiper(".grettings-main-slider", {
       slidesPerView: 1,
       spaceBetween: 16,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
       loop: true,
       autoplay: {
         delay: 5000,
@@ -355,6 +357,16 @@ $(document).ready(function () {
     $("[data-modal]").map(function () {
       $(this).click((e) => e.preventDefault());
     });
+  }
+
+  if ($("[data-aos]").length > 0) {
+    if ($(window).width() < 1280) {
+      AOS.init({
+        disable: true,
+      });
+    } else {
+      AOS.init();
+    }
   }
 
   // --------------------------------

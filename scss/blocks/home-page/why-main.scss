@@ -29,37 +29,46 @@
 }
 
 .why-item {
-  display: flex;
-  align-items: flex-start;
+  color: $colorWhite-a6;
   border-radius: 24px;
   overflow: hidden;
-  color: $colorWhite-a6;
-  padding: 44px 37px;
-  gap: 100px;
   position: relative;
-  transition: all 0.3s;
 
-  @include responsive1449 {
-    padding: 30px 25px;
-  }
-
-  @include responsive1279 {
-    gap: 30px;
-    padding: 24px;
-  }
-
-  @include responsive479 {
+  .why-item__inner {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 16px;
+    align-items: flex-start;
+    padding: 44px 37px;
+    gap: 100px;
+    position: relative;
+    transition: all 0.3s;
+    width: 100%;
+
+    @include responsive1449 {
+      padding: 30px 25px;
+    }
+
+    @include responsive1279 {
+      gap: 30px;
+      padding: 24px;
+    }
+
+    @include responsive479 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 16px;
+    }
   }
 
   &:nth-child(1) {
-    background-color: #3b6153;
+    .why-item__inner {
+      background-color: #3b6153;
+    }
 
     @include hover {
-      background-color: #467463;
+      .why-item__inner {
+        background-color: #467463;
+      }
     }
   }
 
@@ -67,23 +76,33 @@
     background-color: #728962;
 
     @include hover {
-      background-color: #819b6f;
+      .why-item__inner {
+        background-color: #819b6f;
+      }
     }
   }
 
   &:nth-child(3) {
-    background-color: #9b8644;
+    .why-item__inner {
+      background-color: #9b8644;
+    }
 
     @include hover {
-      background-color: #ab954b
+      .why-item__inner {
+        background-color: #ab954b;
+      }
     }
   }
 
   &:nth-child(4) {
-    background-color: #82573f;
+    .why-item__inner {
+      background-color: #82573f;
+    }
 
     @include hover {
-      background-color: #8d5e44;
+      .why-item__inner {
+        background-color: #8d5e44;
+      }
     }
   }
 
