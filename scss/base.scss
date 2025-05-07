@@ -17,6 +17,29 @@ body {
       padding-top: 0;
     }
   }
+
+  &.is-openCatalogMenu {
+    .header {
+      .header-block-drop,
+      .logo,
+      .burger-menu {
+        pointer-events: none;
+        opacity: 0.11;
+        z-index: -1;
+      }
+    }
+  }
+
+  &.is-openMenu {
+    overflow: hidden;
+    margin-right: 17px !important;
+
+    .overlay {
+      &.visible {
+        z-index: 11;
+      }
+    }
+  }
 }
 
 .container {
@@ -87,19 +110,14 @@ div {
   cursor: pointer;
   position: relative;
   transition: transform 0.3s;
-  width: 133px;
-  min-width: 133px;
-  height: 27px;
+  width: 142px;
+  min-width: 142px;
+  height: 40px;
   @include invisLink;
 
-  @include responsive1449 {
-    width: 184px;
-    height: 46px;
-  }
-
   @include responsive1279 {
-    width: 270px;
-    height: 51px;
+    width: 180px;
+    height: 50px;
   }
 
   @include responsive767 {
@@ -136,7 +154,7 @@ div {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 138px;
+  padding-top: 100px;
 
   @include responsive1279 {
     padding-top: 105px;
@@ -779,6 +797,7 @@ section {
     width: 39px;
     height: 24px;
     display: flex;
+    left: 1px;
   }
 }
 
@@ -877,7 +896,7 @@ section {
 }
 
 .overlay {
-  background-color: $colorBlack;
+  background-color: $colorDark;
   position: fixed;
   top: 0;
   left: 0;
@@ -891,7 +910,7 @@ section {
 
   &.visible {
     pointer-events: initial;
-    opacity: 0.55;
+    opacity: 0.9;
     display: block;
   }
 }

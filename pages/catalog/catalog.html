@@ -34,17 +34,25 @@
 
                     <div class="burger-mobile header-link">
                         <div class="burger-mobile__burger">
+                            <!-- <span class="burger-mobile__line"></span>
                             <span class="burger-mobile__line"></span>
-                            <span class="burger-mobile__line"></span>
-                            <span class="burger-mobile__line"></span>
+                            <span class="burger-mobile__line"></span> -->
                         </div>
                         <span class="burger-mobile__text">Меню</span>
+                    </div>
+
+                    <div class="burger-catalog">
+                        <span class="burger-catalog__text">Каталог товаров</span>
+                    </div>
+
+                    <div class="burger-menu header-link">
+                        <span class="burger-menu__text">Меню</span>
                     </div>
 
                     <div class="logo">
                         <picture>
                             <source media="(max-width: 767px)" srcset="./../../img/svg/logo-small.svg">
-                            <img src="./../../img/svg/logo.svg" alt="logo">
+                            <img src="./../../img/svg/logo-black.svg" alt="logo">
                         </picture>
                     </div>
 
@@ -55,6 +63,7 @@
                             class="header-controls-mobile__link header-controls-mobile__link--mail"></a>
                     </div>
 
+                    <!-- старое меню для мобилы -->
                     <div class="header-menu">
                         <div class="link-menu-catalog header-link">
                             <div class="link-menu-catalog__burger">
@@ -65,7 +74,8 @@
                             <span class="link-menu-catalog__text">Каталог товаров</span>
                         </div>
 
-                        <div class="invisProductCatalog">
+                        <div class="invisProductCatalog invisProductCatalog--mobile">
+
                             <div class="assortment__list assortment__list--catalog">
 
                                 <div class="assortment__item">
@@ -175,6 +185,7 @@
 
                                 </div>
                             </div>
+
                         </div>
 
                         <nav class="header-list">
@@ -211,18 +222,80 @@
                             </ul>
                         </nav>
 
-                        <a href="tel:88008000800" class="link-phone header-link">8 (800) 8000 800</a>
-
-                        <a href="mailto:zonakomforta@zk.ru" class="link-mail header-link">zonakomforta@zk.ru</a>
-                        <div class="lang">
-                            <div class="lang-current">
+                        <div class="header-block-drop">
+                            <div class="mobileDrop">
                                 <div class="lang-current__flag">
                                     <img src="../../img/svg/flag1.svg" alt="ru">
                                 </div>
-                                <span class="lang-current__text">RU</span>
+
+                                <a href="tel:88008000800" class="link-phone">8 (800) 8000 800</a>
                             </div>
 
-                            <div class="lang-invis">
+                            <div class="header-drop-invis">
+                                <ul class="header-drop-invis__list">
+                                    <li class="header-drop-invis__item">
+                                        <a href="tel:88008000800" class="header-drop-invis__link">
+                                            <div class="lang-flag">
+                                                <img src="../../img/svg/flag1.svg" alt="ru">
+                                            </div>
+                                            <span>8 (800) 8000 800</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="header-drop-invis__item">
+                                        <a href="tel:88008000800" class="header-drop-invis__link">
+                                            <div class="lang-flag">
+                                                <img src="../../img/svg/flag2.svg" alt="en">
+                                            </div>
+                                            <span>8 (800) 8000 800</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="header-block-drop">
+                            <div class="mobileDrop">
+                                <div class="lang-current__flag">
+                                    <img src="../../img/svg/flag1.svg" alt="ru">
+                                </div>
+                                <a href="mailto:zonakomforta@zk.ru" class="link-mail">zonakomforta@zk.ru</a>
+                            </div>
+
+                            <div class="header-drop-invis">
+                                <ul class="header-drop-invis__list">
+                                    <li class="header-drop-invis__item">
+                                        <a href="mailto:zonakomforta@zk.ru" class="header-drop-invis__link">
+                                            <div class="lang-flag">
+                                                <img src="../../img/svg/flag1.svg" alt="ru">
+                                            </div>
+                                            <span>zonakomforta@zk.ru</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="header-drop-invis__item">
+                                        <a href="mailto:zonakomforta@zk.ru" class="header-drop-invis__link">
+                                            <div class="lang-flag">
+                                                <img src="../../img/svg/flag2.svg" alt="en">
+                                            </div>
+                                            <span>zonakomforta@zk.ru</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="lang ">
+                            <div class="mobileDrop">
+                                <div class="lang-current">
+                                    <div class="lang-current__flag">
+                                        <img src="../../img/svg/flag1.svg" alt="ru">
+                                    </div>
+                                    <span class="lang-current__text">RU</span>
+                                </div>
+                            </div>
+
+                            <div class="lang-invis header-drop-invis">
                                 <ul class="lang__list">
                                     <li class="lang__item active">
                                         <a href="#" class="lang__link">
@@ -243,6 +316,211 @@
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <!-- /старое меню для мобилы -->
+
+                    <div class="header-block-drop">
+                        <div class="lang-current__flag">
+                            <img src="../../img/svg/flag1.svg" alt="ru">
+                        </div>
+
+                        <a href="tel:88008000800" class="link-phone">8 (800) 8000 800</a>
+
+                        <div class="header-drop-invis">
+                            <ul class="header-drop-invis__list">
+                                <li class="header-drop-invis__item">
+                                    <a href="tel:88008000800" class="header-drop-invis__link">
+                                        <div class="lang-flag">
+                                            <img src="../../img/svg/flag1.svg" alt="ru">
+                                        </div>
+                                        <span>8 (800) 8000 800</span>
+                                    </a>
+                                </li>
+
+                                <li class="header-drop-invis__item">
+                                    <a href="tel:88008000800" class="header-drop-invis__link">
+                                        <div class="lang-flag">
+                                            <img src="../../img/svg/flag2.svg" alt="en">
+                                        </div>
+                                        <span>8 (800) 8000 800</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header-block-drop">
+                        <div class="lang-current__flag">
+                            <img src="../../img/svg/flag1.svg" alt="ru">
+                        </div>
+
+                        <a href="mailto:zonakomforta@zk.ru" class="link-mail">zonakomforta@zk.ru</a>
+
+                        <div class="header-drop-invis">
+                            <ul class="header-drop-invis__list">
+                                <li class="header-drop-invis__item">
+                                    <a href="mailto:zonakomforta@zk.ru" class="header-drop-invis__link">
+                                        <div class="lang-flag">
+                                            <img src="../../img/svg/flag1.svg" alt="ru">
+                                        </div>
+                                        <span>zonakomforta@zk.ru</span>
+                                    </a>
+                                </li>
+
+                                <li class="header-drop-invis__item">
+                                    <a href="mailto:zonakomforta@zk.ru" class="header-drop-invis__link">
+                                        <div class="lang-flag">
+                                            <img src="../../img/svg/flag2.svg" alt="en">
+                                        </div>
+                                        <span>zonakomforta@zk.ru</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lang header-block-drop">
+                        <div class="lang-current">
+                            <div class="lang-current__flag">
+                                <img src="../../img/svg/flag1.svg" alt="ru">
+                            </div>
+                            <span class="lang-current__text">RU</span>
+                        </div>
+
+                        <div class="lang-invis">
+                            <ul class="lang__list">
+                                <li class="lang__item active">
+                                    <a href="#" class="lang__link">
+                                        <div class="lang-flag">
+                                            <img src="../../img/svg/flag1.svg" alt="ru">
+                                        </div>
+                                        <span>RU</span>
+                                    </a>
+                                </li>
+                                <li class="lang__item">
+                                    <a href="#" class="lang__link">
+                                        <div class="lang-flag">
+                                            <img src="../../img/svg/flag2.svg" alt="en">
+                                        </div>
+                                        <span>EN</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="invisProductCatalog invisProductCatalog--desktop">
+
+                        <div class="assortment__list assortment__list--catalog">
+
+                            <div class="assortment__item">
+                                <a href="#"></a>
+
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-assortment4.webp">
+                                        <img src="./../../img/pic-assortment4.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="assortment__content">
+                                    <span class="assortment__text">
+                                        грили
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="assortment__item">
+                                <a href="#"></a>
+
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-assortment2.webp">
+                                        <img src="./../../img/pic-assortment2.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="assortment__content">
+                                    <span class="assortment__text">
+                                        Композитные газовые баллоны Hexagon Ragasco
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="assortment__item">
+                                <a href="#"></a>
+
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-assortment4.webp">
+                                        <img src="./../../img/pic-assortment4.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="assortment__content">
+                                    <span class="assortment__text">
+                                        грили
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="assortment__item">
+                                <a href="#"></a>
+
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-assortment5.webp">
+                                        <img src="./../../img/pic-assortment5.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="assortment__content">
+                                    <span class="assortment__text">
+                                        Композитные газовы баллоны Hexagon Ragasco
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="assortment__item">
+                                <a href="#"></a>
+
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-assortment3.webp">
+                                        <img src="./../../img/pic-assortment3.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="assortment__content">
+                                    <span class="assortment__text">Газовые обогреватели с имитацией живого
+                                        пламени</span>
+                                </div>
+
+                            </div>
+
+                            <div class="assortment__item">
+                                <a href="#"></a>
+
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/pic-assortment1.webp">
+                                        <img src="./../../img/pic-assortment1.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="assortment__content">
+                                    <span class="assortment__text">
+                                        Аксессуары для грилей
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -505,6 +783,156 @@
     </div>
 
     <div class="overlay"></div>
+
+    <div class="menu-invis">
+
+        <span class="menu-invis__close"></span>
+
+        <div class="logo">
+            <picture>
+                <img src="./../../img/svg/logo.svg" alt="logo">
+            </picture>
+        </div>
+
+        <ul class="menu-invis-menu">
+            <li class="menu-invis-menu__sub">
+                <a href="#" class="menu-invis-menu__arrow">Компания</a>
+                <ul class="sub">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Стать партнёром</a></li>
+            <li><a href="#">Где купить</a></li>
+        </ul>
+
+        <div class="menu-invis-catalog">
+
+            <span class="menu-invis-catalog__title">Продукция</span>
+
+            <div class="menu-invis-catalog__item">
+                <a href="#"></a>
+
+                <div class="picture-block">
+                    <picture>
+                        <source type="image/webp" srcset="./../../img/pic-assortment5.webp">
+                        <img src="./../../img/pic-assortment5.jpg" alt="">
+                    </picture>
+                </div>
+
+                <span class="menu-invis-catalog__name">Обогреватели</span>
+            </div>
+
+            <div class="menu-invis-catalog__item">
+                <a href="#"></a>
+
+                <div class="picture-block">
+                    <picture>
+                        <source type="image/webp" srcset="./../../img/pic-assortment3.webp">
+                        <img src="./../../img/pic-assortment3.jpg" alt="">
+                    </picture>
+                </div>
+
+                <span class="menu-invis-catalog__name">Баллоны</span>
+            </div>
+
+            <div class="menu-invis-catalog__item">
+                <a href="#"></a>
+
+                <div class="picture-block">
+                    <picture>
+                        <source type="image/webp" srcset="./../../img/pic-assortment4.webp">
+                        <img src="./../../img/pic-assortment4.jpg" alt="">
+                    </picture>
+                </div>
+
+                <span class="menu-invis-catalog__name">Обогреватели</span>
+            </div>
+
+            <div class="menu-invis-catalog__item">
+                <a href="#"></a>
+
+                <div class="picture-block">
+                    <picture>
+                        <source type="image/webp" srcset="./../../img/pic-assortment5.webp">
+                        <img src="./../../img/pic-assortment5.jpg" alt="">
+                    </picture>
+                </div>
+
+                <span class="menu-invis-catalog__name">Баллоны</span>
+            </div>
+
+            <div class="menu-invis-catalog__item">
+                <a href="#"></a>
+
+                <div class="picture-block">
+                    <picture>
+                        <source type="image/webp" srcset="./../../img/pic-assortment2.webp">
+                        <img src="./../../img/pic-assortment2.jpg" alt="">
+                    </picture>
+                </div>
+
+                <span class="menu-invis-catalog__name">Обогреватели</span>
+            </div>
+
+            <div class="menu-invis-catalog__item">
+                <a href="#"></a>
+
+                <div class="picture-block">
+                    <picture>
+                        <source type="image/webp" srcset="./../../img/pic-assortment1.webp">
+                        <img src="./../../img/pic-assortment1.jpg" alt="">
+                    </picture>
+                </div>
+
+                <span class="menu-invis-catalog__name">Баллоны</span>
+            </div>
+        </div>
+
+        <div class="menu-invis-contacts">
+            <span class="menu-invis-contacts__title">Контакты</span>
+
+            <p>
+                Москва, пр. Ильича 150, 2 этаж <br /> пн-вс с 9:00 до 21:00
+            </p>
+            <p>
+                Р-ка Казахстан, г. Астана, ул. <br /> Достык, д. 18, офис 307 пн-вс с 9:00 до 21:00
+            </p>
+
+            <a href="#" class="btn btn--black btn--arrow">Смотреть на карте</a>
+        </div>
+
+        <div class="menu-invis-social">
+            <span class="menu-invis-social__title">Наши соц сети</span>
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../../img/svg/telegram.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../img/svg/vk.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../img/svg/rutube.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../img/svg/dzen.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </body>
 

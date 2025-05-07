@@ -104,6 +104,10 @@
     min-width: 250px;
   }
 
+  @include responsive1023 {
+    min-width: initial;
+  }
+
   @include responsive767 {
     min-width: initial;
     width: 100%;
