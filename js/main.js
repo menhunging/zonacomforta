@@ -465,16 +465,48 @@ $(document).ready(function () {
     }
   }
 
-  // --------------------------------
-
-  if ($(".selectric").length > 0) {
-    $(".selectric").map(function () {
-      $(this).selectric({
-        onOpen: function (element) {},
-        onChange: function (element) {},
-        onClose: function (element) {},
-      });
+  if ($(".product-section-slider ").length > 0) {
+    const swiper = new Swiper(".product-slider-more", {
+      slidesPerView: 4,
+      spaceBetween: 32,
+      navigation: {
+        nextEl: ".product-section-slider  .btnSwiperNext ",
+        prevEl: ".product-section-slider  .btnSwiperPrev",
+      },
+      breakpoints: {
+        0: {
+          spaceBetween: 16,
+          slidesPerView: 1,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1024: {
+          spaceBetween: 24,
+          slidesPerView: 3,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 32,
+        },
+      },
     });
+  }
+
+  if ($(".marketplaces__item").length > 0) {
+    if ($(window).width() < 1280) {
+      $(".marketplaces__item").on("click", function (event) {
+        event.preventDefault();
+        $(this).addClass("opened");
+      });
+
+      $(document).on("click", function (event) {
+        if (!$(event.target).closest(".marketplaces__item").length) {
+          $(".marketplaces__item").removeClass("opened");
+        }
+      });
+    }
   }
 });
 

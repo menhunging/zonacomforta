@@ -896,7 +896,7 @@ section {
 }
 
 .overlay {
-  background-color: $colorDark;
+  background-color: #edeadf;
   position: fixed;
   top: 0;
   left: 0;
@@ -905,13 +905,11 @@ section {
   z-index: 10;
   opacity: 0;
   pointer-events: none;
-  display: none;
   transition: opacity 0.3s;
 
   &.visible {
     pointer-events: initial;
     opacity: 0.9;
-    display: block;
   }
 }
 
