@@ -6517,7 +6517,7 @@ p {
   }
 }
 .marketplaces .marketplaces__item--ozon::before {
-  background-image: url("./../../img/svg/bg-ozon.svg");
+  background-image: url("./../img/svg/bg-ozon.svg");
   z-index: 0;
   background-position: center;
   background-repeat: no-repeat;
@@ -6529,7 +6529,7 @@ p {
   background: linear-gradient(90deg, #ff5500 25%, #ff8800 100%);
 }
 .marketplaces .marketplaces__item--partners::after {
-  background-image: url("./../../img/market-parners1.png"), url("./../../img/market-parners2.png");
+  background-image: url("./../img/market-parners1.png"), url("./../../img/market-parners2.png");
   background-size: 75px, contain;
 }
 .marketplaces .picture-block {

@@ -126,7 +126,7 @@
 
     &--ozon {
       &::before {
-        background-image: url("./../../img/svg/bg-ozon.svg");
+        background-image: url("./../img/svg/bg-ozon.svg");
         z-index: -0;
         background-position: center;
         background-repeat: no-repeat;
@@ -146,7 +146,7 @@
       }
 
       &::after {
-        background-image: url("./../../img/market-parners1.png"),
+        background-image: url("./../img/market-parners1.png"),
           url("./../../img/market-parners2.png");
 
         background-size: 75px, contain;
