@@ -18,6 +18,7 @@
   @include responsive767 {
     height: 100vh;
     margin-bottom: 40px;
+    min-height: 500px;
   }
 
   @include responsive639 {
@@ -47,7 +48,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
-      padding: 100px 0 14px;
+      padding: 100px 0;
     }
 
     @include after {
@@ -200,7 +201,12 @@
     }
 
     @include responsive767 {
-      display: none;
+      top: auto;
+      transform: initial;
+      bottom: 8px;
+      width: 66px;
+      height: 66px;
+      border-radius: 16px;
     }
 
     &.btnSwiperPrev {
@@ -221,6 +227,10 @@
       @include responsive1279 {
         left: 20px;
       }
+
+      @include responsive767 {
+        left: 10px;
+      }
     }
 
     &.btnSwiperNext {
@@ -240,6 +250,10 @@
 
       @include responsive1279 {
         right: 20px;
+      }
+
+      @include responsive767 {
+        right: 10px;
       }
     }
 
@@ -264,7 +278,14 @@
     align-items: center;
 
     @include responsive767 {
-      display: none;
+      width: 192px;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include responsive389 {
+      width: 150px;
     }
   }
 
@@ -280,6 +301,14 @@
     background-color: $colorWhite-a33;
     border-radius: 24px;
     padding: 0 32px;
+
+    @include responsive767 {
+      border-radius: 16px;
+    }
+
+    @include responsive389 {
+      padding: 0 24px;
+    }
 
     .swiper-pagination-bullet {
       height: 2px;

@@ -37,6 +37,7 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+      order: 3;
     }
 
     @include responsive767 {
@@ -47,10 +48,26 @@
       border: 0;
       padding: 0;
       display: block;
+
+      @include responsive1023 {
+        order: 2;
+      }
     }
 
     &--full {
       grid-column: span 2;
+    }
+
+    &:first-child {
+      @include responsive1023 {
+        order: 1;
+      }
+    }
+
+    &:nth-child(4) {
+      @include responsive1023 {
+        order: 2;
+      }
     }
   }
 
@@ -81,20 +98,7 @@
     background-color: transparent;
     padding: 0;
     position: relative;
-
-    @include before {
-      background: linear-gradient(
-        263.98deg,
-        rgba(255, 99, 1, 0.2) 16.16%,
-        rgba(150, 57, 150, 0.2) 56.35%,
-        rgba(0, 84, 235, 0.2) 85.83%
-      );
-      width: 300%;
-      height: 300%;
-      top: -100%;
-      left: -100%;
-      pointer-events: none;
-    }
+    width: 100%;
   }
 }
 
@@ -279,19 +283,30 @@
   width: 100%;
 }
 
+.volume-card-slider {
+  @include responsive767 {
+    overflow: visible;
+  }
+}
+
 .volume-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-top: 15px;
 
-  @include responsive479 {
-    grid-template-columns: 1fr;
+  @include responsive767 {
+    gap: 0;
+    display: flex;
   }
 
   .volume-card__item {
     position: relative;
     height: 292px;
+
+    @include responsiveMinWidth768 {
+      width: 100% !important;
+    }
 
     @include responsive1279 {
       height: 230px;
@@ -664,6 +679,7 @@
 
 .product-section-slider {
   width: 100%;
+  overflow: hidden;
 
   .product-section-slider__head {
     display: flex;
@@ -672,12 +688,20 @@
   }
 
   .product-slider-more {
-    margin-top: 32px;
+    margin-top: 20px;
     width: 100%;
     overflow: hidden;
 
+    @include responsive1279 {
+      overflow: visible;
+    }
+
     .swiper-slide {
       transition: all 0.3s;
+    }
+
+    .swiper-wrapper {
+      padding: 12px 0;
     }
   }
 }

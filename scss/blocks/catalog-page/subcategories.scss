@@ -46,4 +46,34 @@
       object-fit: contain;
     }
   }
+
+  &.subcategories-slider--v2 {
+    .swiper-slide {
+      border-radius: 24px;
+      color: $colorWhite;
+      font-size: 20px;
+      padding: 16px 24px;
+
+      &.color1 {
+        background-color: #6d9285;
+      }
+
+      &.color2 {
+        background-color: #d47842;
+      }
+
+      &.color3 {
+        background-color: #c5a37a;
+      }
+    }
+
+    .picture-block {
+      width: 64px;
+      height: 64px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
 }

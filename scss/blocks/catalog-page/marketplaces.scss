@@ -20,6 +20,28 @@
     grid-column: initial;
   }
 
+  .marketplaces__item__wrap {
+    background-color: $colorWhite;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+    border-radius: 24px;
+    gap: 16px;
+
+    @include responsive1279 {
+      flex-direction: column;
+    }
+
+    @include responsive1023 {
+      flex-direction: row;
+    }
+
+    @include responsive767 {
+      flex-direction: column;
+    }
+  }
+
   .marketplaces__title {
     font-weight: 700;
     font-size: 28px;
@@ -27,7 +49,7 @@
     font-family: $fontMain;
     letter-spacing: 0em;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     @include responsive1449 {
       font-size: 24px;
@@ -104,7 +126,7 @@
 
     &--ozon {
       &::before {
-        background-image: url("../../../img/svg/bg-ozon.svg");
+        background-image: url("./../../img/svg/bg-ozon.svg");
         z-index: -0;
         background-position: center;
         background-repeat: no-repeat;
@@ -124,8 +146,8 @@
       }
 
       &::after {
-        background-image: url("../../../img/market-parners1.png"),
-          url("../../../img/market-parners2.png");
+        background-image: url("./../../img/market-parners1.png"),
+          url("./../../img/market-parners2.png");
 
         background-size: 75px, contain;
       }
@@ -146,10 +168,13 @@
   .btn {
     font-family: $fontMain;
     font-size: 16px;
-    width: 160px;
+    width: auto;
     height: 50px;
     padding: 0;
     border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 177px;
   }
 }
 

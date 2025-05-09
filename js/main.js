@@ -1,4 +1,53 @@
 $(document).ready(function () {
+  if ($(".menu-invis-menu__arrow").length > 0) {
+    $(".menu-invis-menu__arrow .arrow").on("click", function () {
+      $(this)
+        .toggleClass("opened")
+        .parents(".menu-invis-menu__arrow")
+        .siblings(".sub")
+        .stop()
+        .slideToggle();
+    });
+  }
+
+  if ($(".header-link--arrow").length > 0) {
+    $(".header-link--arrow .arrow").on("click", function () {
+      $(this)
+        .parents(".header-link--arrow")
+        .toggleClass("opened")
+        .siblings(".menu-sub")
+        .stop()
+        .slideToggle();
+    });
+  }
+
+  if ($(".filter-application").length > 0) {
+    if ($(window).width() >= 1024) {
+      let timer = null;
+
+      $(".filter-row input").on("change", function () {
+        let positionInput = $(this).parents(".check-block").position().top;
+
+        closeFilterApplication();
+
+        timer = setTimeout(function () {
+          $(".filter-application")
+            .addClass("visible")
+            .attr("style", `top:${positionInput}px`);
+        }, 200);
+      });
+
+      $(".filter-application__close").on("click", () =>
+        closeFilterApplication()
+      );
+
+      function closeFilterApplication() {
+        clearTimeout(timer);
+        $(".filter-application").removeClass("visible");
+      }
+    }
+  }
+
   if ($(".burger-mobile").length > 0) {
     let menu = $(".header-menu");
     let burger = $(".burger-mobile");
@@ -120,19 +169,6 @@ $(document).ready(function () {
         .stop()
         .slideToggle();
     });
-  }
-
-  if ($(".header-list").length > 0) {
-    if ($(window).width() < 1280) {
-      $(".header-link--arrow").on("click", function (event) {
-        event.preventDefault();
-        $(this)
-          .toggleClass("opened")
-          .siblings(".menu-sub")
-          .stop()
-          .slideToggle();
-      });
-    }
   }
 
   if ($(".grettings-main-slider").length > 0) {
@@ -507,6 +543,28 @@ $(document).ready(function () {
         }
       });
     }
+  }
+
+  if ($(".volume-card-slider").length > 0) {
+    const swiper = new Swiper(".volume-card-slider", {
+      slidesPerView: 2.25,
+      spaceBetween: 8,
+      breakpoints: {
+        0: {
+          slidesPerView: 2.25,
+          spaceBetween: 8,
+          enabled: true,
+        },
+        480: {
+          slidesPerView: 2.1,
+          spaceBetween: 8,
+          enabled: true,
+        },
+        768: {
+          enabled: false,
+        },
+      },
+    });
   }
 });
 

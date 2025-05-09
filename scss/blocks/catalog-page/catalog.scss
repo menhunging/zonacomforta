@@ -157,6 +157,7 @@
     position: sticky;
     top: 8px;
     left: 0;
+    z-index: 5;
 
     @include responsive1279 {
       width: 280px;
@@ -190,6 +191,28 @@
     @include responsive1279 {
       width: calc(100% - 280px - 8px);
       padding: 16px;
+    }
+  }
+
+  .catalog-section__right-bottom {
+    width: calc(100% - 325px - 8px);
+    margin-left: auto;
+    border: solid 1px $colorBlack-a2;
+    border-radius: 8px;
+    padding: 24px;
+
+    @include responsive1279 {
+      width: calc(100% - 280px - 8px);
+      padding: 16px;
+    }
+
+    @include responsive1023 {
+      width: 100%;
+      margin: 0;
+    }
+
+    .catalog-text {
+      padding: 0;
     }
   }
 
@@ -232,6 +255,10 @@
 
     .product-item {
       order: 4;
+    
+      @include responsive767{
+        order: 3;
+      }
 
       &:nth-child(1) {
         order: 1;
@@ -261,6 +288,7 @@
   @include responsive1279 {
     font-size: 14px;
     line-height: 120%;
+    box-shadow: 0px 0px 10px 5px $colorBlack-a1;
   }
 
   @include hover {
@@ -274,6 +302,10 @@
     .btn {
       background-color: $colorOrange;
       border-color: $colorOrange;
+      opacity: 1;
+    }
+
+    .product-item__info {
       opacity: 1;
     }
   }
@@ -341,6 +373,62 @@
 
     @include hover {
       background-color: $colorWhite;
+    }
+  }
+}
+
+.product-item__info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+
+  @include responsive1279 {
+    opacity: 1;
+  }
+
+  li {
+  }
+
+  a {
+    padding: 2px 8px;
+    border: solid 2px #4e5457;
+    border-radius: 10px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include before {
+      position: relative;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.16675 5.99992L5.33341 10.1666L13.6667 1.83325' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 9px;
+      display: none;
+    }
+
+    @include hover {
+      background-color: $colorBlack-a2;
+      border-color: transparent;
+      color: $colorWhite;
+    }
+  }
+
+  .active {
+    background-color: $colorBlack-a2;
+    border-color: transparent;
+    color: $colorWhite;
+    font-weight: 700;
+
+    &::before {
+      display: block;
     }
   }
 }
@@ -431,12 +519,15 @@
   cursor: pointer;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='SVGRepo_bgCarrier' stroke-width='0'%3e%3c/g%3e%3cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3e%3c/g%3e%3cg id='SVGRepo_iconCarrier'%3e%3cpath d='M17.9882 3H5.87976C4.25428 3 3.30773 4.8362 4.25068 6.16022L8.38005 11.9583C8.86259 12.6359 9.1219 13.447 9.1219 14.2788V18.3293C9.1219 19.8043 10.3176 21 11.7926 21C13.2676 21 14.4633 19.8043 14.4633 18.3293V14.3385C14.4633 13.4698 14.7461 12.6247 15.269 11.931L19.5854 6.20375C20.5787 4.88587 19.6385 3 17.9882 3Z' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
   background-position: center;
-  background-size: contain;
+  background-size: 24px;
   background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
   opacity: 0.7;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 5px $colorBlack-a1;
 
   @include responsive1023 {
     display: block;

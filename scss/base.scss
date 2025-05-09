@@ -157,7 +157,7 @@ div {
   padding-top: 100px;
 
   @include responsive1279 {
-    padding-top: 105px;
+    padding-top: 100px;
   }
 }
 
@@ -746,6 +746,7 @@ section {
 
     @include responsive767 {
       gap: 0 37px;
+      display: none;
     }
   }
 
@@ -798,6 +799,30 @@ section {
     height: 24px;
     display: flex;
     left: 1px;
+  }
+
+  .breadcrumbs__mobile {
+    display: none;
+    font-size: 12px;
+    line-height: 24px;
+    position: relative;
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.844676 0.861934C1.10503 0.601584 1.52714 0.601584 1.78749 0.861934L7.98275 7.0572C8.50345 7.5779 8.50345 8.42212 7.98275 8.94281L1.78749 15.1381C1.52714 15.3984 1.10503 15.3984 0.844676 15.1381C0.584327 14.8777 0.584327 14.4556 0.844676 14.1953L7.03994 8.00001L0.844676 1.80474C0.584327 1.54439 0.584327 1.12228 0.844676 0.861934Z' fill='%234E5457'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      transform: scale(-1, -1);
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    @include responsive767 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
 }
 
