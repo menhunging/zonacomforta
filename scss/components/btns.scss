@@ -105,9 +105,22 @@
     }
   }
 
-  &--white{
+  &--white {
     background-color: $colorWhite;
     color: $colorBlack;
+  }
+
+  &--dark {
+    background-color: $colorBlack-a2;
+    color: $colorWhite;
+
+    @include hover {
+      background-color: $colorOrange;
+
+      &::after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='20' viewBox='0 0 10 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.577574 1.07733C0.903011 0.751893 1.43065 0.751893 1.75609 1.07733L9.50016 8.82141C10.151 9.47228 10.151 10.5276 9.50016 11.1784L1.75609 18.9225C1.43065 19.2479 0.903011 19.2479 0.577574 18.9225C0.252137 18.5971 0.252137 18.0694 0.577574 17.744L8.32165 9.99992L0.577574 2.25584C0.252137 1.9304 0.252137 1.40277 0.577574 1.07733Z' fill='white'/%3e%3c/svg%3e ");
+      }
+    }
   }
 
   &:disabled {

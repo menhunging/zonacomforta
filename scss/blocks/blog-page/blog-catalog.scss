@@ -1,0 +1,129 @@
+.colorCylinders {
+  background-color: #c28866;
+}
+
+.colorAccessories {
+  background-color: #99afa7;
+}
+
+.colorOther {
+  background-color: #b7aa9a;
+}
+
+.colorGrills {
+  background-color: #9ea9ab;
+}
+
+.blog-catalog {
+  .blog-catalog__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive389 {
+      flex-wrap: wrap;
+    }
+
+    .caption {
+      font-size: 20px;
+    }
+
+    .sort-block {
+      @include responsive1279 {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+
+      @include responsive389 {
+        order: 3;
+        margin: 0;
+        width: 100%;
+      }
+
+      .sort-block__list {
+        right: 0;
+        left: auto;
+
+        @include responsive389 {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+
+    .filter-mobile-button {
+    }
+  }
+
+  .blog-catalog__body {
+    margin-top: 16px;
+  }
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @include responsive1279 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include responsive639 {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-item {
+    flex-direction: column;
+  }
+
+  .blog-item__media {
+    width: 100%;
+    height: 246px;
+    opacity: 1;
+
+    @include responsive639 {
+      width: 100%;
+      height: auto;
+      padding-top: calc(200 / 380 * 100%);
+    }
+
+    .picture-block {
+      @include invisLink;
+      position: absolute;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .blog-item__content {
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+    width: 100%;
+
+    @include responsive1449 {
+      gap: 16px;
+    }
+
+    .btn {
+      font-family: $fontMain;
+      width: 100%;
+    }
+  }
+
+  .blog-item__date {
+  }
+
+  .blog-item__name {
+    font-weight: 400;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}

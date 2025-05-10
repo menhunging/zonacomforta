@@ -66,7 +66,9 @@ $(document).ready(function () {
     });
 
     overlay.on("click", function () {
-      closeMenu();
+      if (burger.hasClass("opened")) {
+        closeMenu();
+      }
     });
 
     function closeMenu() {
@@ -337,7 +339,11 @@ $(document).ready(function () {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1,
+          slidesPerView: 1.1,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 1.5,
           spaceBetween: 16,
         },
         1024: {
@@ -367,25 +373,28 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".filter").length > 0) {
-    $(".filter__title").on("click", function () {
-      if ($(this).hasClass("opened")) {
-        $(this)
-          .removeClass("opened")
-          .siblings(".filter__content")
-          .stop()
-          .slideUp();
-      } else {
-        $(this)
-          .addClass("opened")
-          .siblings(".filter__content")
-          .stop()
-          .slideDown();
-      }
-    });
+  if ($(".catalog-section__left").length > 0) {
+    if ($(".filter").length > 0) {
+      $(".filter__title").on("click", function () {
+        if ($(this).hasClass("opened")) {
+          $(this)
+            .removeClass("opened")
+            .siblings(".filter__content")
+            .stop()
+            .slideUp();
+        } else {
+          $(this)
+            .addClass("opened")
+            .siblings(".filter__content")
+            .stop()
+            .slideDown();
+        }
+      });
+    }
 
+    $(".filter-mobile-head__close").on("click", closeFilter);
     $(".filter-mobile-button").on("click", toggleFilter);
-    $(".overlay, .filter-mobile-head__close").on("click", closeFilter);
+    $(".overlay").on("click", closeFilter);
 
     function toggleFilter() {
       $(".catalog-section__left, .overlay, body").toggleClass(
@@ -564,6 +573,23 @@ $(document).ready(function () {
           enabled: false,
         },
       },
+    });
+  }
+
+  if ($(".copyText").length > 0) {
+    let timerCopyText = null;
+
+    $(".copyText").on("click", function () {
+      let copyText = $(this);
+      navigator.clipboard.writeText(copyText.text());
+      $(".copyText").removeClass("copied");
+      copyText.addClass("copied");
+
+      clearTimeout(timerCopyText);
+
+      timerCopyText = setTimeout(function () {
+        copyText.removeClass("copied");
+      }, 3000);
     });
   }
 });

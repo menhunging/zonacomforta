@@ -1,5 +1,6 @@
 .blog-block {
   padding: 30px 0;
+  overflow: hidden;
 }
 
 .blog-block__head {
@@ -9,7 +10,7 @@
   gap: 20px;
 
   .caption--h4 {
-    @include responsive767{
+    @include responsive767 {
       font-size: 24px;
     }
   }
@@ -26,6 +27,12 @@
 
 .blog-block-slider {
   margin-top: 24px;
+
+  @include responsive1023 {
+    width: calc(100% + 32px);
+    left: -16px;
+    padding: 0 16px;
+  }
 
   .swiper-slide {
   }

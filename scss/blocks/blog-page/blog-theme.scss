@@ -1,0 +1,97 @@
+.blog-theme {
+  width: 100%;
+
+  .blog-theme__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 160%;
+    width: 100%;
+    display: flex;
+  }
+
+  .blog-theme__list {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .blog-theme__item {
+    width: 100%;
+
+    &.active {
+      .blog-theme__link {
+        max-width: 100%;
+        color: $colorWhite;
+        background-color: #111;
+
+        &.colorCylinders {
+          background-color: #bc6d3f;
+        }
+
+        &.colorAccessories {
+          background-color: #60af92;
+        }
+
+        &.colorOther {
+          background-color: #6e6356;
+        }
+
+        &.colorGrills {
+          background-color: #579da9;
+        }
+      }
+    }
+  }
+
+  .blog-theme__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    background-color: #cfcfcf;
+    border-radius: 16px;
+    padding: 0 12px;
+    max-width: 247px;
+    transition: all 0.3s;
+    gap: 4px;
+
+    @include hover {
+      max-width: 100%;
+    }
+
+    &.colorCylinders {
+      background-color: #c28866;
+    }
+
+    &.colorAccessories {
+      background-color: #99afa7;
+    }
+
+    &.colorOther {
+      background-color: #b7aa9a;
+    }
+
+    &.colorGrills {
+      background-color: #9ea9ab;
+    }
+
+    .count {
+      margin-left: auto;
+      opacity: 0.4;
+    }
+
+    .picture-block {
+      width: 32px;
+      height: 32px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}

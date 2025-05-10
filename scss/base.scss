@@ -861,8 +861,7 @@ section {
     }
 
     &.active {
-      background-color: #4e5457;
-      color: $colorWhite;
+      background-color: rgba(78, 84, 87, 0.2);
     }
   }
 
@@ -870,8 +869,7 @@ section {
     cursor: pointer;
 
     @include hover {
-      color: $colorWhite;
-      background-color: #4e5457;
+      background-color: rgba(78, 84, 87, 0.2);
     }
   }
 }

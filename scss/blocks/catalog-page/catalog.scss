@@ -214,6 +214,11 @@
     .catalog-text {
       padding: 0;
     }
+
+    .marketplaces {
+      background-color: transparent;
+      padding: 0;
+    }
   }
 
   .catalog-section__bottom {
@@ -255,8 +260,8 @@
 
     .product-item {
       order: 4;
-    
-      @include responsive767{
+
+      @include responsive767 {
         order: 3;
       }
 
@@ -472,6 +477,10 @@
   z-index: 3;
   display: inline-flex;
 
+  @include responsive639 {
+    font-size: 14px;
+  }
+
   &.opened {
     .sort-block__sort::before {
       transform: scale(1, -1);
@@ -504,6 +513,11 @@
     border-radius: 16px;
     padding: 16px;
     width: 220px;
+
+    @include responsive639 {
+      width: 180px;
+      padding: 12px
+    }
 
     li {
     }
