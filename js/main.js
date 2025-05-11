@@ -592,6 +592,94 @@ $(document).ready(function () {
       }, 3000);
     });
   }
+
+  if ($(".guarantee-category__list").length > 0) {
+    const swiper = new Swiper(".guarantee-category__list", {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.55,
+          spaceBetween: 10,
+          enabled: true,
+        },
+        390: {
+          slidesPerView: 2.2,
+          spaceBetween: 10,
+          enabled: true,
+        },
+        640: {
+          slidesPerView: 3.2,
+          spaceBetween: 10,
+          enabled: true,
+        },
+        768: {
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+          enabled: true,
+        },
+        1024: {
+          slidesPerView: 4.2,
+          spaceBetween: 20,
+          enabled: true,
+        },
+        1280: {
+          enabled: false,
+        },
+      },
+    });
+  }
+
+  if ($(".security-slider").length > 0) {
+    const sliders = document.querySelectorAll(".security-slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider)
+            .parents(".security-section__col")
+            .find(".btnSwiperNext")[0];
+          navPrev = $(slider)
+            .parents(".security-section__col")
+            .find(".btnSwiperPrev")[0];
+
+          pagination = $(slider)
+            .parents(".security-section__col")
+            .find(".swiper-pagination")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+            pagination: {
+              el: pagination,
+              type: "fraction",
+              renderFraction: function (currentClass, totalClass) {
+                return `<span class="${currentClass}"></span> из <span class="${totalClass}"></span>`;
+              },
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
 });
 
 function Marquee(selector, speed, reverse = false) {

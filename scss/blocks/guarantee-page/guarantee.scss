@@ -1,0 +1,500 @@
+.guarantee-section {
+  padding: 0;
+}
+
+.guarantee-section__media {
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include responsive767 {
+    height: auto;
+    padding-top: calc(320 / 768 * 100%);
+  }
+}
+
+.guarantee-section__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+
+  @include responsive639 {
+    flex-direction: column;
+  }
+
+  @include responsive767 {
+    margin-top: 8px;
+  }
+
+  .guarantee-section__col {
+    position: relative;
+    padding: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include responsive1023 {
+      font-size: 14px;
+    }
+
+    @include responsive767 {
+      padding: 24px;
+    }
+
+    @include responsive479 {
+      padding: 16px;
+    }
+
+    @include responsive639 {
+      width: 100% !important;
+    }
+
+    &--left {
+      width: calc(50% - 4px);
+      background-color: #d3b898;
+
+      p {
+        max-width: 314px;
+        margin-left: auto;
+        margin-top: 24px;
+
+        @include responsive1279 {
+          max-width: 284px;
+        }
+
+        @include responsive639 {
+          max-width: 250px;
+        }
+
+        @include responsive389 {
+          max-width: 180px;
+        }
+      }
+    }
+
+    &--right {
+      width: calc(50% - 4px);
+      background-color: #b8bbbc;
+
+      ul {
+        margin-top: 24px;
+      }
+
+      li {
+        position: relative;
+        text-indent: 25px;
+
+        & + li {
+          margin-top: 20px;
+        }
+
+        @include before {
+          content: "🔹";
+          position: absolute;
+          top: 0;
+          left: -25px;
+        }
+      }
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 386px;
+    height: 258px;
+
+    @include responsive1599 {
+      left: -50px;
+    }
+
+    @include responsive1279 {
+      left: -80px;
+      width: 320px;
+      height: 210px;
+    }
+
+    @include responsive1023 {
+      left: -40px;
+      bottom: -40px;
+      width: 260px;
+      height: 180px;
+    }
+
+    @include responsive479 {
+      left: -80px;
+      bottom: 0px;
+      width: 220px;
+      height: 150px;
+    }
+  }
+
+  .caption--h4 {
+  }
+}
+
+.guarantee-category {
+  background-color: #e1ded4;
+  border-radius: 8px;
+  margin-top: 8px;
+  padding: 32px;
+  overflow: hidden;
+
+  @include responsive767 {
+    padding: 24px;
+  }
+
+  @include responsive479 {
+    padding: 16px;
+  }
+
+  .guarantee-category__list {
+    margin-top: 20px;
+
+    @include responsive1279 {
+      overflow: visible;
+    }
+
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      @include responsive1279 {
+        display: flex;
+      }
+    }
+
+    .swiper-slide {
+    }
+
+    .guarantee-category__item {
+      position: relative;
+      width: 100%;
+      height: 161px;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      align-items: flex-end;
+      @include invisLink;
+
+      &.color1 {
+        background-color: #6d7992;
+      }
+
+      &.color2 {
+        background-color: #91926d;
+      }
+
+      &.color3 {
+        background-color: #9eb6bb;
+      }
+
+      &.color4 {
+        background-color: #b7aa9a;
+      }
+
+      &.color5 {
+        background-color: #465450;
+      }
+
+      &.color6 {
+        background-color: #9eb6bb;
+      }
+
+      @include hover {
+        .picture-block {
+          opacity: 1;
+        }
+
+        .name {
+          opacity: 1;
+        }
+      }
+    }
+
+    .picture-block {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      transition: opacity 0.3s;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .name {
+      font-family: $fontRadiotechnika;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $colorWhite;
+      word-break: break-all;
+      width: 100%;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+
+      @include after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='17' viewBox='0 0 9 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.868259 0.755982C1.13792 0.471964 1.57512 0.471964 1.84477 0.755982L8.26153 7.51445C8.80085 8.08249 8.80084 9.00345 8.26153 9.57149L1.84477 16.33C1.57512 16.614 1.13792 16.614 0.868259 16.33C0.598601 16.0459 0.598601 15.5855 0.868259 15.3014L7.28501 8.54297L0.868259 1.7845C0.598601 1.50048 0.598601 1.04 0.868259 0.755982Z' fill='white'/%3e%3c/svg%3e ");
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+      }
+    }
+  }
+}
+
+.guarantee-section__contacts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 16px;
+  gap: 8px;
+
+  @include responsive1279 {
+    flex-direction: column;
+  }
+
+  .caption--h4 {
+    max-width: 59%;
+
+    @include responsiveMinWidth1600 {
+      font-size: 24px;
+    }
+
+    @include responsive1599 {
+      max-width: 70%;
+    }
+
+    @include responsive767 {
+      max-width: 100%;
+    }
+  }
+
+  .guarantee-warranty {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 826px;
+    flex: 2;
+    background-color: #e2e9dc;
+    border-radius: 8px;
+    padding: 32px;
+
+    @include responsive1279 {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include responsive767 {
+      padding: 24px;
+    }
+
+    @include responsive479 {
+      padding: 16px;
+    }
+
+    p {
+      max-width: 639px;
+      margin-top: 15px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-top: 24px;
+      width: 100%;
+
+      @include responsive639 {
+        flex-direction: column;
+      }
+    }
+
+    .ListLinks {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      counter-reset: list-counter;
+
+      @include responsive767 {
+        width: 240px;
+      }
+
+      @include responsive639 {
+        width: 100%;
+      }
+
+      li {
+        list-style: none;
+        counter-increment: list-counter;
+
+        &.active {
+          a {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+        }
+
+        a {
+          cursor: pointer;
+          position: relative;
+          padding: 12px;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          display: block;
+
+          @include responsive1023 {
+            font-size: 14px;
+            padding: 8px;
+          }
+
+          @include responsive767 {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          @include before {
+            content: counter(list-counter) ". ";
+            font-weight: bold;
+            left: 0;
+            top: 0;
+            position: relative;
+            width: 18px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .tabs-body {
+      background-color: rgba(0, 0, 0, 0.05);
+      width: 100%;
+      flex: 1;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      @include responsive767 {
+        padding: 16px;
+      }
+
+      @include responsive639 {
+        margin-top: 12px;
+      }
+
+      .picture-block {
+        position: absolute;
+        right: -60px;
+        bottom: -45px;
+        width: 278px;
+        height: 352px;
+
+        @include responsive1023 {
+          width: 220px;
+          height: 300px;
+        }
+      }
+
+      p {
+        max-width: 187px;
+        margin: 0;
+
+        @include responsive1279 {
+          max-width: 337px;
+        }
+
+        @include responsive1023 {
+          max-width: 187px;
+        }
+      }
+    }
+  }
+
+  .contacts-section {
+    flex: 1;
+    border: solid 1px #b8b5ac;
+    padding: 32px;
+    border-radius: 8px;
+
+    @include responsive767 {
+      padding: 24px;
+    }
+
+    @include responsive479 {
+      padding: 16px;
+    }
+
+    .tabs {
+      margin-top: 24px;
+    }
+
+    .listLinks {
+      max-width: 500px;
+
+      li {
+        width: 50%;
+        max-width: 100%;
+      }
+    }
+
+    .contacts-list {
+    }
+
+    .contacts-block {
+      width: 100%;
+      border: 0;
+      padding: 0;
+
+      li {
+        &:first-child {
+          border: 0;
+        }
+      }
+    }
+    .contacts-block__title {
+    }
+    .social {
+    }
+    .copyText {
+    }
+
+    .btn {
+      border: 0;
+      font-size: 16px;
+      font-family: $fontMain;
+      width: 100%;
+      background-color: $colorBlack-a2;
+      height: 50px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      max-width: 500px;
+
+      @include hover {
+        background-color: $colorBlack;
+      }
+
+      @include responsive479 {
+        margin-top: 12px;
+        font-size: 14px;
+        height: 45px;
+      }
+    }
+  }
+}
