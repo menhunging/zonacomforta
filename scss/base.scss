@@ -1044,3 +1044,237 @@ section {
   .btn {
   }
 }
+
+.thanks-page {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  padding: 80px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include responsive767 {
+    padding: 30px 0;
+  }
+
+  .thanks-page__media {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 675px);
+    width: 660px;
+    height: 349px;
+    transform: translateY(-50%);
+    overflow: hidden;
+    border-radius: 32px;
+
+    @include responsive1449 {
+      left: calc(50% - 625px);
+      width: 630px;
+      height: 335px;
+    }
+
+    @include responsive1279 {
+      width: 480px;
+      height: 254px;
+      left: calc(50% - 500px);
+      top: 50%;
+    }
+
+    @include responsive1023 {
+      left: calc(50% - 370px);
+      width: 340px;
+      height: 181px;
+    }
+
+    @include responsive767 {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: initial;
+      margin: 0 auto;
+      height: auto;
+      padding-top: calc(320 / 480 * 100%);
+      width: 100%;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .thanks-page__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 642px;
+    width: 100%;
+    margin-left: auto;
+
+    @include responsive1449 {
+      max-width: 580px;
+    }
+
+    @include responsive1279 {
+      max-width: 480px;
+    }
+
+    @include responsive1023 {
+      max-width: 380px;
+      gap: 32px;
+    }
+
+    @include responsive767 {
+      max-width: 100%;
+      gap: 24px;
+      max-width: 100%;
+      width: 100%;
+      margin-top: 0;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .thanks-page__title {
+    font-family: $fontRadiotechnika;
+  }
+
+  p {
+    max-width: 642px;
+    width: 100%;
+  }
+
+  .btn {
+  }
+}
+
+.simple-section {
+  padding: 0;
+
+  .simple-section__body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .simple-section__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    font-size: 16px;
+
+    @include responsive1023 {
+      flex-direction: column;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+
+  .simple-section__line--left {
+  }
+
+  .simple-section__line--right {
+    flex-direction: row-reverse;
+
+    @include responsive1023 {
+      flex-direction: column;
+    }
+  }
+
+  .simple-section__line--full {
+    max-width: 897px;
+    width: 100%;
+
+    .simple-section__content {
+      width: 100%;
+    }
+  }
+
+  .simple-section__media {
+    width: 50%;
+
+    @include responsive1023 {
+      width: 100%;
+    }
+
+    img {
+      @include responsive1023 {
+        width: 100%;
+      }
+    }
+  }
+
+  .simple-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 50%;
+
+    @include responsive1023 {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 120%;
+
+    @include responsive1449 {
+    }
+
+    @include responsive1279 {
+      font-size: 24px;
+    }
+
+    @include responsive767 {
+      font-size: 22px;
+    }
+
+    @include responsive479 {
+      font-size: 18px;
+    }
+
+    @include responsive389 {
+      font-size: 15px;
+    }
+  }
+
+  h3 {
+    font-family: $fontMain;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 700;
+
+    @include responsive1279 {
+      font-size: 18px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+    }
+
+    @include responsive479 {
+      font-size: 16px;
+    }
+
+    @include responsive389 {
+      font-size: 15px;
+    }
+  }
+
+  h4 {
+  }
+
+  .btn {
+    max-width: 288px;
+  }
+}
