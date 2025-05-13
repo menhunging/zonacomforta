@@ -1,0 +1,73 @@
+.about-text {
+  padding: 0;
+
+  .reviews-main {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive1023 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .reviews-main__text {
+    width: calc(100% - 660px - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include responsive1449 {
+      width: calc(100% - 560px - 40px);
+      gap: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1279 {
+      width: calc(100% - 450px - 30px);
+      font-size: 14px;
+    }
+
+    @include responsive1023 {
+      width: 100%;
+    }
+  }
+
+  .reviews-slider {
+    margin: 0;
+    width: 660px;
+
+    @include responsive1449 {
+      width: 560px;
+    }
+
+    @include responsive1279 {
+      width: 450px;
+    }
+
+    @include responsive1023 {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      @include responsive1023 {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .picture-block {
+  }
+
+  .videoPlay {
+    width: 100%;
+    height: 85px;
+
+    @include responsive1023 {
+      top: auto;
+    }
+  }
+}

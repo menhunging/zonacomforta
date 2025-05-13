@@ -8778,5 +8778,585 @@ p {
     font-size: 14px;
   }
 }
+.about-text {
+  padding: 0;
+}
+.about-text .reviews-main {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .about-text .reviews-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.about-text .reviews-main__text {
+  width: calc(100% - 660px - 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 1449px) {
+  .about-text .reviews-main__text {
+    width: calc(100% - 560px - 40px);
+    gap: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 1279px) {
+  .about-text .reviews-main__text {
+    width: calc(100% - 450px - 30px);
+    font-size: 14px;
+  }
+}
+@media (max-width: 1023px) {
+  .about-text .reviews-main__text {
+    width: 100%;
+  }
+}
+.about-text .reviews-slider {
+  margin: 0;
+  width: 660px;
+}
+@media (max-width: 1449px) {
+  .about-text .reviews-slider {
+    width: 560px;
+  }
+}
+@media (max-width: 1279px) {
+  .about-text .reviews-slider {
+    width: 450px;
+  }
+}
+@media (max-width: 1023px) {
+  .about-text .reviews-slider {
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .about-text .reviews-slider .swiper-slide {
+    padding-bottom: 10px;
+  }
+}
+.about-text .videoPlay {
+  width: 100%;
+  height: 85px;
+}
+@media (max-width: 1023px) {
+  .about-text .videoPlay {
+    top: auto;
+  }
+}
+
+.about-adv .about-adv__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 32px;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__list {
+    gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .about-adv .about-adv__list {
+    margin-top: 20px;
+  }
+}
+.about-adv .about-adv__item {
+  width: calc(33.3333333333% - 20px);
+  background-color: #000;
+  border-radius: 32px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 12px;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item {
+    order: 1;
+    width: calc(50% - 5px);
+  }
+}
+@media (max-width: 767px) {
+  .about-adv .about-adv__item {
+    padding: 24px;
+  }
+}
+@media (max-width: 639px) {
+  .about-adv .about-adv__item {
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.about-adv .about-adv__item:nth-child(1) {
+  width: calc(50% - 10px);
+  background-color: #d3b898;
+  min-height: 375px;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(1) {
+    min-height: 350px;
+    width: calc(50% - 5px);
+  }
+}
+@media (max-width: 639px) {
+  .about-adv .about-adv__item:nth-child(1) {
+    width: 100%;
+    min-height: 280px;
+  }
+}
+.about-adv .about-adv__item:nth-child(1) .picture-block {
+  width: 100%;
+  height: 255px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.about-adv .about-adv__item:nth-child(2) {
+  width: calc(50% - 10px);
+  background-color: rgba(78, 84, 87, 0.6);
+  min-height: 375px;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(2) {
+    min-height: 350px;
+    width: calc(50% - 5px);
+  }
+}
+@media (max-width: 639px) {
+  .about-adv .about-adv__item:nth-child(2) {
+    width: 100%;
+    min-height: 280px;
+  }
+}
+.about-adv .about-adv__item:nth-child(2) .picture-block {
+  width: 324px;
+  height: 252px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(2) .picture-block {
+    widows: 220px;
+    height: 180px;
+    right: -30px;
+  }
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(2) .picture-block img {
+    object-fit: contain;
+  }
+}
+.about-adv .about-adv__item:nth-child(3) {
+  background-color: #fa6130;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(3) {
+    order: 4;
+  }
+}
+.about-adv .about-adv__item:nth-child(4) {
+  background-color: rgb(26, 26, 28);
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(4) {
+    width: 100%;
+    min-height: 280px;
+    order: 3;
+  }
+}
+.about-adv .about-adv__item:nth-child(4) .picture-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about-adv .about-adv__item:nth-child(4) .picture-block picture {
+  width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(4) .picture-block picture {
+    width: 50%;
+  }
+}
+@media (max-width: 639px) {
+  .about-adv .about-adv__item:nth-child(4) .picture-block picture {
+    width: 75%;
+  }
+}
+.about-adv .about-adv__item:nth-child(4) .picture-block img {
+  object-fit: contain;
+}
+.about-adv .about-adv__item:nth-child(5) {
+  background-color: #91926d;
+}
+@media (max-width: 1023px) {
+  .about-adv .about-adv__item:nth-child(5) {
+    order: 5;
+  }
+}
+.about-adv .about-adv__item .caption {
+  font-family: "Radiotechnika";
+  font-size: 24px;
+  margin-top: auto;
+}
+@media (max-width: 1279px) {
+  .about-adv .about-adv__item .caption {
+    font-size: 18px;
+  }
+}
+.about-adv .picture-block {
+  position: relative;
+  width: 136px;
+  height: 136px;
+  z-index: -1;
+}
+
+.about-partners .about-partners__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .about-partners .about-partners__list {
+    gap: 15px;
+  }
+}
+@media (max-width: 479px) {
+  .about-partners .about-partners__list {
+    grid-template-columns: 1fr;
+  }
+}
+.about-partners .about-partners__item {
+  font-size: 16px;
+  padding-left: 248px;
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+@media (max-width: 1023px) {
+  .about-partners .about-partners__item {
+    padding-left: 150px;
+    font-size: 14px;
+    min-height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .about-partners .about-partners__item {
+    min-height: 120px;
+    gap: 8px;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.about-partners .about-partners__item .about-partners__name {
+  font-family: "Radiotechnika";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+}
+@media (max-width: 1023px) {
+  .about-partners .about-partners__item .about-partners__name {
+    font-size: 20px;
+  }
+}
+.about-partners .about-partners__item .picture-block {
+  width: 200px;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1023px) {
+  .about-partners .about-partners__item .picture-block {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 767px) {
+  .about-partners .about-partners__item .picture-block {
+    position: relative;
+  }
+}
+@media (max-width: 479px) {
+  .about-partners .about-partners__item .picture-block {
+    width: 100px;
+    height: 100px;
+  }
+}
+.about-partners .about-partners__item .picture-block img {
+  object-fit: contain;
+}
+.about-partners .about-partners__item p {
+  max-width: 372px;
+}
+
+.about-cooperation .about-cooperation__list {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+@media (max-width: 1023px) {
+  .about-cooperation .about-cooperation__list {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+}
+.about-cooperation .about-cooperation__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  padding-left: 232px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: 135px;
+}
+@media (max-width: 1599px) {
+  .about-cooperation .about-cooperation__item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1279px) {
+  .about-cooperation .about-cooperation__item {
+    font-size: 12px;
+    padding-left: 200px;
+  }
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__item {
+    padding-left: 0;
+  }
+}
+.about-cooperation .about-cooperation__item:first-child {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 24px;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 1023px) {
+  .about-cooperation .about-cooperation__item:first-child {
+    min-height: 300px;
+    grid-column: initial;
+    grid-row: initial;
+    width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__item:first-child {
+    padding: 0;
+    color: rgb(78, 84, 87);
+    min-height: 135px;
+  }
+}
+.about-cooperation .about-cooperation__item:first-child .picture-block {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__item:first-child .picture-block {
+    height: auto;
+  }
+}
+.about-cooperation .about-cooperation__item:first-child .picture-block:before {
+  opacity: 1;
+}
+.about-cooperation .about-cooperation__item:first-child p {
+  opacity: 0.7;
+}
+.about-cooperation .about-cooperation__item .picture-block {
+  width: 212px;
+  height: 135px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 1279px) {
+  .about-cooperation .about-cooperation__item .picture-block {
+    width: 180px;
+    height: 130px;
+  }
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__item .picture-block {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%;
+  }
+}
+.about-cooperation .about-cooperation__item .picture-block::before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.88%, rgba(0, 0, 0, 0.7) 78.23%);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+.about-cooperation .about-cooperation__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__content {
+    padding: 8px 16px;
+  }
+}
+.about-cooperation .about-cooperation__name {
+  font-family: "Radiotechnika";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+}
+@media (max-width: 1279px) {
+  .about-cooperation .about-cooperation__name {
+    font-size: 20px;
+  }
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__name {
+    font-size: 18px;
+  }
+}
+.about-cooperation .about-cooperation__controls {
+  max-width: 343px;
+  width: 100%;
+  margin-top: 40px;
+}
+@media (max-width: 479px) {
+  .about-cooperation .about-cooperation__controls {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.about-why .about-why__list {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr;
+  gap: 18px;
+  margin-top: 32px;
+}
+@media (max-width: 1279px) {
+  .about-why .about-why__list {
+    grid-template-columns: 50% 1fr;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 639px) {
+  .about-why .about-why__list {
+    grid-template-columns: 1fr;
+  }
+}
+.about-why .about-why__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  padding: 24px;
+}
+@media (max-width: 1279px) {
+  .about-why .about-why__item {
+    padding: 16px;
+  }
+}
+.about-why .about-why__item:nth-child(1) {
+  grid-row: 1/3;
+}
+@media (max-width: 639px) {
+  .about-why .about-why__item:nth-child(1) {
+    min-height: 320px;
+  }
+}
+.about-why .about-why__item:nth-child(1) .picture-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about-why .about-why__item:nth-child(1) .picture-block img {
+  object-fit: cover;
+}
+.about-why .about-why__item:nth-child(2) {
+  background-color: #d3b898;
+}
+.about-why .about-why__item:nth-child(3) {
+  background-color: #fb8159;
+}
+.about-why .about-why__item:nth-child(4) {
+  background-color: #b2b399;
+}
+.about-why .about-why__item:nth-child(5) {
+  background-color: #b8bbbc;
+}
+.about-why .picture-block {
+  width: 80px;
+  height: 80px;
+}
+.about-why .picture-block img {
+  object-fit: contain;
+}
+.about-why .about-why__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 20px;
+}
+@media (max-width: 1279px) {
+  .about-why .about-why__content {
+    font-size: 14px;
+  }
+}
+.about-why .about-why__name {
+  font-family: "Radiotechnika";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
 
 /*# sourceMappingURL=style.css.map */

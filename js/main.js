@@ -218,7 +218,7 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".reviews-slider").length > 0) {
+  if ($(".reviews-slider.swiper").length > 0) {
     const swiper = new Swiper(".reviews-slider", {
       slidesPerView: 1,
       spaceBetween: 16,

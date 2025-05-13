@@ -1,0 +1,156 @@
+.about-cooperation {
+  .caption {
+  }
+
+  .about-cooperation__list {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 20px;
+    margin-top: 40px;
+
+    @include responsive1023 {
+      grid-template-columns: 1fr;
+      margin-top: 20px;
+    }
+  }
+
+  .about-cooperation__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    padding-left: 232px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    min-height: 135px;
+
+    @include responsive1599 {
+      font-size: 14px;
+    }
+
+    @include responsive1279 {
+      font-size: 12px;
+      padding-left: 200px;
+    }
+
+    @include responsive479 {
+      padding-left: 0;
+    }
+
+    &:first-child {
+      grid-column: 1/2;
+      grid-row: 1/4;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 24px;
+      color: $colorWhite;
+
+      @include responsive1023 {
+        min-height: 300px;
+        grid-column: initial;
+        grid-row: initial;
+        width: 100%;
+      }
+
+      @include responsive479 {
+        padding: 0;
+        color: $colorBlack;
+        min-height: 135px;
+      }
+
+      .picture-block {
+        width: 100%;
+        height: 100%;
+
+        @include responsive479 {
+          height: auto;
+        }
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      p {
+        opacity: 0.7;
+      }
+    }
+
+    .picture-block {
+      width: 212px;
+      height: 135px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      @include responsive1279 {
+        width: 180px;
+        height: 130px;
+      }
+
+      @include responsive479 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: calc(180 / 320 * 100%);
+      }
+
+      @include before {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 8.88%,
+          rgba(0, 0, 0, 0.7) 78.23%
+        );
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .about-cooperation__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+    @include responsive479 {
+      padding: 8px 16px;
+    }
+  }
+
+  .about-cooperation__name {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+
+    @include responsive1279 {
+      font-size: 20px;
+    }
+
+    @include responsive479 {
+      font-size: 18px;
+    }
+  }
+
+  .about-cooperation__controls {
+    max-width: 343px;
+    width: 100%;
+    margin-top: 40px;
+
+    @include responsive479 {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
