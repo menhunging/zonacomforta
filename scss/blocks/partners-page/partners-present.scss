@@ -1,0 +1,80 @@
+.partners-present {
+  padding: 48px 0;
+
+  @include responsive1023 {
+    padding: 30px 0;
+  }
+
+  .partners-present__inner {
+    position: relative;
+    background-color: #d4d6d7;
+    padding: 32px;
+    border-radius: 8px;
+
+    @include responsive1023 {
+      padding: 24px;
+    }
+  }
+
+  .partners-present__text {
+    max-width: calc(80% + 24px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    position: relative;
+    font-size: 16px;
+
+    @include responsive1279 {
+      max-width: 70%;
+    }
+
+    @include responsive1023 {
+      max-width: 60%;
+      gap: 16px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+
+    @include responsive639 {
+      max-width: 100%;
+    }
+
+    @include responsive479 {
+      font-size: 12px;
+    }
+  }
+
+  .partners-present__controls {
+    margin-top: -8px;
+
+    @include responsive1023 {
+      margin-top: 0;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-50%);
+
+    @include responsive639 {
+      right: -20px;
+      top: auto;
+      width: 240px;
+      height: 230px;
+      transform: inherit;
+      bottom: -30px;
+    }
+
+    @include responsive479 {
+      display: none;
+    }
+  }
+}

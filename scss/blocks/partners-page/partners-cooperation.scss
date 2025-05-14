@@ -1,0 +1,58 @@
+.partners-cooperation {
+  padding: 48px 0;
+
+  @include responsive767 {
+    padding: 30px 0;
+  }
+
+  .partners-cooperation__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 24px;
+    gap: 16px;
+
+    @include responsive1279 {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @include responsive639 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .partners-cooperation__item {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    font-size: 16px;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+
+    @include before {
+      position: relative;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='12' viewBox='0 0 18 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.66663 6L6.66663 11L16.6666 1' stroke='%23111111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+    }
+  }
+
+  .partners-cooperation__name {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+
+    @include responsive767 {
+      font-size: 14px;
+    }
+  }
+}

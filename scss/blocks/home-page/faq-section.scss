@@ -23,167 +23,164 @@
       }
     }
   }
+}
 
-  .faq-list {
+.faq-list {
+  width: 100%;
+  margin-left: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include responsive1279 {
+    margin-top: 30px;
+  }
+}
+
+.faq-item {
+  width: 100%;
+  padding: 25px;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+
+  @include responsive767 {
+    padding: 15px;
+  }
+
+  @include before {
     width: 100%;
-    margin-left: auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(51, 40, 37, 0.3);
+    background-repeat: no-repeat;
+    background-position: 70px bottom, left bottom;
+    background-image: url("../img/bg-faq1.png"), url("../img/bg-faq2.png");
+    background-image: image-set(
+        url("../img/bg-faq1.webp") type("image/webp"),
+        url("../img/bg-faq1.png") type("image/png")
+      ),
+      image-set(
+        url("../img/bg-faq2.webp") type("image/webp"),
+        url("../img/bg-faq2.png") type("image/png")
+      );
+    opacity: 0;
+
+    @include responsive1023 {
+      background-position: -60px bottom, -120px bottom;
+    }
+
+    @include responsive639 {
+      background-image: none;
+    }
+  }
+
+  &.opened {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.faq-section__quest {
+  cursor: pointer;
+  font-family: $fontRadiotechnika;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  position: relative;
+  width: 808px;
+  margin-left: auto;
+  padding-right: 50px;
+
+  @include responsive1279 {
+    width: 480px;
+  }
+
+  @include responsive767 {
+    width: 360px;
+    font-size: 22px;
+  }
+
+  @include responsive639 {
+    width: 100%;
+    font-size: 20px;
+    color: $colorWhite-a22;
+  }
+
+  &.active {
+    color: $colorWhite-a8;
+
+    &::before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.5' d='M0.836 0.431999H35.788V6.008H0.836V0.431999Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+    }
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.7' d='M28.804 11.432V17.008H17.652V28.16H12.008V17.008H0.856V11.432H12.008V0.211999H17.652V11.432H28.804Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include responsive639 {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.faq-section__answer {
+  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  padding: 11px 0;
+  width: 808px;
+  margin-left: auto;
+
+  @include responsive1279 {
+    width: 480px;
+  }
+
+  @include responsive767 {
+    width: 360px;
+  }
+
+  @include responsive639 {
+    width: 100%;
+  }
+}
+
+.faq-controls {
+  margin-top: 100px;
+  width: 808px;
+  margin-left: auto;
+
+  @include responsive1449 {
     margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    @include responsive1279 {
-      margin-top: 30px;
-    }
   }
 
-  .faq-item {
+  @include responsive1279 {
+    width: 480px;
+    margin-top: 50px;
+  }
+
+  @include responsive767 {
+    width: 400px;
+  }
+
+  @include responsive639 {
     width: 100%;
-    padding: 25px;
-    margin-left: auto;
-    position: relative;
-    z-index: 2;
-
-    @include responsive767 {
-      padding: 15px;
-    }
-
-    @include before {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 24px;
-      overflow: hidden;
-      z-index: -1;
-      opacity: 0;
-      background-color: rgba(51, 40, 37, 0.3);
-      background-repeat: no-repeat;
-      background-position: 70px bottom, left bottom;
-      background-image: url("../img/bg-faq1.png"), url("../img/bg-faq2.png");
-      background-image: image-set(
-          url("../img/bg-faq1.webp") type("image/webp"),
-          url("../img/bg-faq1.png") type("image/png")
-        ),
-        image-set(
-          url("../img/bg-faq2.webp") type("image/webp"),
-          url("../img/bg-faq2.png") type("image/png")
-        );
-      opacity: 0;
-
-      @include responsive1023 {
-        background-position: -60px bottom, -120px bottom;
-      }
-
-      @include responsive639 {
-        background-image: none;
-      }
-    }
-
-    &.opened {
-      &::before {
-        opacity: 1;
-      }
-    }
-  }
-
-  .faq-section__quest {
-    cursor: pointer;
-    font-family: $fontRadiotechnika;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 120%;
-    position: relative;
-    width: 808px;
-    margin-left: auto;
-    padding-right: 50px;
-
-    @include responsive1279 {
-      width: 480px;
-    }
-
-    @include responsive767 {
-      width: 360px;
-      font-size: 22px;
-    }
-
-    @include responsive639 {
-      width: 100%;
-      font-size: 20px;
-      color: $colorWhite-a22;
-    }
-
-    &.active {
-      color: $colorWhite-a8;
-
-      &::before {
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='6' viewBox='0 0 36 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.5' d='M0.836 0.431999H35.788V6.008H0.836V0.431999Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
-      }
-    }
-
-    @include before {
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.7' d='M28.804 11.432V17.008H17.652V28.16H12.008V17.008H0.856V11.432H12.008V0.211999H17.652V11.432H28.804Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 34px;
-      height: 34px;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-
-      @include responsive639 {
-        width: 20px;
-        height: 20px;
-      }
-    }
-  }
-
-  .faq-section__answer {
-    display: none;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
-    padding: 11px 0;
-    width: 808px;
-    margin-left: auto;
-
-    @include responsive1279 {
-      width: 480px;
-    }
-
-    @include responsive767 {
-      width: 360px;
-    }
-
-    @include responsive639 {
-      width: 100%;
-    }
-  }
-
-  .faq-controls {
-    margin-top: 100px;
-    width: 808px;
-    margin-left: auto;
-
-    @include responsive1449 {
-      margin-top: 50px;
-    }
-
-    @include responsive1279 {
-      width: 480px;
-      margin-top: 50px;
-    }
-
-    @include responsive767 {
-      width: 400px;
-    }
-
-    @include responsive639 {
-      width: 100%;
-      margin-top: 30px;
-    }
-  }
-
-  .btn {
+    margin-top: 30px;
   }
 }

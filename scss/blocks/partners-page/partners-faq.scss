@@ -1,0 +1,143 @@
+.partners-faq {
+  .caption {
+  }
+
+  .partners-faq__inner {
+    background: linear-gradient(to right, #e9b49e, #bcc0b5);
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 24px;
+    position: relative;
+
+    @include responsive1449 {
+      padding: 24px;
+    }
+
+    @include responsive767 {
+      padding: 16px;
+    }
+  }
+
+  .faq-list {
+    margin: 0;
+  }
+
+  .faq-item {
+    max-width: 864px;
+    margin: 0;
+    border-radius: 16px;
+    position: static;
+
+    @include responsive1449 {
+      max-width: 765px;
+    }
+
+    @include responsive1279 {
+      max-width: 505px;
+    }
+
+    @include responsive1023 {
+      max-width: 360px;
+    }
+
+    @include responsive767 {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &.opened {
+      background: url("../../../img/bg-faq-part1.png"),
+        url("../../../img/bg-faq-part2.png");
+      background-position: left center, right center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .picture-block {
+        opacity: 1;
+      }
+    }
+  }
+
+  .faq-section__quest {
+    margin: 0;
+    color: $colorDark;
+
+    @include responsive1449 {
+      width: 100%;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+    }
+
+    @include responsive389 {
+      font-size: 15px;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_1252_2701)'%3e%3cpath d='M23.0005 11.1438C23.5528 11.1438 24.0004 11.5914 24.0004 12.1437C24.0004 12.6959 23.5528 13.1435 23.0005 13.1435H12.9989V23.1439C12.9988 23.6961 12.5512 24.1437 11.999 24.1438C11.4467 24.1438 10.9991 23.6961 10.9991 23.1439V13.1435H1.00014C0.448097 13.1433 0.000259667 12.6958 0.000244141 12.1437C0.000244117 11.5915 0.448087 11.144 1.00014 11.1438H10.9991V1.14345C10.9992 0.591295 11.4468 0.143555 11.999 0.143555C12.5511 0.143577 12.9987 0.591309 12.9989 1.14345V11.1438H23.0005Z' fill='%23111111'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_1252_2701'%3e%3crect width='24' height='24' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    }
+
+    &.active {
+      &::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_1252_7839)'%3e%3cpath d='M23.0008 11.1433C23.5531 11.1433 24.0007 11.5909 24.0007 12.1432C24.0006 12.6954 23.553 13.1431 23.0008 13.1431H1.00038C0.448368 13.1428 0.000600632 12.6952 0.000488281 12.1432C0.000488258 11.5909 0.448787 11.1426 1.00107 11.1426L23.0008 11.1433Z' fill='%23111111'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_1252_7839'%3e%3crect width='24' height='24' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+      }
+    }
+  }
+
+  .faq-section__answer {
+    margin: 0;
+
+    @include responsive1449 {
+      width: 100%;
+    }
+
+    @include responsive767 {
+      padding-bottom: 0;
+    }
+
+    .picture-block {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      width: 400px;
+      height: calc(100% - 80px);
+      border-radius: 16px;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.3s;
+
+      @include responsive1449 {
+        top: 24px;
+        height: calc(100% - 64px);
+      }
+
+      @include responsive1023 {
+        width: 300px;
+      }
+
+      @include responsive767 {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding-top: calc(280 / 320 * 100%);
+        right: auto;
+        bottom: auto;
+        top: auto;
+        margin-top: 24px;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

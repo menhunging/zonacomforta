@@ -200,7 +200,7 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".faq-section").length > 0) {
+  if ($(".faq-list").length > 0) {
     $(".faq-section__quest").on("click", function () {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");

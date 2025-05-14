@@ -1,0 +1,76 @@
+.partners-adv {
+  padding: 0;
+
+  .partners-adv__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+
+    @include responsive1279 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .partners-adv__item {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    border-radius: 16px;
+    padding: 24px;
+    font-size: 16px;
+
+    @include responsive639 {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include responsive389 {
+      gap: 16px;
+    }
+
+    &:nth-child(1) {
+      background-color: #d3b898;
+    }
+
+    &:nth-child(2) {
+      background-color: #fb8159;
+    }
+
+    &:nth-child(3) {
+      background-color: #b2b399;
+    }
+
+    &:nth-child(4) {
+      background-color: #b8bbbc;
+    }
+  }
+
+  .picture-block {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+  }
+
+  .partners-adv__name {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+
+    @include responsive1023 {
+      font-size: 20px;
+    }
+  }
+
+  .partners-adv__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
