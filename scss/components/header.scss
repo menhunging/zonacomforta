@@ -24,7 +24,7 @@
     position: relative;
     border: solid 1px #b8b5ac;
 
-    @include responsive1449 {
+    @include responsive1549 {
       justify-content: space-between;
       gap: 4px;
       padding: 6px;
@@ -39,7 +39,7 @@
   .logo {
     margin: 0 auto;
 
-    @include responsive1449 {
+    @include responsive1549 {
       left: 10px;
     }
 
@@ -705,7 +705,7 @@
     z-index: -1;
   }
 
-  @include responsive1449 {
+  @include responsive1549 {
     width: 220px;
   }
 
@@ -766,7 +766,7 @@
   text-align: center;
   color: $colorBlack;
 
-  @include responsive1449 {
+  @include responsive1549 {
     width: 220px;
   }
 
@@ -831,7 +831,7 @@
     }
   }
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding: 12px 8px;
     font-size: 13px;
   }
@@ -939,7 +939,7 @@
   transition: right 0.3s;
   color: $colorDark;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding: 24px;
   }
 
@@ -965,7 +965,7 @@
     border-radius: 8px;
     transition: transform 0.3s;
 
-    @include responsive1449 {
+    @include responsive1549 {
       width: 34px;
       height: 34px;
       background-size: 15px;
@@ -1164,7 +1164,7 @@
       background-position: left center;
       background-repeat: no-repeat;
 
-      @include responsive1449 {
+      @include responsive1549 {
         font-size: 14px;
       }
     }
@@ -1289,7 +1289,7 @@ body {
         );
       }
 
-      @include responsive1449 {
+      @include responsive1549 {
         width: 220px;
       }
 

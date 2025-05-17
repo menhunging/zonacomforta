@@ -9,7 +9,7 @@
     gap: 20px;
     margin-top: 32px;
 
-    @include responsive1449 {
+    @include responsive1549 {
       gap: 16px;
       margin-top: 24px;
     }
@@ -37,7 +37,7 @@
     z-index: 3;
     overflow: hidden;
 
-    @include responsive1449 {
+    @include responsive1549 {
       padding: 24px;
     }
 
@@ -62,7 +62,7 @@
       background-color: #d3b898;
       min-height: 375px;
 
-      @include responsive1449 {
+      @include responsive1549 {
         min-height: 300px;
       }
 
@@ -90,7 +90,7 @@
       background-color: rgba(78, 84, 87, 0.6);
       min-height: 375px;
 
-      @include responsive1449 {
+      @include responsive1549 {
         min-height: 300px;
       }
 

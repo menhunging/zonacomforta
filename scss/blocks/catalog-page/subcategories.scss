@@ -13,7 +13,7 @@
     font-size: 20px;
     line-height: 160%;
 
-    @include responsive1449 {
+    @include responsive1549 {
       font-size: 18px;
     }
   }
@@ -58,7 +58,7 @@
       font-size: 20px;
       padding: 16px 24px;
 
-      @include responsive1449 {
+      @include responsive1549 {
         font-size: 16px;
         padding: 12px 16px;
       }

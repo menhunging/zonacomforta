@@ -2,7 +2,7 @@
   .caption {
     max-width: 1040px;
 
-    @include responsive1449 {
+    @include responsive1549 {
       max-width: 100%;
     }
   }
@@ -48,7 +48,7 @@
     height: 300px;
     margin: 0 auto;
 
-    @include responsive1449 {
+    @include responsive1549 {
       width: 240px;
       height: 240px;
     }
@@ -110,7 +110,7 @@ p {
   padding: 0 118px;
   min-height: 422px;
 
-  @include responsive1449 {
+  @include responsive1549 {
     min-height: 250px;
     padding: 0 30px;
   }

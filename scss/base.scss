@@ -41,7 +41,7 @@ body {
     }
   }
 
-  @include responsive1449 {
+  @include responsive1549 {
     font-size: 16px;
   }
 }
@@ -52,7 +52,7 @@ body {
   padding: 0 12.5px;
   margin: 0 auto;
 
-  @include responsive1449 {
+  @include responsive1549 {
     max-width: 1200px;
   }
 
@@ -160,7 +160,7 @@ div {
   flex-direction: column;
   padding-top: 100px;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding-top: 90px;
   }
 
@@ -202,7 +202,7 @@ picture {
 section {
   padding: 80px 0;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding: 50px 0;
   }
 
@@ -249,7 +249,7 @@ section {
     }
   }
 
-  @include responsive1449 {
+  @include responsive1549 {
     height: 30px;
   }
 }
@@ -265,7 +265,7 @@ section {
   border-right: 0;
   border-radius: 0;
 
-  @include responsive1449 {
+  @include responsive1549 {
     height: 30px;
   }
 
@@ -282,7 +282,7 @@ section {
     color: $colorBlack;
     border-bottom: solid 1px rgba(159, 159, 159, 1);
 
-    @include responsive1449 {
+    @include responsive1549 {
       padding: 0;
       font-size: 12px;
     }
@@ -561,7 +561,7 @@ section {
     padding-left: 70px;
     color: $colorWhite;
 
-    @include responsive1449 {
+    @include responsive1549 {
       font-size: 14px;
       line-height: 17px;
       padding-left: 65px;
@@ -596,7 +596,7 @@ section {
       transform: translateY(-50%);
       background-color: $colorWhite;
 
-      @include responsive1449 {
+      @include responsive1549 {
         width: 42px;
         height: 42px;
       }
@@ -621,7 +621,7 @@ section {
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23EDEADF' stroke-width='4'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
 
-      @include responsive1449 {
+      @include responsive1549 {
         width: 42px;
         height: 42px;
         background-size: 24px;
@@ -655,7 +655,7 @@ section {
       border-radius: 50%;
       border: solid 1px $colorBlack;
 
-      @include responsive1449 {
+      @include responsive1549 {
         top: 0;
       }
     }
@@ -669,12 +669,12 @@ section {
       background-color: $colorOrange;
       opacity: 0;
 
-      @include responsive1449 {
+      @include responsive1549 {
         top: 3px;
       }
     }
 
-    @include responsive1449 {
+    @include responsive1549 {
       font-size: 12px;
     }
   }
@@ -760,7 +760,7 @@ section {
   position: relative;
   z-index: 3;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding: 10px 0;
   }
 
@@ -859,7 +859,7 @@ section {
 .section-title {
   padding: 30px 0;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding: 20px 0;
   }
 }
@@ -987,7 +987,7 @@ section {
   line-height: 160%;
   padding-bottom: 80px;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding-bottom: 40px;
   }
 
@@ -1004,7 +1004,7 @@ section {
     height: 500px;
     transform: translateY(-50%);
 
-    @include responsive1449 {
+    @include responsive1549 {
       top: calc(50% + 5px);
       left: calc(50% - 555px);
       width: 565px;
@@ -1051,7 +1051,7 @@ section {
     width: 100%;
     margin-left: auto;
 
-    @include responsive1449 {
+    @include responsive1549 {
       max-width: 500px;
       gap: 24px;
     }
@@ -1091,7 +1091,7 @@ section {
   }
 
   .btn {
-    @include responsive1449 {
+    @include responsive1549 {
       height: 50px;
       gap: 5px;
       font-size: 18px;
@@ -1114,7 +1114,7 @@ section {
   flex-direction: column;
   justify-content: center;
 
-  @include responsive1449{
+  @include responsive1549 {
     padding: 60px 0;
   }
 
@@ -1132,7 +1132,7 @@ section {
     overflow: hidden;
     border-radius: 32px;
 
-    @include responsive1449 {
+    @include responsive1549 {
       left: calc(50% - 587px);
       width: 550px;
       height: 294px;
@@ -1176,7 +1176,7 @@ section {
     width: 100%;
     margin-left: auto;
 
-    @include responsive1449 {
+    @include responsive1549 {
       max-width: 580px;
     }
 
@@ -1281,7 +1281,7 @@ section {
     gap: 32px;
     width: 50%;
 
-    @include responsive1449 {
+    @include responsive1549 {
       gap: 24px;
     }
 
@@ -1294,7 +1294,7 @@ section {
     font-size: 30px;
     line-height: 120%;
 
-    @include responsive1449 {
+    @include responsive1549 {
       font-size: 24px;
     }
 
@@ -1321,7 +1321,7 @@ section {
     line-height: 120%;
     font-weight: 700;
 
-    @include responsive1449 {
+    @include responsive1549 {
       font-size: 18px;
     }
 
@@ -1348,7 +1348,7 @@ section {
   .btn {
     max-width: 288px;
 
-    @include responsive1449 {
+    @include responsive1549 {
       height: 70px;
       max-width: 250px;
     }

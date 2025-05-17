@@ -5,7 +5,7 @@
   height: 830px;
   margin-bottom: 80px;
 
-  @include responsive1449 {
+  @include responsive1549 {
     height: 100vh;
     margin-bottom: 60px;
     min-height: 720px;
@@ -41,7 +41,7 @@
     padding: 165px 0;
     z-index: 2;
 
-    @include responsive1449 {
+    @include responsive1549 {
       padding: 150px 0;
     }
 
@@ -78,7 +78,7 @@
         transform: translateX(115px);
         opacity: 1;
 
-        @include responsive1449 {
+        @include responsive1549 {
           transform: translateX(110px);
         }
 
@@ -113,7 +113,7 @@
     color: $colorWhite-a6;
     transition: transform 1.5s, opacity 1s;
 
-    @include responsive1449 {
+    @include responsive1549 {
       width: 500px;
       font-size: 22px;
     }
@@ -198,7 +198,7 @@
       opacity: 0;
     }
 
-    @include responsive1449{
+    @include responsive1549{
       width: 78px;
       height: 78px;
     }
@@ -223,7 +223,7 @@
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.7071 0.792893C11.3166 0.402369 10.6834 0.402369 10.2929 0.792893L0.999999 10.0858C0.218949 10.8668 0.218952 12.1332 1 12.9142L10.2929 22.2071C10.6834 22.5976 11.3166 22.5976 11.7071 22.2071C12.0976 21.8166 12.0976 21.1834 11.7071 20.7929L2.41421 11.5L11.7071 2.20711C12.0976 1.81658 12.0976 1.18342 11.7071 0.792893Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
       }
 
-      @include responsive1449 {
+      @include responsive1549 {
         left: 12.5px;
       }
 
@@ -247,7 +247,7 @@
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='23' viewBox='0 0 12 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.792893C0.683417 0.402369 1.31658 0.402369 1.70711 0.792893L11 10.0858C11.7811 10.8668 11.781 12.1332 11 12.9142L1.70711 22.2071C1.31658 22.5976 0.683417 22.5976 0.292893 22.2071C-0.0976311 21.8166 -0.0976311 21.1834 0.292893 20.7929L9.58579 11.5L0.292893 2.20711C-0.0976311 1.81658 -0.0976311 1.18342 0.292893 0.792893Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
       }
 
-      @include responsive1449 {
+      @include responsive1549 {
         right: 12.5px;
       }
 

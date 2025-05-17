@@ -35,7 +35,7 @@
     border-radius: 8px;
     overflow: hidden;
 
-    @include responsive1449 {
+    @include responsive1549 {
       padding: 24px;
     }
 
@@ -64,7 +64,7 @@
         margin-left: auto;
         margin-top: 24px;
 
-        @include responsive1449 {
+        @include responsive1549 {
           max-width: 284px;
         }
 
@@ -151,7 +151,7 @@
   padding: 32px;
   overflow: hidden;
 
-  @include responsive1449 {
+  @include responsive1549 {
     padding: 24px;
   }
 
@@ -291,7 +291,7 @@
       max-width: 70%;
     }
 
-    @include responsive1449 {
+    @include responsive1549 {
       max-width: 80%;
     }
 
@@ -312,7 +312,7 @@
     border-radius: 8px;
     padding: 32px;
 
-    @include responsive1449 {
+    @include responsive1549 {
       max-width: 700px;
       padding: 24px;
     }
@@ -426,7 +426,7 @@
         width: 278px;
         height: 352px;
 
-        @include responsive1449 {
+        @include responsive1549 {
           right: -66px;
           bottom: -45px;
           width: 228px;
@@ -460,7 +460,7 @@
     padding: 32px;
     border-radius: 8px;
 
-    @include responsive1449 {
+    @include responsive1549 {
       padding: 24px;
     }
 

@@ -61,7 +61,7 @@
   opacity: 0.3;
   transition: opacity 0.3s;
 
-  @include responsive1449 {
+  @include responsive1549 {
     width: 194px;
     height: 194px;
   }
@@ -93,7 +93,7 @@
   padding: 0 16px;
   flex: 1;
 
-  @include responsive1449 {
+  @include responsive1549 {
     gap: 16px;
   }
 
@@ -157,7 +157,7 @@
   gap: 95px;
   margin-top: 45px;
 
-  @include responsive1449 {
+  @include responsive1549 {
     gap: 70px;
     margin-top: 30px;
   }
@@ -188,7 +188,7 @@
     font-size: 20px;
     line-height: 140%;
 
-    @include responsive1449 {
+    @include responsive1549 {
       font-size: 18px;
       max-width: 500px;
     }

@@ -22,7 +22,7 @@ $colorBlue: #045afe;
 
 $responsive1799: "1799px";
 $responsive1599: "1599px";
-$responsive1449: "1449px";
+$responsive1549: "1549px";
 $responsive1279: "1279px";
 $responsive1023: "1023px";
 $responsive767: "767px";
@@ -68,8 +68,8 @@ $responsive389: "389px";
   }
 }
 
-@mixin responsive1449 {
-  @media (max-width: $responsive1449) {
+@mixin responsive1549 {
+  @media (max-width: $responsive1549) {
     @content;
   }
 }
