@@ -662,6 +662,57 @@
       background-color: transparent;
     }
   }
+
+  .assortment__list--catalog {
+    @include responsive639 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include responsive389 {
+      grid-template-columns: 1fr;
+    }
+
+    .assortment__item {
+      @include responsive639 {
+        min-height: 175px;
+      }
+
+      .assortment__text {
+        position: relative;
+        padding-right: 20px;
+
+        @include after {
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='16' viewBox='0 0 8 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.202243 0.213013C0.471901 -0.0710044 0.909102 -0.0710044 1.17876 0.213013L7.59551 6.97148C8.13483 7.53952 8.13483 8.46048 7.59551 9.02852L1.17876 15.787C0.909102 16.071 0.471901 16.071 0.202243 15.787C-0.0674144 15.503 -0.0674144 15.0425 0.202243 14.7585L6.619 8L0.202243 1.24153C-0.0674144 0.957515 -0.0674144 0.497031 0.202243 0.213013Z' fill='white'/%3e%3c/svg%3e ");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 8px;
+          position: relative;
+          width: 24px;
+          height: 24px;
+          display: none;
+          min-width: 24px;
+
+          @include responsive639 {
+            display: block;
+          }
+        }
+      }
+
+      .picture-block {
+        @include responsive639 {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: initial;
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 }
 
 .burger-catalog {

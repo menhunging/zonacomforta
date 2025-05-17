@@ -124,3 +124,64 @@
     padding: 0;
   }
 }
+
+#popup-guarant {
+  .modal__container {
+    max-width: 624px;
+
+    @include responsive1549 {
+      max-width: 800px;
+    }
+
+    @include responsive1279 {
+      max-width: 95%;
+    }
+  }
+
+  .modal__close {
+    width: 36px;
+    height: 36px;
+    background-size: 26px;
+    right: 5px;
+    top: 5px;
+
+    @include responsive1279 {
+    }
+  }
+}
+
+.popup-guarant {
+  background-color: $colorWhite;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  overflow: hidden;
+  gap: 40px;
+
+  @include responsive1549 {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  @include responsive1279 {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+  }
+
+  .caption {
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(183, 170, 154, 0.2);
+    border-radius: 8px;
+  }
+}

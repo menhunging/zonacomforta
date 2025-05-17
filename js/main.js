@@ -23,28 +23,15 @@ $(document).ready(function () {
 
   if ($(".filter-application").length > 0) {
     if ($(window).width() >= 1024) {
-      let timer = null;
-
+      // можно удалить, оставил для примера
       $(".filter-row input").on("change", function () {
-        let positionInput = $(this).parents(".check-block").position().top;
-
-        closeFilterApplication();
-
-        timer = setTimeout(function () {
-          $(".filter-application")
-            .addClass("visible")
-            .attr("style", `top:${positionInput}px`);
-        }, 200);
+        openFilterApplication($(this));
       });
+      //  /можно удалить, оставил для примера
 
       $(".filter-application__close").on("click", () =>
         closeFilterApplication()
       );
-
-      function closeFilterApplication() {
-        clearTimeout(timer);
-        $(".filter-application").removeClass("visible");
-      }
     }
   }
 
@@ -372,7 +359,7 @@ $(document).ready(function () {
     });
 
     $(".btnClearSearch").on("click", function () {
-      $(this).siblings("input").val("");
+      $(this).siblings("input").val("").trigger("keyup").focus();
       $(this).hide();
     });
   }
@@ -688,7 +675,68 @@ $(document).ready(function () {
 
     sliders.length && sliderinit();
   }
+
+  if ($(".filter__content").length > 0) {
+    $(".filter__content .filter__search input").on("keyup", function () {
+      let input = $(this);
+      let inputValue = input.val().toLowerCase();
+      let parents = input.parents(".filter__content");
+
+      if (input.val().trim() !== "") {
+        input.siblings(".btnClearSearch").show();
+      } else {
+        input.siblings(".btnClearSearch").hide();
+      }
+
+      parents.find(".check-block").each(function () {
+        let labelText = $(this).find("label").text().toLowerCase();
+
+        if (labelText.includes(inputValue)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    });
+  }
 });
+// application
+let timerApplication = null;
+
+function openFilterApplication(input) {
+  let positionInput = input.parents(".check-block").position().top;
+  let applicationBlock = $(".filter-application");
+
+  closeFilterApplication();
+
+  $(document).mouseup(function (e) {
+    if (
+      !applicationBlock.is(e.target) &&
+      applicationBlock.has(e.target).length === 0
+    ) {
+      closeFilterApplication();
+    }
+  });
+
+  $(document).on("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeFilterApplication();
+    }
+  });
+
+  timerApplication = setTimeout(function () {
+    applicationBlock
+      .addClass("visible")
+      .attr("style", `top:${positionInput}px`);
+  }, 200);
+}
+
+function closeFilterApplication() {
+  clearTimeout(timerApplication);
+  $(".filter-application").removeClass("visible");
+  $(document).off("mouseup keydown");
+}
+// /application
 
 function Marquee(selector, speed, reverse = false) {
   const parentSelector = document.querySelector(selector);

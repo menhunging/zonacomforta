@@ -85,6 +85,9 @@
     max-height: 210px;
     height: 100%;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -99,14 +102,12 @@
   }
 
   .check-block {
-    & + .check-block {
-      margin-top: 16px;
-    }
-
     label {
       color: $colorBlack;
       padding-left: 30px;
       min-height: 20px;
+      display: flex;
+      align-items: center;
 
       &::after {
         width: 20px;
@@ -159,9 +160,11 @@
         width: 28px;
         height: 28px;
         position: absolute;
-        right: 20px;
+        right: 15px;
         top: 50%;
         transform: translateY(-50%);
+        background-size: 16px;
+        display: none;
 
         @include responsive1279 {
           width: 20px;
