@@ -354,7 +354,7 @@ $(document).ready(function () {
           slidesPerView: 2,
           spaceBetween: 16,
         },
-        1450: {
+        1550: {
           slidesPerView: 3,
           spaceBetween: 16,
         },
@@ -539,7 +539,7 @@ $(document).ready(function () {
           slidesPerView: 4,
           spaceBetween: 24,
         },
-        1450: {
+        1550: {
           slidesPerView: 4,
           spaceBetween: 32,
         },
