@@ -17,6 +17,7 @@
 
   @include responsive1449 {
     margin-top: 30px;
+    gap: 20px;
   }
 
   @include responsive1023 {
@@ -44,7 +45,7 @@
     width: 100%;
 
     @include responsive1449 {
-      padding: 30px 25px;
+      padding: 25px;
     }
 
     @include responsive1279 {
@@ -121,6 +122,10 @@
   line-height: 120%;
   width: 100px;
 
+  @include responsive1449 {
+    font-size: 50px;
+  }
+
   @include responsive1023 {
     font-size: 46px;
   }
@@ -170,6 +175,10 @@
     font-size: 30px;
     line-height: 100%;
 
+    @include responsive1449 {
+      font-size: 26px;
+    }
+
     @include responsive767 {
       font-size: 24px;
       line-height: 120%;
@@ -216,7 +225,11 @@
   pointer-events: none;
   transition: all 0.3s;
 
-  @include responsive1449{
+  @include responsive1449 {
+    right: -32px;
+  }
+
+  @include responsive1449 {
     width: 320px;
   }
 

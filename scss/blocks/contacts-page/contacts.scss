@@ -74,6 +74,11 @@
   line-height: 160%;
   color: #4e5457;
 
+  @include responsive1449 {
+    padding: 24px;
+    font-size: 15px;
+  }
+
   @include responsive1279 {
     padding: 16px;
     font-size: 14px;

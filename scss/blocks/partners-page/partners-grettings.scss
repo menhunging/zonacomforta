@@ -39,6 +39,11 @@
     border-radius: 16px;
     max-width: 555px;
 
+    @include responsive1449 {
+      max-width: 420px;
+      padding: 24px;
+    }
+
     @include responsive1279 {
       max-width: 420px;
       padding: 24px;

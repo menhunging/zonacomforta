@@ -3,8 +3,13 @@
     display: flex;
     justify-content: space-between;
 
+    @include responsive1449 {
+      align-items: center;
+    }
+
     @include responsive767 {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -15,8 +20,13 @@
     line-height: 160%;
     color: $colorBlack-a6;
 
+    @include responsive1449 {
+      font-size: 16px;
+    }
+
     @include responsive1279 {
       width: 45%;
+      font-size: 18px;
     }
 
     @include responsive1023 {
@@ -31,8 +41,8 @@
       width: 100%;
     }
 
-    .btn{
-      @include responsive767{
+    .btn {
+      @include responsive767 {
         display: none;
       }
     }
@@ -117,10 +127,10 @@
   }
 }
 
-.brand-main__btnMobile{
+.brand-main__btnMobile {
   display: none;
 
-  @include responsive767{
+  @include responsive767 {
     display: flex;
     width: 100%;
     max-width: 100%;

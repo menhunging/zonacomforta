@@ -8,6 +8,11 @@
     gap: 18px;
     margin-top: 32px;
 
+    @include responsive1449 {
+      margin-top: 24px;
+      gap: 16px;
+    }
+
     @include responsive1279 {
       grid-template-columns: 50% 1fr;
       margin-top: 20px;
@@ -85,6 +90,11 @@
     font-size: 16px;
     line-height: 160%;
     margin-top: 20px;
+
+    @include responsive1449 {
+      font-size: 14px;
+      gap: 4px;
+    }
 
     @include responsive1279 {
       font-size: 14px;

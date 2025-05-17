@@ -61,6 +61,11 @@
   opacity: 0.3;
   transition: opacity 0.3s;
 
+  @include responsive1449 {
+    width: 194px;
+    height: 194px;
+  }
+
   @include responsive479 {
     width: 100%;
     height: auto;
@@ -87,6 +92,10 @@
   gap: 24px;
   padding: 0 16px;
   flex: 1;
+
+  @include responsive1449 {
+    gap: 16px;
+  }
 
   @include responsive479 {
     padding: 0;
@@ -148,6 +157,11 @@
   gap: 95px;
   margin-top: 45px;
 
+  @include responsive1449 {
+    gap: 70px;
+    margin-top: 30px;
+  }
+
   @include responsive767 {
     flex-direction: column-reverse;
     gap: 20px;
@@ -173,6 +187,11 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
+
+    @include responsive1449 {
+      font-size: 18px;
+      max-width: 500px;
+    }
 
     @include responsive767 {
       font-size: 16px;

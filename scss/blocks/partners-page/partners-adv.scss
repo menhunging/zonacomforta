@@ -20,6 +20,11 @@
     padding: 24px;
     font-size: 16px;
 
+    @include responsive1449 {
+      padding: 16px;
+      gap: 24px;
+    }
+
     @include responsive639 {
       flex-direction: column;
       text-align: center;
@@ -55,6 +60,12 @@
     width: 200px;
     height: 200px;
     min-width: 200px;
+
+    @include responsive1449 {
+      width: 180px;
+      height: 180px;
+      min-width: 180px;
+    }
   }
 
   .partners-adv__name {

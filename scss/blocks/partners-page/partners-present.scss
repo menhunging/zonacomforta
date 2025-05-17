@@ -11,6 +11,10 @@
     padding: 32px;
     border-radius: 8px;
 
+    @include responsive1449 {
+      padding: 24px;
+    }
+
     @include responsive1023 {
       padding: 24px;
     }
@@ -25,6 +29,11 @@
     align-items: flex-start;
     position: relative;
     font-size: 16px;
+
+    @include responsive1449 {
+      gap: 16px;
+      max-width: calc(80% - 35px);
+    }
 
     @include responsive1279 {
       max-width: 70%;
@@ -51,7 +60,7 @@
   .partners-present__controls {
     margin-top: -8px;
 
-    @include responsive1023 {
+    @include responsive1449 {
       margin-top: 0;
     }
   }

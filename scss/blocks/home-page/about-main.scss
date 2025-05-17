@@ -51,11 +51,8 @@
 
       @include responsive1449 {
         min-height: 265px;
-      }
-
-      @include responsive1279 {
+        font-size: 16px;
         padding: 24px;
-        font-size: 18px;
       }
 
       @include responsive1023 {
@@ -229,7 +226,7 @@
       position: relative;
 
       @include responsive1449 {
-        font-size: 34px;
+        font-size: 32px;
       }
 
       @include responsive767 {

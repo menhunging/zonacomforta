@@ -6,8 +6,9 @@
   margin-bottom: 80px;
 
   @include responsive1449 {
-    height: 740px;
+    height: 100vh;
     margin-bottom: 60px;
+    min-height: 720px;
   }
 
   @include responsive1279 {
@@ -78,7 +79,7 @@
         opacity: 1;
 
         @include responsive1449 {
-          transform: translateX(150px);
+          transform: translateX(110px);
         }
 
         @include responsive1279 {
@@ -105,7 +106,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    // transform: translateX(115px);
     transform: translateX(500px);
     opacity: 0;
     font-size: 28px;
@@ -115,13 +115,11 @@
 
     @include responsive1449 {
       width: 500px;
-      // transform: translateX(150px);
-      font-size: 24px;
+      font-size: 22px;
     }
 
     @include responsive1279 {
       width: 470px;
-      // transform: translateX(120px);
       font-size: 20px;
     }
 
@@ -198,6 +196,11 @@
       left: 0;
       top: 0;
       opacity: 0;
+    }
+
+    @include responsive1449{
+      width: 78px;
+      height: 78px;
     }
 
     @include responsive767 {

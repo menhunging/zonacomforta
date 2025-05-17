@@ -35,6 +35,10 @@
     border-radius: 8px;
     overflow: hidden;
 
+    @include responsive1449 {
+      padding: 24px;
+    }
+
     @include responsive1023 {
       font-size: 14px;
     }
@@ -59,6 +63,10 @@
         max-width: 314px;
         margin-left: auto;
         margin-top: 24px;
+
+        @include responsive1449 {
+          max-width: 284px;
+        }
 
         @include responsive1279 {
           max-width: 284px;
@@ -142,6 +150,10 @@
   margin-top: 8px;
   padding: 32px;
   overflow: hidden;
+
+  @include responsive1449 {
+    padding: 24px;
+  }
 
   @include responsive767 {
     padding: 24px;
@@ -279,6 +291,10 @@
       max-width: 70%;
     }
 
+    @include responsive1449 {
+      max-width: 80%;
+    }
+
     @include responsive767 {
       max-width: 100%;
     }
@@ -295,6 +311,11 @@
     background-color: #e2e9dc;
     border-radius: 8px;
     padding: 32px;
+
+    @include responsive1449 {
+      max-width: 700px;
+      padding: 24px;
+    }
 
     @include responsive1279 {
       max-width: 100%;
@@ -405,6 +426,13 @@
         width: 278px;
         height: 352px;
 
+        @include responsive1449 {
+          right: -66px;
+          bottom: -45px;
+          width: 228px;
+          height: 262px;
+        }
+
         @include responsive1023 {
           width: 220px;
           height: 300px;
@@ -431,6 +459,10 @@
     border: solid 1px #b8b5ac;
     padding: 32px;
     border-radius: 8px;
+
+    @include responsive1449 {
+      padding: 24px;
+    }
 
     @include responsive767 {
       padding: 24px;
