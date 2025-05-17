@@ -7,6 +7,10 @@
     border-radius: 8px;
     line-height: 160%;
 
+    @include responsive1449 {
+      padding: 16px;
+    }
+
     @include responsive1023 {
       font-size: 14px;
       line-height: 140%;
@@ -19,6 +23,10 @@
         margin-top: 32px;
         display: block;
 
+        @include responsive1449 {
+          margin-top: 24px;
+        }
+
         @include responsive1279 {
           margin-top: 24px;
         }
@@ -30,6 +38,10 @@
       width: 100%;
       border-radius: 8px;
       overflow: hidden;
+
+      @include responsive1449 {
+        margin-bottom: 24px;
+      }
 
       @include responsive1279 {
         margin-bottom: 24px;
@@ -58,7 +70,7 @@
     ul {
       margin: 12px 0 32px 10px;
 
-      @include responsive767{
+      @include responsive767 {
         margin-left: 5px;
       }
 
@@ -74,8 +86,8 @@
           border-radius: 50%;
           background-color: $colorBlack;
 
-          @include responsive1023{
-            top:7px;
+          @include responsive1023 {
+            top: 7px;
           }
         }
       }
@@ -98,6 +110,10 @@
     height: 50px;
     padding: 0 25px 0 10px;
     font-size: 16px;
+
+    @include responsive1449 {
+      height: 45px;
+    }
 
     @include responsive767 {
       font-size: 14px;

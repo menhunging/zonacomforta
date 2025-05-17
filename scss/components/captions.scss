@@ -41,15 +41,15 @@ h2,
   font-family: $fontRadiotechnika;
 
   @include responsive1449 {
-    font-size: 76px;
+    font-size: 56px;
   }
 
   @include responsive1279 {
-    font-size: 72px;
+    font-size: 56px;
   }
 
   @include responsive1023 {
-    font-size: 66px;
+    font-size: 55px;
   }
 
   @include responsive767 {
@@ -69,11 +69,11 @@ h3,
   font-weight: 400;
 
   @include responsive1449 {
-    font-size: 38px;
+    font-size: 30px;
   }
 
   @include responsive1279 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   @include responsive1023 {
@@ -95,6 +95,7 @@ h4,
   line-height: 120%;
 
   @include responsive1449 {
+    font-size: 28px;
   }
 
   @include responsive1279 {
@@ -120,8 +121,13 @@ h4,
   display: block;
   font-weight: 400;
 
+  @include responsive1449 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   @include responsive1279 {
-    font-size: 38px;
+    font-size: 32px;
     line-height: 48px;
   }
 

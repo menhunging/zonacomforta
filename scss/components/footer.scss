@@ -4,7 +4,7 @@
   line-height: 160%;
   padding: 31px 0;
 
-  @include responsive767 {
+  @include responsive1449 {
     padding: 20px 0;
   }
 
@@ -22,7 +22,7 @@
     padding: 64px 40px;
 
     @include responsive1449 {
-      padding: 40px 30px;
+      padding: 30px 25px;
     }
 
     @include responsive1279 {
@@ -35,7 +35,7 @@
     height: 65px;
 
     @include responsive1449 {
-      width: 280px;
+      width: 240px;
     }
 
     @include responsive767 {
@@ -146,6 +146,11 @@
   padding-top: 64px;
   max-width: 335px;
 
+  @include responsive1449 {
+    max-width: 275px;
+    gap: 16px;
+  }
+
   @include responsive1279 {
     margin: 0 auto;
     padding: 0;
@@ -161,6 +166,13 @@
     padding-right: 15px;
     height: 47px;
     border-radius: 12px;
+
+    @include responsive1449 {
+      font-size: 14px;
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 40px;
+    }
 
     @include responsive767 {
       font-size: 14px;

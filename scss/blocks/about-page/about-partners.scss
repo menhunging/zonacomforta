@@ -26,6 +26,10 @@
     justify-content: center;
     gap: 16px;
 
+    @include responsive1449 {
+      min-height: 160px;
+    }
+
     @include responsive1023 {
       padding-left: 150px;
       font-size: 14px;

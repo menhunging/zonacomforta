@@ -40,6 +40,10 @@ body {
       }
     }
   }
+
+  @include responsive1449 {
+    font-size: 16px;
+  }
 }
 
 .container {
@@ -49,7 +53,7 @@ body {
   margin: 0 auto;
 
   @include responsive1449 {
-    max-width: 1300px;
+    max-width: 1200px;
   }
 
   @include responsive1279 {
@@ -156,6 +160,10 @@ div {
   flex-direction: column;
   padding-top: 100px;
 
+  @include responsive1449 {
+    padding-top: 90px;
+  }
+
   @include responsive1279 {
     padding-top: 100px;
   }
@@ -195,7 +203,7 @@ section {
   padding: 80px 0;
 
   @include responsive1449 {
-    padding: 60px 0;
+    padding: 50px 0;
   }
 
   @include responsive1279 {
@@ -553,6 +561,12 @@ section {
     padding-left: 70px;
     color: $colorWhite;
 
+    @include responsive1449 {
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 65px;
+    }
+
     @include responsive1279 {
       font-size: 12px;
     }
@@ -582,6 +596,11 @@ section {
       transform: translateY(-50%);
       background-color: $colorWhite;
 
+      @include responsive1449 {
+        width: 42px;
+        height: 42px;
+      }
+
       @include responsive1023 {
         width: 38px;
         height: 38px;
@@ -601,6 +620,12 @@ section {
       background-position: center;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23EDEADF' stroke-width='4'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
+
+      @include responsive1449 {
+        width: 42px;
+        height: 42px;
+        background-size: 24px;
+      }
 
       @include responsive1023 {
         width: 38px;
@@ -735,6 +760,10 @@ section {
   position: relative;
   z-index: 3;
 
+  @include responsive1449 {
+    padding: 10px 0;
+  }
+
   @include responsive767 {
     padding: 5px 0;
   }
@@ -829,6 +858,10 @@ section {
 
 .section-title {
   padding: 30px 0;
+
+  @include responsive1449 {
+    padding: 20px 0;
+  }
 }
 
 .pagination {
@@ -954,6 +987,10 @@ section {
   line-height: 160%;
   padding-bottom: 80px;
 
+  @include responsive1449 {
+    padding-bottom: 40px;
+  }
+
   @include responsive767 {
     padding-bottom: 40px;
     padding-top: 0;
@@ -966,6 +1003,13 @@ section {
     width: 665px;
     height: 500px;
     transform: translateY(-50%);
+
+    @include responsive1449 {
+      top: calc(50% + 5px);
+      left: calc(50% - 555px);
+      width: 565px;
+      height: 290px;
+    }
 
     @include responsive1279 {
       width: 450px;
@@ -1007,6 +1051,11 @@ section {
     width: 100%;
     margin-left: auto;
 
+    @include responsive1449 {
+      max-width: 500px;
+      gap: 24px;
+    }
+
     @include responsive1279 {
       max-width: 480px;
     }
@@ -1042,6 +1091,15 @@ section {
   }
 
   .btn {
+    @include responsive1449 {
+      height: 50px;
+      gap: 5px;
+      font-size: 18px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+    }
   }
 }
 
@@ -1055,6 +1113,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include responsive1449{
+    padding: 60px 0;
+  }
 
   @include responsive767 {
     padding: 30px 0;
@@ -1071,9 +1133,9 @@ section {
     border-radius: 32px;
 
     @include responsive1449 {
-      left: calc(50% - 625px);
-      width: 630px;
-      height: 335px;
+      left: calc(50% - 587px);
+      width: 550px;
+      height: 294px;
     }
 
     @include responsive1279 {
@@ -1219,6 +1281,10 @@ section {
     gap: 32px;
     width: 50%;
 
+    @include responsive1449 {
+      gap: 24px;
+    }
+
     @include responsive1023 {
       width: 100%;
     }
@@ -1229,6 +1295,7 @@ section {
     line-height: 120%;
 
     @include responsive1449 {
+      font-size: 24px;
     }
 
     @include responsive1279 {
@@ -1254,6 +1321,10 @@ section {
     line-height: 120%;
     font-weight: 700;
 
+    @include responsive1449 {
+      font-size: 18px;
+    }
+
     @include responsive1279 {
       font-size: 18px;
     }
@@ -1276,5 +1347,10 @@ section {
 
   .btn {
     max-width: 288px;
+
+    @include responsive1449 {
+      height: 70px;
+      max-width: 250px;
+    }
   }
 }

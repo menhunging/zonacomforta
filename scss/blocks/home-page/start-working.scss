@@ -49,8 +49,8 @@
     margin: 0 auto;
 
     @include responsive1449 {
-      width: 270px;
-      height: 270px;
+      width: 240px;
+      height: 240px;
     }
 
     @include responsive1279 {
@@ -111,8 +111,8 @@ p {
   min-height: 422px;
 
   @include responsive1449 {
-    min-height: 330px;
-    padding: 0 50px;
+    min-height: 250px;
+    padding: 0 30px;
   }
 
   @include responsive1279 {

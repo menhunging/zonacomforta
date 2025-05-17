@@ -48,6 +48,10 @@
     border: solid 1px $colorBlack-a2;
     border-radius: 8px;
 
+    @include responsive1449 {
+      padding: 16px;
+    }
+
     @include responsive1279 {
       padding: 16px;
     }
@@ -85,6 +89,10 @@
   .catalog-section__search {
     width: 334px;
 
+    @include responsive1449 {
+      width: 245px;
+    }
+
     @include responsive1279 {
       width: 250px;
     }
@@ -109,9 +117,12 @@
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 19L13 13M1 8C1 8.91925 1.18106 9.82951 1.53284 10.6788C1.88463 11.5281 2.40024 12.2997 3.05025 12.9497C3.70026 13.5998 4.47194 14.1154 5.32122 14.4672C6.1705 14.8189 7.08075 15 8 15C8.91925 15 9.82951 14.8189 10.6788 14.4672C11.5281 14.1154 12.2997 13.5998 12.9497 12.9497C13.5998 12.2997 14.1154 11.5281 14.4672 10.6788C14.8189 9.82951 15 8.91925 15 8C15 7.08075 14.8189 6.1705 14.4672 5.32122C14.1154 4.47194 13.5998 3.70026 12.9497 3.05025C12.2997 2.40024 11.5281 1.88463 10.6788 1.53284C9.82951 1.18106 8.91925 1 8 1C7.08075 1 6.1705 1.18106 5.32122 1.53284C4.47194 1.88463 3.70026 2.40024 3.05025 3.05025C2.40024 3.70026 1.88463 4.47194 1.53284 5.32122C1.18106 6.1705 1 7.08075 1 8Z' stroke='%23FA4F19' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
         background-repeat: no-repeat;
 
-        @include responsive1279 {
+        @include responsive1449 {
           height: 50px;
           font-size: 14px;
+        }
+
+        @include responsive1279 {
         }
 
         &::placeholder {
@@ -132,9 +143,15 @@
         top: 50%;
         transform: translateY(-50%);
 
+        @include responsive1449 {
+          width: 18px;
+          height: 18px;
+          background-size: contain;
+        }
+
         @include responsive1279 {
-          width: 20px;
-          height: 20px;
+          width: 18px;
+          height: 18px;
         }
       }
     }
@@ -158,6 +175,10 @@
     top: 8px;
     left: 0;
     z-index: 5;
+
+    @include responsive1449 {
+      padding: 16px;
+    }
 
     @include responsive1279 {
       width: 280px;
@@ -188,6 +209,10 @@
     border-radius: 8px;
     flex: 1;
 
+    @include responsive1449 {
+      padding: 16px;
+    }
+
     @include responsive1279 {
       width: calc(100% - 280px - 8px);
       padding: 16px;
@@ -200,6 +225,10 @@
     border: solid 1px $colorBlack-a2;
     border-radius: 8px;
     padding: 24px;
+
+    @include responsive1449 {
+      padding: 16px;
+    }
 
     @include responsive1279 {
       width: calc(100% - 280px - 8px);
@@ -228,6 +257,10 @@
     border-radius: 8px;
     margin-top: 8px;
 
+    @include responsive1449 {
+      padding: 16px;
+    }
+
     @include responsive1279 {
       padding: 16px;
     }
@@ -253,6 +286,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+
+  @include responsive1449 {
+    gap: 24px;
+  }
 
   @include responsive1279 {
     grid-template-columns: repeat(2, 1fr);
@@ -290,9 +327,12 @@
   border-radius: 24px;
   transition: all 0.3s;
 
-  @include responsive1279 {
+  @include responsive1449 {
     font-size: 14px;
     line-height: 120%;
+  }
+
+  @include responsive1279 {
     box-shadow: 0px 0px 10px 5px $colorBlack-a1;
   }
 
@@ -321,6 +361,10 @@
     transition: transform 0.3s;
     @include invisLink;
 
+    @include responsive1449 {
+      height: 180px;
+    }
+
     @include responsive639 {
       height: 180px;
     }
@@ -342,10 +386,15 @@
     line-height: 160%;
     transition: color 0.3s;
 
-    @include responsive1279 {
+    @include responsive1449 {
       font-size: 18px;
       min-height: 48px;
       line-height: 120%;
+    }
+
+    @include responsive1279 {
+      font-size: 18px;
+      min-height: 48px;
     }
 
     @include hover {
@@ -370,6 +419,11 @@
     background-color: $colorBlack;
     border-color: $colorBlack;
 
+    @include responsive1449 {
+      height: 45px;
+      margin-top: 12px;
+    }
+
     @include responsive1279 {
       background-color: $colorOrange;
       border-color: $colorOrange;
@@ -393,6 +447,11 @@
   opacity: 0.7;
   transition: opacity 0.3s;
 
+  @include responsive1449 {
+    font-size: 14px;
+    gap: 6px;
+  }
+
   @include responsive1279 {
     opacity: 1;
   }
@@ -408,6 +467,11 @@
     display: flex;
     align-items: center;
     gap: 4px;
+
+    @include responsive1449 {
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
 
     @include before {
       position: relative;
@@ -516,7 +580,7 @@
 
     @include responsive639 {
       width: 180px;
-      padding: 12px
+      padding: 12px;
     }
 
     li {

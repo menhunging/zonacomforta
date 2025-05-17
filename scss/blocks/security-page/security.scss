@@ -9,6 +9,11 @@
     padding: 32px;
     gap: 20px;
 
+    @include responsive1449 {
+      padding: 24px;
+      gap: 16px;
+    }
+
     @include responsive1279 {
       grid-template-columns: 1fr 1fr;
     }
@@ -78,8 +83,12 @@
     width: 100%;
     height: 315px;
 
+    @include responsive1449 {
+      height: 225px;
+    }
+
     @include responsive1279 {
-      height: 240px;
+      height: 225px;
     }
 
     @include responsive639 {
@@ -102,7 +111,7 @@
   gap: 64px;
 
   @include responsive1449 {
-    gap: 32px;
+    gap: 24px;
   }
 
   .security-section__line {
@@ -110,6 +119,10 @@
     justify-content: space-between;
     gap: 8px;
     min-height: 375px;
+
+    @include responsive1449 {
+      min-height: 320px;
+    }
 
     @include responsive639 {
       flex-direction: column !important;
@@ -152,6 +165,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    @include responsive1449 {
+      padding: 24px;
+    }
 
     @include responsive639 {
       width: 100%;

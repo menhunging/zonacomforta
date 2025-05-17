@@ -16,6 +16,10 @@
     position: relative;
     cursor: pointer;
 
+    @include responsive1449 {
+      font-size: 18px;
+    }
+
     @include responsive1279 {
       font-size: 18px;
     }
@@ -102,6 +106,7 @@
     label {
       color: $colorBlack;
       padding-left: 30px;
+      min-height: 20px;
 
       &::after {
         width: 20px;

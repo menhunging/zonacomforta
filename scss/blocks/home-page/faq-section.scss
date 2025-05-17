@@ -33,6 +33,10 @@
   flex-direction: column;
   align-items: flex-start;
 
+  @include responsive1449 {
+    margin-top: 40px;
+  }
+
   @include responsive1279 {
     margin-top: 30px;
   }
@@ -72,6 +76,10 @@
       );
     opacity: 0;
 
+    @include responsive1449 {
+      background-position: 10px bottom, -70px bottom;
+    }
+
     @include responsive1023 {
       background-position: -60px bottom, -120px bottom;
     }
@@ -99,8 +107,16 @@
   margin-left: auto;
   padding-right: 50px;
 
+  @include responsive1449 {
+    width: 740px;
+  }
+
   @include responsive1279 {
-    width: 480px;
+    width: 520px;
+  }
+
+  @include responsive1023 {
+    width: 460px;
   }
 
   @include responsive767 {
@@ -148,8 +164,16 @@
   width: 808px;
   margin-left: auto;
 
+  @include responsive1449 {
+    width: 740px;
+  }
+
   @include responsive1279 {
-    width: 480px;
+    width: 520px;
+  }
+
+  @include responsive1023 {
+    width: 460px;
   }
 
   @include responsive767 {
@@ -168,11 +192,16 @@
 
   @include responsive1449 {
     margin-top: 50px;
+    width: 740px;
   }
 
   @include responsive1279 {
-    width: 480px;
     margin-top: 50px;
+    width: 520px;
+  }
+
+  @include responsive1023 {
+    width: 460px;
   }
 
   @include responsive767 {
