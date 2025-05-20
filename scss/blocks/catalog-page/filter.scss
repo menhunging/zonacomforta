@@ -2,6 +2,32 @@
   position: sticky;
   top: 0;
   left: 0;
+  overflow: auto;
+  width: calc(100% + 15px);
+  height: calc(100vh - 33px);
+  margin-right: -15px;
+  margin-top: -24px;
+  margin-bottom: -24px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include responsive1549 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: -16px;
+    margin-bottom: -16px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 0;
+    background-color: transparent;
+  }
 
   .filter-row {
     & + .filter-row {
@@ -47,7 +73,20 @@
     padding-top: 12px;
     // display: none;
 
-    ul {
+    & > ul {
+      overflow: auto;
+      height: 120px;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 4px;
+        background-color: rgba(0, 0, 0, 0.33);
+        border-radius: 10px;
+      }
     }
 
     li {

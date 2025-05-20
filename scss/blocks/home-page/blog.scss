@@ -39,13 +39,35 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  transition: all 0.3s;
 
   @include responsive479 {
     flex-direction: column;
     width: 100%;
   }
 
+  &.color1 {
+    background-color: #b79e4e;
+  }
+  &.color2 {
+    background-color: #e58567;
+  }
+  &.color3 {
+    background-color: #3b6153;
+  }
+  &.color4 {
+    background-color: #806289;
+  }
+  &.color5 {
+    background-color: #dca895;
+  }
+  &.color6 {
+    background-color: #6b9b9c;
+  }
+
   @include hover {
+    background-color: $colorDark;
+
     .blog-item__media {
       opacity: 1;
     }

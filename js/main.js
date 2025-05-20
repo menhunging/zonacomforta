@@ -338,11 +338,52 @@ $(document).ready(function () {
           spaceBetween: 16,
         },
         1280: {
-          slidesPerView: 2,
-          spaceBetween: 16,
+          slidesPerView: 3,
+          spaceBetween: 8,
         },
         1550: {
           slidesPerView: 3,
+          spaceBetween: 16,
+        },
+      },
+    });
+  }
+
+  if ($(".blog-block-slider--v2").length > 0) {
+    const swiper = new Swiper(".blog-block-slider--v2", {
+      slidesPerView: 4,
+      spaceBetween: 16,
+      navigation: {
+        prevEl: ".blog-block .btnSwiperPrev",
+        nextEl: ".blog-block .btnSwiperNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.4,
+          spaceBetween: 16,
+        },
+        480: {
+          slidesPerView: 1.8,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2.4,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2.4,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+        1550: {
+          slidesPerView: 4,
           spaceBetween: 16,
         },
       },

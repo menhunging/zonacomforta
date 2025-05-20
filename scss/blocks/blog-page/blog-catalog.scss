@@ -82,6 +82,10 @@
     height: 246px;
     opacity: 1;
 
+    @include responsive1549{
+      height: 194px;
+    }
+
     @include responsive639 {
       width: 100%;
       height: auto;
