@@ -23,15 +23,28 @@ $(document).ready(function () {
 
   if ($(".filter-application").length > 0) {
     if ($(window).width() >= 1024) {
-      // можно удалить, оставил для примера
-      $(".filter-row input").on("change", function () {
-        openFilterApplication($(this));
-      });
-      //  /можно удалить, оставил для примера
+      let timer = null;
+
+      // $(".filter-row input").on("change", function () {
+      //   let positionInput = $(this).parents(".check-block").position().top;
+      //
+      //   closeFilterApplication();
+      //
+      //   timer = setTimeout(function () {
+      //     $(".filter-application")
+      //       .addClass("visible")
+      //       .attr("style", `top:${positionInput}px`);
+      //   }, 200);
+      // });
 
       $(".filter-application__close").on("click", () =>
         closeFilterApplication()
       );
+
+      function closeFilterApplication() {
+        clearTimeout(timer);
+        $(".filter-application").removeClass("visible");
+      }
     }
   }
 
@@ -74,7 +87,9 @@ $(document).ready(function () {
 
     burger.on("click", function () {
       let menu =
-        $(window).width() >= 1280
+        $(window).width() >= 1280 && window.devicePixelRatio < 1.5
+          ? $(".invisProductCatalog--desktop")
+          : $(window).width() >= 1250 && window.devicePixelRatio >= 1.5
           ? $(".invisProductCatalog--desktop")
           : $(".invisProductCatalog--mobile");
 
@@ -84,7 +99,17 @@ $(document).ready(function () {
         burger.addClass("opened");
         menu.stop().slideDown();
 
-        if ($(window).width() >= 1280) {
+        if ($(window).width() >= 1280 && window.devicePixelRatio < 1.5) {
+          overlay.addClass("visible");
+          body.addClass("is-openCatalogMenu");
+
+          overlay.on("click", function () {
+            closeMenu();
+          });
+        } else if (
+          $(window).width() >= 1250 &&
+          window.devicePixelRatio >= 1.5
+        ) {
           overlay.addClass("visible");
           body.addClass("is-openCatalogMenu");
 
@@ -100,7 +125,12 @@ $(document).ready(function () {
         menu.stop().slideUp();
         overlay.off("click");
 
-        if ($(window).width() >= 1280) {
+        if ($(window).width() >= 1280 && window.devicePixelRatio < 1.5) {
+          overlay.removeClass("visible");
+        } else if (
+          $(window).width() >= 1250 &&
+          window.devicePixelRatio >= 1.5
+        ) {
           overlay.removeClass("visible");
         }
       }
@@ -538,7 +568,9 @@ $(document).ready(function () {
         disable: true,
       });
     } else {
-      AOS.init();
+      AOS.init({
+        once: true,
+      });
     }
   }
 
@@ -740,44 +772,29 @@ $(document).ready(function () {
       });
     });
   }
+
+  if ($(".popup-cookies__row").length > 0) {
+    $(".popup-cookies__caption").on("click", function () {
+      const caption = $(this);
+      const row = caption.parents(".popup-cookies__row");
+      const text = caption.next(".popup-cookies__text");
+
+      const isActive = caption.hasClass("active");
+
+      $(".popup-cookies__row").removeClass("opened");
+      $(".popup-cookies__caption").removeClass("active");
+      $(".popup-cookies__text").stop().slideUp();
+
+      if (!isActive) {
+        row.addClass("opened");
+        caption.addClass("active");
+        text.stop().slideDown();
+      }
+    });
+  }
+
+  cookieHandle(); // проверяем и показываем предупреждение для куки
 });
-// application
-let timerApplication = null;
-
-function openFilterApplication(input) {
-  let positionInput = input.parents(".check-block").position().top;
-  let applicationBlock = $(".filter-application");
-
-  closeFilterApplication();
-
-  $(document).mouseup(function (e) {
-    if (
-      !applicationBlock.is(e.target) &&
-      applicationBlock.has(e.target).length === 0
-    ) {
-      closeFilterApplication();
-    }
-  });
-
-  $(document).on("keydown", function (event) {
-    if (event.key === "Escape") {
-      closeFilterApplication();
-    }
-  });
-
-  timerApplication = setTimeout(function () {
-    applicationBlock
-      .addClass("visible")
-      .attr("style", `top:${positionInput}px`);
-  }, 200);
-}
-
-function closeFilterApplication() {
-  clearTimeout(timerApplication);
-  $(".filter-application").removeClass("visible");
-  $(document).off("mouseup keydown");
-}
-// /application
 
 function Marquee(selector, speed, reverse = false) {
   const parentSelector = document.querySelector(selector);
@@ -809,4 +826,33 @@ function Marquee(selector, speed, reverse = false) {
   parentSelector.addEventListener("mouseleave", startMarquee);
 
   startMarquee();
+}
+
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function getCookie(name) {
+  let cookieArr = document.cookie.split("; ");
+  for (let cookie of cookieArr) {
+    let [cookieName, cookieValue] = cookie.split("=");
+    if (cookieName === name) return cookieValue;
+  }
+  return null;
+}
+
+function cookieHandle() {
+  if (!getCookie("notificationClosed")) {
+    MicroModal.show("popup-cookies");
+  }
+
+  $("#popup-cookies [data-micromodal-close]").on("click", function () {
+    setCookie("notificationClosed", "true", 30); // Запоминаем на 30 дней
+  });
 }

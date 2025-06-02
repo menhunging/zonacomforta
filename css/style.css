@@ -1531,6 +1531,17 @@ section {
   }
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .btn {
   cursor: pointer;
   outline: none;
@@ -1982,8 +1993,9 @@ h4,
 }
 
 .modal__overlay {
-  background-color: #edeadf;
+  background-color: rgba(237, 234, 223, 0.77);
   transition: all 0.3s;
+  backdrop-filter: blur(5px);
 }
 
 .micromodal-slide .modal__container,
@@ -2050,6 +2062,135 @@ h4,
   height: 200px;
   background-color: rgba(183, 170, 154, 0.2);
   border-radius: 8px;
+}
+
+#popup-cookies .modal__container {
+  max-width: 670px;
+}
+@media (max-width: 767px) {
+  #popup-cookies .modal__container {
+    max-width: 95%;
+  }
+}
+#popup-cookies .modal__close {
+  width: 36px;
+  height: 36px;
+  background-size: 26px;
+  right: 5px;
+  top: 5px;
+}
+.popup-cookies {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+  padding: 24px;
+}
+@media (max-width: 389px) {
+  .popup-cookies {
+    font-size: 14px;
+  }
+}
+.popup-cookies .caption {
+  margin-bottom: 24px;
+  font-family: "Radiotechnika";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%;
+  display: block;
+}
+@media (max-width: 767px) {
+  .popup-cookies .caption {
+    font-size: 24px;
+  }
+}
+@media (max-width: 389px) {
+  .popup-cookies .caption {
+    font-size: 22px;
+  }
+}
+.popup-cookies .popup-cookies__list {
+  margin: 24px 0;
+}
+.popup-cookies .popup-cookies__row + .popup-cookies__row {
+  margin-top: 16px;
+}
+.popup-cookies .popup-cookies__row.opened .popup-cookies__caption::before {
+  transform: rotate(180deg);
+}
+.popup-cookies .popup-cookies__caption {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+  padding-right: 30px;
+}
+@media (max-width: 389px) {
+  .popup-cookies .popup-cookies__caption {
+    font-size: 14px;
+  }
+}
+.popup-cookies .popup-cookies__caption::before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='12' viewBox='0 0 23 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.5001 0.499924C22.8906 0.890449 22.8906 1.52361 22.5001 1.91414L13.2072 11.207C12.4261 11.9881 11.1598 11.9881 10.3788 11.207L1.08586 1.91414C0.695337 1.52361 0.695337 0.890448 1.08586 0.499924C1.47639 0.109399 2.10955 0.109399 2.50008 0.499924L11.793 9.79282L21.0859 0.499924C21.4764 0.1094 22.1096 0.1094 22.5001 0.499924Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+  width: 22px;
+  height: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  top: 0;
+  right: 0;
+}
+.popup-cookies .popup-cookies__text {
+  display: none;
+  padding-top: 15px;
+}
+.popup-cookies a:not(.btn) {
+  text-decoration: underline;
+  color: #fa4f19;
+  transition: text-decoration 0.3s;
+}
+@media (hover: hover) {
+  .popup-cookies a:not(.btn):hover {
+    text-decoration-color: transparent;
+  }
+}
+.popup-cookies .popup-cookies__controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  margin-top: 24px;
+}
+@media (max-width: 639px) {
+  .popup-cookies .popup-cookies__controls {
+    flex-direction: column;
+  }
+}
+.popup-cookies .btn {
+  flex: 1;
+  min-width: initial;
+  font-size: 16px;
+  color: #fa4f19;
+  font-family: "Inter";
+  padding: 12px 0;
+  height: auto;
+  border-radius: 10px;
+  min-height: 50px;
+}
+@media (max-width: 389px) {
+  .popup-cookies .btn {
+    font-size: 14px;
+    min-height: 40px;
+  }
+}
+.popup-cookies .btn:hover {
+  color: rgb(255, 255, 255);
 }
 
 .header {
@@ -3285,6 +3426,8 @@ body.index-page .burger-catalog::after {
 }
 body.index-page .burger-catalog::before {
   background: linear-gradient(90deg, #fe4b01 0%, #f99d21 24.52%, #dbcc4f 59.62%, #8edf22 81.25%, #02bf7d 100%);
+  background-size: 200% 100%;
+  animation: gradientMove 5s linear infinite;
 }
 @media (max-width: 1549px) {
   body.index-page .burger-catalog {
@@ -6908,6 +7051,9 @@ p {
   height: 50px;
   margin-top: 24px;
   font-family: "Inter";
+}
+.filter .filter__clear + .filter__clear {
+  margin-top: 12px;
 }
 
 .filter-mobile-head {
@@ -10633,7 +10779,7 @@ p {
   display: none;
 }
 .partners-faq .faq-item.opened {
-  background: url("../../../img/bg-faq-part1.png"), url("../../../img/bg-faq-part2.png");
+  background: url("../img/bg-faq-part1.png"), url("../img/bg-faq-part2.png");
   background-position: left center, right center;
   background-repeat: no-repeat;
   background-size: cover;

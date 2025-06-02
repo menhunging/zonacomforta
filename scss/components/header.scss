@@ -1338,6 +1338,8 @@ body {
           #8edf22 81.25%,
           #02bf7d 100%
         );
+        background-size: 200% 100%;
+        animation: gradientMove 5s linear infinite;
       }
 
       @include responsive1549 {

@@ -110,8 +110,9 @@
 }
 
 .modal__overlay {
-  background-color: #edeadf;
+  background-color: rgba(237, 234, 223, 0.77);
   transition: all 0.3s;
+  backdrop-filter: blur(5px);
 }
 
 .micromodal-slide .modal__container,
@@ -183,5 +184,147 @@
     height: 200px;
     background-color: rgba(183, 170, 154, 0.2);
     border-radius: 8px;
+  }
+}
+
+#popup-cookies {
+  .modal__container {
+    max-width: 670px;
+
+    @include responsive767 {
+      max-width: 95%;
+    }
+  }
+
+  .modal__close {
+    width: 36px;
+    height: 36px;
+    background-size: 26px;
+    right: 5px;
+    top: 5px;
+
+    @include responsive1279 {
+    }
+  }
+}
+
+.popup-cookies {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  background-color: $colorWhite;
+  border-radius: 24px;
+  padding: 24px;
+
+  @include responsive389 {
+    font-size: 14px;
+  }
+
+  .caption {
+    margin-bottom: 24px;
+    font-family: $fontRadiotechnika;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+    display: block;
+
+    @include responsive767 {
+      font-size: 24px;
+    }
+
+    @include responsive389 {
+      font-size: 22px;
+    }
+  }
+
+  .popup-cookies__list {
+    margin: 24px 0;
+  }
+
+  .popup-cookies__row {
+    & + .popup-cookies__row {
+      margin-top: 16px;
+    }
+
+    &.opened {
+      .popup-cookies__caption {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .popup-cookies__caption {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    padding-right: 30px;
+
+    @include responsive389 {
+      font-size: 14px;
+    }
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='12' viewBox='0 0 23 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.5001 0.499924C22.8906 0.890449 22.8906 1.52361 22.5001 1.91414L13.2072 11.207C12.4261 11.9881 11.1598 11.9881 10.3788 11.207L1.08586 1.91414C0.695337 1.52361 0.695337 0.890448 1.08586 0.499924C1.47639 0.109399 2.10955 0.109399 2.50008 0.499924L11.793 9.79282L21.0859 0.499924C21.4764 0.1094 22.1096 0.1094 22.5001 0.499924Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
+      width: 22px;
+      height: 22px;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: block;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .popup-cookies__text {
+    display: none;
+    padding-top: 15px;
+  }
+
+  a:not(.btn) {
+    text-decoration: underline;
+    color: $colorOrange;
+    transition: text-decoration 0.3s;
+
+    @include hover {
+      text-decoration-color: transparent;
+    }
+  }
+
+  .popup-cookies__controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    width: 100%;
+    margin-top: 24px;
+
+    @include responsive639 {
+      flex-direction: column;
+    }
+  }
+
+  .btn {
+    flex: 1;
+    min-width: initial;
+    font-size: 16px;
+    color: $colorOrange;
+    font-family: $fontMain;
+    padding: 12px 0;
+    height: auto;
+    border-radius: 10px;
+    min-height: 50px;
+
+    @include responsive389 {
+      font-size: 14px;
+      min-height: 40px;
+    }
+
+    &:hover {
+      color: $colorWhite;
+    }
   }
 }

@@ -220,6 +220,10 @@
     height: 50px;
     margin-top: 24px;
     font-family: $fontMain;
+
+    & + .filter__clear{
+      margin-top: 12px;
+    }
   }
 }
 
