@@ -1368,3 +1368,21 @@ section {
     background-position: 0% 50%;
   }
 }
+
+@keyframes btn_shine {
+  0% {
+    left: -100px;
+    opacity: 1;
+  }
+  25% {
+    left: calc(100% + 200px);
+  }
+
+  99% {
+    left: calc(100% + 200px);
+    opacity: 0;
+  }
+  100% {
+    left: -100px;
+  }
+}

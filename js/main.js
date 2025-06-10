@@ -793,6 +793,36 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".header-drop-invis__link").length > 0) {
+    $(".header-drop-invis__link").on("click", function (event) {
+      event.preventDefault();
+      const href = $(this).attr("href");
+      const text = $(this).attr("data-phone") ?? $(this).attr("data-mail");
+      const flag = $(this).attr("data-flag");
+      const parents = $(this).parents(".header-block-drop");
+      const link = parents.find(".link-phone");
+      const linkMail = parents.find(".link-mail");
+      const img = parents.find(".lang-current__flag img");
+
+      parents.find("a").removeClass("active");
+      $(this).addClass("active");
+
+      if (link) {
+        handleLinkCurrent(link);
+      }
+
+      if (linkMail) {
+        handleLinkCurrent(linkMail);
+      }
+
+      function handleLinkCurrent(link) {
+        link.text(text);
+        link.attr("href", href);
+        img.attr("src", flag);
+      }
+    });
+  }
+
   cookieHandle(); // проверяем и показываем предупреждение для куки
 });
 
