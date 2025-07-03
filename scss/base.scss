@@ -1386,3 +1386,95 @@ section {
     left: -100px;
   }
 }
+
+.notification-cookie {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 100;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.11);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+
+  @include responsive1549 {
+    max-width: 1200px;
+  }
+
+  @include responsive1279 {
+    max-width: 768px;
+  }
+
+  @include responsive767 {
+    width: calc(100% - 40px);
+    font-size: 14px;
+    line-height: 18px;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 10px;
+  }
+
+  .notification-cookie__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    color: $colorBlack;
+    font-size: 16px;
+
+    @include responsive767 {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .notification-cookie__link {
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+    color: $colorOrange;
+
+    @include responsive767 {
+      font-size: 11px;
+    }
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+
+  .notification-cookie__btn {
+    width: 190px;
+    height: 48px;
+    border-radius: 12px;
+    color: $colorWhite;
+    transition: opacity 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+
+    @include responsive767 {
+      width: 160px;
+      height: 40px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}

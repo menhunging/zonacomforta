@@ -38,6 +38,10 @@
   padding: 0;
   margin: 0;
   position: relative;
+
+  @include responsive767 {
+    transform: scale(0.8);
+  }
 }
 
 .modal__inner {
